@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# 
+# Start of session at: Thu Mar 15 11:20:17 2018
+# Process ID: 4528
+# Current directory: C:/Users/Keith/Documents/Git/DataHub/DataHub-Vivado/DataHub-Vivado.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/Users/Keith/Documents/Git/DataHub/DataHub-Vivado/DataHub-Vivado.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/Keith/Documents/Git/DataHub/DataHub-Vivado/DataHub-Vivado.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

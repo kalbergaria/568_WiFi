@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1521929765">
+  <File Type="PA-TCL" Name="DataHub_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="DataHub_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="DataHub_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="DataHub_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="DataHub_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="DataHub_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="DataHub_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="DataHub_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="DataHub_wrapper_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/DataHub/DataHub.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/DataHub/hdl/DataHub_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/DataHub/ip/DataHub_mig_7series_0_0/mig_a.prj">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="ScopedToCell" Val="DataHub_mig_7series_0_0"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="DataHub_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="DataHub_microblaze_0_xlconcat_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="DataHub_ilmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="DataHub_microblaze_0_axi_intc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="DataHub_rst_mig_7series_0_81M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="DataHub_dlmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="DataHub_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="DataHub_ilmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="DataHub_axi_gpio_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="DataHub_dlmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="DataHub_lmb_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="DataHub_mig_7series_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="DataHub_axi_uartlite_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="DataHub_microblaze_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="DataHub_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="DataHub_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="DataHub_PmodWIFI_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="DataHub_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="DataHub_mdm_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="DataHub_rst_clk_wiz_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="DataHub_PmodSD_0_0"/>
+</GenRun>
