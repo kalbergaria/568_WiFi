@@ -33,6 +33,12 @@ As you run into issues we encourage you to open issues so that we can address AS
 
 Once you have the only thing you will want to be updating in your own projects is the source code
 
+## Submodule Cloning  
+Digilent's vivado library is included with this repo but quite large so it's linked.
+
+If you wish to use it, run:
+`git submodule update --init --recursive`
+
 ## Running this Project on Your Board
 If you wish to see the project within this repository function on your board, open the porject then 
 
