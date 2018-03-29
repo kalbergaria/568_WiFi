@@ -32,7 +32,7 @@ If you wish to use the block diagram in this repository as a starting point, I r
 If you are using your own block diagram and only wish to augment it with the elements you need in order to get the Wi-Fi Pmod to work, then open the project within this repository, view the block diagram, and add any elements that are within it that are not yet present in your block diagram.
 
 ## How to use the ECE 568 Wi-Fi Interface Libraries
-*NOTE: The best way to verify if your block diagram and SDK setting are compatible with our libraries, is to check if you are able to successfully compile and run the Scan.cpp program that is also located in this folder. This Scan.cpp file simply contains the code provided in one of the Digilent Wi-Fi Pmod examples.*
+*NOTE: The best way to verify if your block diagram and SDK setting are compatible with our libraries, is to check if you are able to successfully compile and run the Scan.c program that is also located in this folder. This Scan.c file simply contains the code in the WiFiScan Digilent Wi-Fi Pmod example.*
 
 The library files are located in the [src directory](https://github.com/kalbergaria/568_WiFi/tree/master/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/src). Copy the files listed below into your SDK project (if you already have developed your own main.cpp then you may want to exclude this file). 
 
