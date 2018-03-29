@@ -33,6 +33,7 @@ If you are using your own block diagram and only wish to augment it with the ele
 
 ## Submodule Cloning 
 *NOTE: You NEED to do this if you plan on generating a bitstream for the project within this repo!*
+
 Digilent's vivado library is included with this repo but quite large so it's linked.
 
 If you wish to use it, run:
