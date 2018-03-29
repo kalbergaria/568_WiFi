@@ -31,6 +31,13 @@ If you wish to use the block diagram in this repository as a starting point, I r
 
 If you are using your own block diagram and only wish to augment it with the elements you need in order to get the Wi-Fi Pmod to work, then open the project within this repository, view the block diagram, and add any elements that are within it that are not yet present in your block diagram.
 
+## Submodule Cloning 
+*NOTE: You NEED to do this if you plan on generating a bitstream for the project within this repo!*
+Digilent's vivado library is included with this repo but quite large so it's linked.
+
+If you wish to use it, run:
+`git submodule update --init --recursive`
+
 ## How to use the ECE 568 Wi-Fi Interface Libraries
 *NOTE: The best way to verify if your block diagram and SDK setting are compatible with our libraries, is to check if you are able to successfully compile and run the Scan.c program that is also located in this folder. This Scan.c file simply contains the code in the WiFiScan Digilent Wi-Fi Pmod example.*
 
