@@ -24,21 +24,34 @@ This interface is being developed to support all of the messaging capabilities s
 
 ![Sequence Diagram](/ReadMeImages/SequenceDiagram.png)
 
-## Getting Started with the Wi-Fi Pmod
+## Block Diagram
 If you wish to use the block diagram in this repository as a starting point, I recommend following the guide we followed to arrive at the current diagram which can be found [HERE](https://www.youtube.com/watch?v=KTeTMv3oiPw&t=5s).
 
-If you are using your own block diagram and only wish to incorporate the elements you need 
+**OR**
 
-As you run into issues we encourage you to open issues so that we can address ASAP!
+If you are using your own block diagram and only wish to augment it with the elements you need in order to get the Wi-Fi Pmod to work, then open the project within this repository, view the block diagram, and add any elements that are within it that are not yet present in your block diagram.
 
-Once you have the only thing you will want to be updating in your own projects is the source code
-
-## Submodule Cloning  
+## Submodule Cloning 
+*NOTE: You NEED to do this if you plan on generating a bitstream for the project within this repo!*
 Digilent's vivado library is included with this repo but quite large so it's linked.
 
 If you wish to use it, run:
 `git submodule update --init --recursive`
 
-## Running this Project on Your Board
-If you wish to see the project within this repository function on your board, open the porject then 
+## How to use the ECE 568 Wi-Fi Interface Libraries
+*NOTE: The best way to verify if your block diagram and SDK setting are compatible with our libraries, is to check if you are able to successfully compile and run the Scan.c program that is also located in this folder. This Scan.c file simply contains the code in the WiFiScan Digilent Wi-Fi Pmod example.*
 
+The library files are located in the [src directory](https://github.com/kalbergaria/568_WiFi/tree/master/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/src). Copy the files listed below into your SDK project (if you already have developed your own main.cpp then you may want to exclude this file). 
+
+**Files to Copy**
+1) main.cpp
+2) Config.h
+3) WiFi.h
+4) WiFi.cpp
+5) Messages.h
+6) Messages.cpp
+
+Reference the main.cpp file as an example on how to use the functions developed. You may also want to view the comments present in the WiFi.h and Messages.h files for information regarding a specific function (i.e. parameters, what it does, and what it returns).
+
+## Reminders
+As you run into issues we encourage you to open issues so that we can address ASAP!
