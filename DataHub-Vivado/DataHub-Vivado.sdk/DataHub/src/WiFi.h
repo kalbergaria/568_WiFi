@@ -7,6 +7,14 @@
 class UDPSocket;
 #define IPSTATUS uint32_t
 
+static const uint16_t SENSOR_DATA_SIZE = 1019;
+typedef uint8_t SensorData[SENSOR_DATA_SIZE];
+struct SensorDataPayload
+{
+    uint8_t sensorID;
+    SensorData sensorData;
+};
+
 ////////////////////////////////////////////////////////////////
 // 	Summary:
 // 		Handles all initialization needed for the WiFi Pmod
@@ -55,6 +63,16 @@ bool ConnectToHub(UDPSocket* udpSocket, IPSTATUS* status);
 // 		TRUE -> if all sensors were successfully registered
 // 		FALSE -> if any sensor could not be registered
 bool RegisterSensors(UDPSocket* udpSocket, IPSTATUS* status);
+
+////////////////////////////////////////////////////////////////
+// 	Summary:
+// 		The data and the ID of its sensor provided to this
+//      function will be sent to the Data Hub.
+//
+// 	Returns:
+// 		TRUE -> if the sensor data and ID was successfully sent
+// 		FALSE -> if there was an issue sending the data provided
+bool SensorDataPub(UDPSocket* udpSocket, IPSTATUS* status, SensorData sensorData, uint8_t sensorID);
 
 void StoreSystemHealthState(Message* sysHealthMsg);
 

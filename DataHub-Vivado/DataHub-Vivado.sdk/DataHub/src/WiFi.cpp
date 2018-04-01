@@ -169,6 +169,37 @@ bool RegisterSensors(UDPSocket* udpSocket, IPSTATUS* status)
 	return successfulRegistration;
 }
 
+////////////////////////////////////////////////////////////////
+// 	Summary:
+// 		The data and the ID of its sensor provided to this
+//      function will be sent to the Data Hub.
+//
+// 	Returns:
+// 		TRUE -> if the sensor data and ID was successfully sent
+// 		FALSE -> if there was an issue sending the data provided
+bool SensorDataPub(UDPSocket* udpSocket, IPSTATUS* status, SensorData sensorData, uint8_t sensorID)
+{
+	// Create and populate the Sensor Data Pub message
+	Message dataPubMsg;
+	SensorDataPayload payload;
+	payload.sensorID = sensorID;
+	memcpy(&sensorData, &payload.sensorData, SENSOR_DATA_SIZE);
+	CreateSensorDataPubMsg(&dataPubMsg, (uint8_t*)&payload, MY_NODE_ID);
+
+	// Send the message
+	if(SendMessage(&dataPubMsg, udpSocket, status, HUB))
+	{
+		xil_printf("Data from !\r\n");
+		// TODO:Print the sensor ID
+		xil_printf(" has been published to the Hub!");
+		return true;
+	}
+	xil_printf("Error publishing the data from ");
+	// TODO:Print the sensor
+	xil_printf("\r\n");
+	return false;
+}
+
 void StoreSystemHealthState(Message* sysHealthMsg)
 {
 	// TODO: implement StoreSystemHealthState()

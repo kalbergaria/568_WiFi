@@ -26,3 +26,12 @@ bool CreateSensorRegMsg(Message* msg, uint8_t* payload, uint8_t nodeId)
     memcpy(msg->payload, payload, PAYLOAD_SIZE);
 	return true;
 }
+
+bool CreateSensorDataPubMsg(Message* msg, uint8_t* payload, uint8_t nodeId)
+{
+    msg = new Message();
+    msg->header.sourceId = nodeId;
+    msg->header.msgType = (uint8_t)SENSOR_DATA_PUB;
+    memcpy(msg->payload, payload, PAYLOAD_SIZE);
+    return true;
+ }

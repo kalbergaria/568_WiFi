@@ -69,16 +69,16 @@ set rc [catch {
   set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/Keith/Documents/Git/DataHub/DataHub-Vivado/DataHub-Vivado.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Keith/Documents/Git/DataHub/DataHub-Vivado/DataHub-Vivado.xpr [current_project]
-  set_property ip_repo_paths C:/Users/Keith/Documents/Git/DataHub/vivado-library [current_project]
-  set_property ip_output_repo C:/Users/Keith/Documents/Git/DataHub/DataHub-Vivado/DataHub-Vivado.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.xpr [current_project]
+  set_property ip_repo_paths C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/vivado-library [current_project]
+  set_property ip_output_repo C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/Keith/Documents/Git/DataHub/DataHub-Vivado/DataHub-Vivado.runs/synth_1/DataHub_wrapper.dcp
+  add_files -quiet C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.runs/synth_1/DataHub_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/Keith/Documents/Git/DataHub/DataHub-Vivado/DataHub-Vivado.srcs/sources_1/bd/DataHub/DataHub.bd
+  add_files C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.srcs/sources_1/bd/DataHub/DataHub.bd
   set_param project.isImplRun false
   set_param project.isImplRun true
   link_design -top DataHub_wrapper -part xc7a100tcsg324-1

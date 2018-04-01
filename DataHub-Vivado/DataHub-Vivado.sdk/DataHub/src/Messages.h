@@ -13,7 +13,7 @@ enum MsgTypes
 {
     CONNECTION_REQ,      // 0
     SYS_HEALTH,          // 1
-    EMERGENCY_REPORT,    // 2 
+    EMERGENCY_REPORT,    // 2
     EMERGENCY_BROADCAST, // 3
     SENSOR_REG,          // 4
     REG_ACK,             // 5
@@ -37,7 +37,7 @@ struct Header
 {
 	uint8_t sourceId;
 	uint8_t msgType;
-    // While it is typically standard to have the message 
+    // While it is typically standard to have the message
     // size within the header, all messages are 1024 bytes
     // in size, therefore it has been omitted.
 };
@@ -55,6 +55,7 @@ struct Message
 bool CreateConnReqMsg(Message* msg, uint8_t nodeId);
 bool CreateSysHealthMsg(Message* msg, uint8_t* payload, uint8_t nodeId);
 bool CreateSensorRegMsg(Message* msg, uint8_t* payload, uint8_t nodeId);
+bool CreateSensorDataPubMsg(Message* msg, uint8_t* payload, uint8_t nodeId);
 
 //--------------------------------------------------------------
 // Helper functions

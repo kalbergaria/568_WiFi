@@ -1,0 +1,302 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 20876
+License: Customer
+
+Current time: 	Sun Apr 01 11:53:39 EDT 2018
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 3072x1728
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 54 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	Keith
+User home directory: C:/Users/Keith
+User working directory: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.4
+RDI_DATADIR: C:/Xilinx/Vivado/2017.4/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/Keith/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/Keith/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/Keith/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/vivado.log
+Vivado journal file location: 	C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/vivado.jou
+Engine tmp dir: 	C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/.Xil/Vivado-20876-Keith-Z640
+
+GUI allocated memory:	192 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 555 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bs (cj):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.xpr. Version: Vivado v2017.4 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// [GUI Memory]: 56 MB (+55786kb) [00:00:06]
+// [Engine Memory]: 503 MB (+376117kb) [00:00:06]
+// Tcl Message: open_project C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// HMemoryUtils.trashcanNow. Engine heap size: 556 MB. GUI used memory: 48 MB. Current time: 4/1/18 11:53:41 AM EDT
+// [Engine Memory]: 556 MB (+29529kb) [00:00:11]
+// [Engine Memory]: 590 MB (+5736kb) [00:00:16]
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 616 MB. GUI used memory: 48 MB. Current time: 4/1/18 11:53:56 AM EDT
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 621 MB (+1462kb) [00:00:26]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 69 MB (+11086kb) [00:00:31]
+// [Engine Memory]: 676 MB (+25515kb) [00:00:31]
+// [GUI Memory]: 85 MB (+13139kb) [00:00:32]
+// [GUI Memory]: 95 MB (+6126kb) [00:00:32]
+// [Engine Memory]: 716 MB (+6632kb) [00:00:32]
+// [Engine Memory]: 759 MB (+7635kb) [00:00:33]
+// [GUI Memory]: 103 MB (+3070kb) [00:00:34]
+// [GUI Memory]: 108 MB (+248kb) [00:00:35]
+// [Engine Memory]: 801 MB (+3835kb) [00:00:35]
+// [GUI Memory]: 114 MB (+661kb) [00:00:36]
+// Tcl Message: open_project C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/Keith/Documents/Git/DataHub/DataHub-Vivado' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Keith/Documents/Git/568_Hub/568_WiFi/vivado-library'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:37 ; elapsed = 00:00:31 . Memory (MB): peak = 978.281 ; gain = 255.309 
+// Project name: DataHub-Vivado; location: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 127 MB (+7416kb) [00:01:14]
+// Elapsed time: 37 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// x (cj): Synthesis is Out-of-date: addNotify
+// Elapsed time: 10 seconds
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // x (cj)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// [GUI Memory]: 134 MB (+1095kb) [00:01:27]
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run DataHub_mig_7series_0_0_synth_1 
+// f (cj): Launch Runs: addNotify
+// [Engine Memory]: 847 MB (+5857kb) [00:01:30]
+// HMemoryUtils.trashcanNow. Engine heap size: 847 MB. GUI used memory: 83 MB. Current time: 4/1/18 11:55:01 AM EDT
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 19 seconds
+dismissDialog("Launch Runs"); // f (cj)
+// bs (cj):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP DataHub_mig_7series_0_0, cache-ID = 53f8dc96ee8309fc; cache size = 47.299 MB. 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sun Apr  1 11:55:17 2018] Launched DataHub_mig_7series_0_0_synth_1, synth_1... Run output will be captured here: DataHub_mig_7series_0_0_synth_1: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.runs/DataHub_mig_7series_0_0_synth_1/runme.log synth_1: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.runs/synth_1/runme.log [Sun Apr  1 11:55:17 2018] Launched impl_1... Run output will be captured here: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1000.457 ; gain = 0.000 
+// Elapsed time: 11 seconds
+dismissDialog("Generate Bitstream"); // bs (cj)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// [Engine Memory]: 910 MB (+21588kb) [00:02:14]
+// HMemoryUtils.trashcanNow. Engine heap size: 918 MB. GUI used memory: 102 MB. Current time: 4/1/18 11:55:46 AM EDT
+// [GUI Memory]: 143 MB (+1643kb) [00:03:04]
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// [GUI Memory]: 150 MB (+121kb) [00:03:59]
+// Elapsed time: 136 seconds
+expandTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "DataHub ;  ; Submodule Runs Complete ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Sun Apr 01 11:29:30 EDT 2018 ; 00:26:04 ;  ;  ;  ; ", 3); // ax (O, cj)
+// Elapsed time: 11 seconds
+collapseTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "DataHub ;  ; Submodule Runs Complete ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Sun Apr 01 11:29:30 EDT 2018 ; 00:26:04 ;  ;  ;  ; ", 3); // ax (O, cj)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aF (Q, cj)
+selectTab((HResource) null, (HResource) null, "Log", 2); // aF (Q, cj)
+selectTab((HResource) null, (HResource) null, "Design Runs", 4); // aF (Q, cj)
+selectTab((HResource) null, (HResource) null, "Reports", 3); // aF (Q, cj)
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 37 seconds
+selectTab((HResource) null, (HResource) null, "Design Runs", 4); // aF (Q, cj)
+// Elapsed time: 15 seconds
+selectButton(PAResourceEtoH.ExploreAheadView_SHOW_PERCENTAGE, (String) null); // u (f, cj): TRUE
+selectButton(PAResourceEtoH.ExploreAheadView_SHOW_PERCENTAGE, (String) null); // u (f, cj): FALSE
+selectButton(PAResourceEtoH.ExploreAheadView_SHOW_PERCENTAGE, (String) null); // u (f, cj): TRUE
+selectButton(PAResourceEtoH.ExploreAheadView_SHOW_PERCENTAGE, (String) null); // u (f, cj): FALSE
+// TclEventType: RUN_COMPLETED
+// ah (cj): Bitstream Generation Completed: addNotify
+// Elapsed time: 343 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cj)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U (q, cj)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z (cj)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z (cj)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ac (cj)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U (q, cj)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// X (cj): Export Hardware: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (X)
+// 'm' command handler elapsed time: 5 seconds
+selectButton("PAResourceItoN.NewExportHardwareDialog_EXPORTED_FILE_FOR_THIS_MODULE_WAS_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Export Hardware"); // X (cj)
+// bs (cj):  Export Hardware : addNotify
+// Tcl Message: write_hwdef -force  -file C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper.hdf 
+dismissDialog("Export Hardware"); // bs (cj)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U (q, cj)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // Z (cj)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z (cj)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ac (cj)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U (q, cj)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa (cj): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aa)
+dismissDialog("Launch SDK"); // aa (cj)
+// Tcl Message: launch_sdk -workspace C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk -hwspec C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk -hwspec C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bs (cj):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.srcs/sources_1/bd/DataHub/DataHub.bd} 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Adding cell -- xilinx.com:ip:mig_7series:4.0 - mig_7series_0 Adding cell -- xilinx.com:ip:clk_wiz:5.4 - clk_wiz_0 Adding cell -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0 Adding cell -- xilinx.com:ip:microblaze:10.0 - microblaze_0 
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding cell -- xilinx.com:ip:axi_intc:4.1 - microblaze_0_axi_intc Adding cell -- xilinx.com:ip:xlconcat:2.1 - microblaze_0_xlconcat Adding cell -- xilinx.com:ip:mdm:3.2 - mdm_1 Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_0_100M Adding cell -- digilentinc.com:IP:PmodWIFI:1.0 - PmodWIFI_0 Adding cell -- digilentinc.com:IP:PmodSD:1.0 - PmodSD_0 Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_led Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_sw Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_mig_7series_0_81M 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar Adding cell -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10 Adding cell -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10 Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - lmb_bram Successfully read diagram <DataHub> from BD file <C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.srcs/sources_1/bd/DataHub/DataHub.bd> 
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1268.730 ; gain = 86.742 
+// 'bA' command handler elapsed time: 10 seconds
+// Elapsed time: 11 seconds
+dismissDialog("Open Block Design"); // bs (cj)
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /microblaze_0_Clk 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /microblaze_0_Clk 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /microblaze_0_Clk 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /microblaze_0_Clk 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /microblaze_0_Clk 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /microblaze_0_Clk 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /microblaze_0_intr 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /microblaze_0_intr 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_mb_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_mb_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /clk_wiz_0_clk_out3 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /clk_wiz_0_clk_out3 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /clk_wiz_0_clk_out3 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /clk_wiz_0_clk_out3 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_mb_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_mb_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /PmodWIFI_0_WF_INTERRUPT 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /PmodWIFI_0_WF_INTERRUPT 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /PmodWIFI_0_WF_INTERRUPT 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /PmodWIFI_0_WF_INTERRUPT 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// HMemoryUtils.trashcanNow. Engine heap size: 918 MB. GUI used memory: 109 MB. Current time: 4/1/18 12:25:47 PM EDT
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_bus_struct_reset 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_peripheral_aresetn 
+// CommandFailedException: ERROR: [BD 41-113] Interface Net not found: /rst_clk_wiz_0_100M_peripheral_aresetn 
