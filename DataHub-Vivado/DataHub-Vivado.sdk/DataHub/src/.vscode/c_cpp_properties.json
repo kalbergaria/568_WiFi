@@ -62,7 +62,7 @@
                 "${workspaceRoot}/DataHub_wrapper_hw_platform_0/drivers/PmodWIFI_v1_0/src/DEIPcK/utility/fpga",
                 "${workspaceRoot}/DataHub/src"
             ],
-            "defines": [            ],
+            "defines": [],
             "intelliSenseMode": "msvc-x64",
             "browse": {
                 "path": [
@@ -84,7 +84,9 @@
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
-            }
+            },
+            "cStandard": "c11",
+            "cppStandard": "c++17"
         }
     ],
     "version": 3

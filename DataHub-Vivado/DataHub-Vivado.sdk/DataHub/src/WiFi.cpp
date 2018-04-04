@@ -207,6 +207,55 @@ void StoreSystemHealthState(Message* sysHealthMsg)
 
 //-----------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
+// Sensor-node messaging functions
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+
+bool WiFiListen(Message* msg, UDPSocket* udpSocket)
+{
+	// Variables init
+	uint32_t bytesRead;
+	Message message;
+
+	// Read incoming messages and check handle the incoming message appropriately
+	if((bytesRead = RecvMessage(&message, udpSocket)) > 0)
+	{
+		PrintMsgType((MsgTypes)message.header.msgType);
+		xil_printf(" message received!");
+
+		switch(message.header.msgType)
+		{
+			case CONNECTION_REQ:
+				// If this is received, then the number of connected sensor nodes
+				// should increase. 
+				break;
+
+			case EMERGENCY_REPORT:
+				break;
+
+			case SENSOR_REG:
+				break;
+
+			case SENSOR_DATA_PUB:
+				break;
+
+			case SENSOR_SUB:
+				break;
+
+			case SENSOR_SAMPLE_REQ:
+				break;
+
+			case SENSOR_UNSUB:
+				break;
+
+			default:
+				break;
+		}
+	}
+}
+
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
 // Helper Functions
 //-----------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------

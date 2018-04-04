@@ -2842,3 +2842,39 @@ con
 12:05:28 INFO  : Successfully done setting XSCT server connection channel  
 12:05:28 INFO  : Processing command line option -hwspec C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper.hdf.
 12:05:28 INFO  : Successfully done setting SDK workspace  
+13:19:52 INFO  : Registering command handlers for SDK TCF services
+13:19:53 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\temp_xsdb_launch_script.tcl
+13:19:56 INFO  : XSCT server has started successfully.
+13:19:58 INFO  : Successfully done setting XSCT server connection channel  
+13:19:58 INFO  : Processing command line option -hwspec C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper.hdf.
+13:19:58 INFO  : Successfully done setting SDK workspace  
+13:19:58 INFO  : Checking for hwspec changes in the project DataHub_wrapper_hw_platform_1.
+13:20:04 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1522702631094,  Project:1522598697153
+13:20:04 INFO  : The hardware specification for project 'DataHub_wrapper_hw_platform_1' is different from C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper.hdf.
+13:21:30 INFO  : Copied contents of C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper.hdf into \DataHub_wrapper_hw_platform_1\system.hdf.
+13:21:36 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:21:36 INFO  : Clearing existing target manager status.
+13:21:36 WARN  : Given IPC port value is invalid. Using default port 2350
+13:21:36 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+13:21:38 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+13:21:38 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:21:38 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:22:38 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+13:29:42 INFO  : Registering command handlers for SDK TCF services
+13:29:43 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\temp_xsdb_launch_script.tcl
+13:29:45 INFO  : XSCT server has started successfully.
+13:29:45 INFO  : Successfully done setting XSCT server connection channel  
+13:29:45 INFO  : Successfully done setting SDK workspace  
+13:29:45 INFO  : Processing command line option -hwspec C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper.hdf.
+13:29:45 INFO  : Checking for hwspec changes in the project DataHub_wrapper_hw_platform_1.
+13:29:50 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1522862954940,  Project:1522702631094
+13:29:50 INFO  : The hardware specification for project 'DataHub_wrapper_hw_platform_1' is different from C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper.hdf.
+13:29:50 INFO  : Copied contents of C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper.hdf into \DataHub_wrapper_hw_platform_1\system.hdf.
+13:29:53 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:29:53 INFO  : Clearing existing target manager status.
+13:29:53 WARN  : Given IPC port value is invalid. Using default port 2350
+13:29:54 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+13:29:55 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+13:29:55 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:29:55 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+15:05:11 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

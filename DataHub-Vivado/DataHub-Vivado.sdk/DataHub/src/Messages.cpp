@@ -20,7 +20,7 @@ bool CreateSysHealthMsg(Message* msg, uint8_t* payload, uint8_t nodeId)
 
 bool CreateSensorRegMsg(Message* msg, uint8_t* payload, uint8_t nodeId)
 {
-	msg = new Message();
+	//msg = new Message();
     msg->header.sourceId = nodeId;
     msg->header.msgType = (uint8_t)SENSOR_REG;
     memcpy(msg->payload, payload, PAYLOAD_SIZE);
@@ -29,7 +29,7 @@ bool CreateSensorRegMsg(Message* msg, uint8_t* payload, uint8_t nodeId)
 
 bool CreateSensorDataPubMsg(Message* msg, uint8_t* payload, uint8_t nodeId)
 {
-    msg = new Message();
+    //msg = new Message();
     msg->header.sourceId = nodeId;
     msg->header.msgType = (uint8_t)SENSOR_DATA_PUB;
     memcpy(msg->payload, payload, PAYLOAD_SIZE);
