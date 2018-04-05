@@ -2,10 +2,8 @@
 #include "PmodWIFI.h"
 
 // Definition of all states
-typedef enum {INIT,	CONNECT, IDLE,
-			/*EXT_NET, SUB, PUB,
-			  UNSUB, EMERGENCY,*/ // to be implemented
-			  CLOSE, DONE} State;
+typedef enum {INIT,	CONNECT, WIFI, EXT_NET,
+			  GPS, RTCC, CLOSE, DONE        } State;
 
 // Prototypes
 void ChangeStatePrintTransition(State* currState, State newState);
@@ -55,6 +53,18 @@ int main(void)
 				// TODO: implement the IDLE state
 				xil_printf("For now there is nothing to do in the IDLE state...\r\n");
 				ChangeStatePrintTransition(&state, CLOSE);
+				break;
+
+			// TODO: Implement the external network interface
+			case EXT_NET:
+				break;
+			
+			// TODO: Implement and integrate GPS
+			case GPS:
+				break;
+
+			// TODO: Implement and integrate RTCC
+			case RTCC:
 				break;
 
 			// Close the socket and transition to the DONE state

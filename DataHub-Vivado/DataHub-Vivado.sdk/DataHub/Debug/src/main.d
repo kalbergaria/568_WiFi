@@ -56,7 +56,7 @@ src/main.o src/main.o: ../src/main.cpp ../src/WiFi.h ../src/Messages.h \
  ../../DataHub_bsp/microblaze_0/include/AdaptorClass.h \
  ../../DataHub_bsp/microblaze_0/include/DEIPcK.h \
  ../../DataHub_bsp/microblaze_0/include/DEWFcK.h \
- ../../DataHub_bsp/microblaze_0/include/DEWFcK/DEWFcK.h
+ ../../DataHub_bsp/microblaze_0/include/DEWFcK/DEWFcK.h ../src/Globals.h
 
 ../src/WiFi.h:
 
@@ -179,3 +179,5 @@ src/main.o src/main.o: ../src/main.cpp ../src/WiFi.h ../src/Messages.h \
 ../../DataHub_bsp/microblaze_0/include/DEWFcK.h:
 
 ../../DataHub_bsp/microblaze_0/include/DEWFcK/DEWFcK.h:
+
+../src/Globals.h:

@@ -32,16 +32,14 @@ struct SensorInfo
 //--------------------------------------------------------------
 //--------------------------------------------------------------
 
-// Specify the correct value below based on you project
-// LIGHTING -> 0
-// CLIMATE  -> 1
-// POWER    -> 2
-// PLANTS   -> 3
-// HUB      -> 4
-#define MY_GROUP 0
-
-// Do not modify the following line
-static const uint8_t MY_NODE_ID = (uint8_t)MY_GROUP;
+// Replace /*YOUR GROUP HERE*/ with one of the following in 
+// accordance to your group:
+// LIGHTING
+// CLIMATE
+// POWER
+// PLANTS
+// HUB
+static const uint8_t MY_NODE_ID = (uint8_t)/*YOUR GROUP HERE*/;
 
 /*********************INTRUCTIONS**********************/
 // 1) Copy the commented the section below enclosed with

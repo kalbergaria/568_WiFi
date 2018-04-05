@@ -1,0 +1,8 @@
+1. Finish what would be needed to accept a connection as the data hub 
+(including responding with sys helath msg)
+
+2. Fix the UDP sending errors
+Attack plan:
+get the C# emulator to send and recv using the samples
+work slowly towards comparing sampled with current implemenation
+wrost case have to switch the the working sample

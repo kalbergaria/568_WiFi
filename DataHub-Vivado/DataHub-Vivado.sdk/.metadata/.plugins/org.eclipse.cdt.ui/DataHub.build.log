@@ -1,5 +1,18 @@
-15:05:08 **** Auto Build of configuration Debug for project DataHub ****
+20:26:50 **** Auto Build of configuration Debug for project DataHub ****
 make all 
+'Building file: ../src/Messages.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Messages.o" -I../../DataHub_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/Messages.d" -MT"src/Messages.o" -o "src/Messages.o" "../src/Messages.cpp"
+In file included from ../src/Messages.h:5:0,
+                 from ../src/Messages.cpp:1:
+../src/Config.h:108:20: warning: 'HUB_IP' defined but not used [-Wunused-variable]
+ static const char* HUB_IP = "192.168.100.50";
+                    ^~~~~~
+../src/Config.h:105:20: warning: 'SSID' defined but not used [-Wunused-variable]
+ static const char* SSID = "ECE568";
+                    ^~~~
+'Finished building: ../src/Messages.cpp'
+' '
 'Building file: ../src/WiFi.cpp'
 'Invoking: MicroBlaze g++ compiler'
 mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/WiFi.o" -I../../DataHub_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/WiFi.d" -MT"src/WiFi.o" -o "src/WiFi.o" "../src/WiFi.cpp"
@@ -8,7 +21,7 @@ In file included from ../src/../../DataHub_bsp/microblaze_0/include/DEIPcK/utili
                  from ../src/../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/System.h:54,
                  from ../src/../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/deIP.h:59,
                  from ../src/../../DataHub_bsp/microblaze_0/include/DEIPcK/DEIPcK.h:64,
-                 from ../src/WiFi.cpp:6:
+                 from ../src/WiFi.cpp:7:
 ../src/../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/../../../MRF24G/utility/ud_inc/internal/../../wf_customize.h:50:0: warning: "INLINE" redefined
  #define INLINE
  
@@ -16,27 +29,46 @@ In file included from ../src/../../DataHub_bsp/microblaze_0/include/DEIPcK/utili
                  from ../src/../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/System.h:54,
                  from ../src/../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/deIP.h:59,
                  from ../src/../../DataHub_bsp/microblaze_0/include/DEIPcK/DEIPcK.h:64,
-                 from ../src/WiFi.cpp:6:
+                 from ../src/WiFi.cpp:7:
 ../../DataHub_bsp/microblaze_0/include/xil_io.h:99:0: note: this is the location of the previous definition
  #define INLINE inline
  
-../src/WiFi.cpp: In function 'bool WiFiListen(Message*, UDPSocket*)':
-../src/WiFi.cpp:255:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../src/WiFi.cpp: In function 'bool ConnectToHub(UDPSocket*, uint32_t*)':
+../src/WiFi.cpp:120:86: error: 'WiFiListenXMillisForMsgOfType' was not declared in this scope
+   if(WiFiListenXMillisForMsgOfType(1000/*msec*/, SYS_HEALTH, &sysHealthMsg, udpSocket))
+                                                                                      ^
+../src/WiFi.cpp:122:40: error: 'StoreSystemHealthState' was not declared in this scope
+    StoreSystemHealthState(&sysHealthMsg);
+                                        ^
+../src/WiFi.cpp: In function 'bool RegisterSensors(UDPSocket*, uint32_t*)':
+../src/WiFi.cpp:160:80: error: 'WiFiListenXMillisForMsgOfType' was not declared in this scope
+    if(WiFiListenXMillisForMsgOfType(250/*msec*/, REG_ACK, &regAckMsg, udpSocket))
+                                                                                ^
+../src/WiFi.cpp: In function 'bool CheckForSystemHealthMsg(Message*, UDPSocket*)':
+../src/WiFi.cpp:214:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
-'Finished building: ../src/WiFi.cpp'
-' '
-'Building target: DataHub.elf'
-'Invoking: MicroBlaze g++ linker'
-mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../DataHub_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "DataHub.elf"  ./src/Messages.o ./src/WiFi.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
-'Finished building target: DataHub.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size DataHub.elf  |tee "DataHub.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 285728	   1852	  18812	 306392	  4acd8	DataHub.elf
-'Finished building: DataHub.elf.size'
-' '
+../src/WiFi.cpp: In function 'bool SubToSensor(Message*, UDPSocket*)':
+../src/WiFi.cpp:226:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/WiFi.cpp: In function 'bool ReportEmergency(Message*, UDPSocket*)':
+../src/WiFi.cpp:238:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/WiFi.cpp: In function 'bool WiFiListenForXMillis(Message*, UDPSocket*, uint32_t)':
+../src/WiFi.cpp:262:15: error: 'typeWanted' was not declared in this scope
+  PrintMsgType(typeWanted);
+               ^~~~~~~~~~
+../src/WiFi.cpp: In function 'bool SendHealth(Message*, UDPSocket*)':
+../src/WiFi.cpp:335:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/WiFi.cpp: In function 'bool DistribHealthToConnectedNodes(Message*, UDPSocket*)':
+../src/WiFi.cpp:347:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/WiFi.o] Error 1
 
-15:05:11 Build Finished (took 2s.886ms)
+20:26:53 Build Finished (took 2s.765ms)
 

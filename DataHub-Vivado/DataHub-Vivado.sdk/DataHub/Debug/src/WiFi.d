@@ -1,5 +1,5 @@
 src/WiFi.o src/WiFi.o: ../src/WiFi.cpp ../src/WiFi.h ../src/Messages.h \
- ../src/Config.h \
+ ../src/Config.h ../src/Globals.h \
  ../src/../../DataHub_bsp/microblaze_0/include/DEIPcK/DEIPcK.h \
  ../../DataHub_bsp/microblaze_0/include/WProgram.h \
  ../src/../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/deIP.h \
@@ -61,6 +61,8 @@ src/WiFi.o src/WiFi.o: ../src/WiFi.cpp ../src/WiFi.h ../src/Messages.h \
 ../src/Messages.h:
 
 ../src/Config.h:
+
+../src/Globals.h:
 
 ../src/../../DataHub_bsp/microblaze_0/include/DEIPcK/DEIPcK.h:
 

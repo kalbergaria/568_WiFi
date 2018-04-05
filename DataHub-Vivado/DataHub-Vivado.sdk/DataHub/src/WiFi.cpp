@@ -3,6 +3,7 @@
 
 // The following #include has to be placed after "WiFi.h" because
 // of forward declarations
+// TODO: see if I can make this include relative
 #include "../../DataHub_bsp/microblaze_0/include/DEIPcK/DEIPcK.h"
 
 ////////////////////////////////////////////////////////////////
@@ -81,7 +82,7 @@ bool Connect(UDPSocket* udpSocket, IPSTATUS* status)
 
 //-----------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
-// Sensor-node messaging functions
+// Sensor-node WiFi Interface Functions
 //-----------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
 
@@ -116,7 +117,7 @@ bool ConnectToHub(UDPSocket* udpSocket, IPSTATUS* status)
 	if(SendMessage(&connReqMsg, udpSocket, status, HUB))
 	{
 		xil_printf("Waiting up to 1 second for a response from the Data Hub...\r\n");
-		if(WaitXMillisForMsgOfSpecifiedType(1000/*msec*/, SYS_HEALTH, &sysHealthMsg, udpSocket))
+		if(WiFiListenXMillisForMsgOfType(1000/*msec*/, SYS_HEALTH, &sysHealthMsg, udpSocket))
 		{
 			StoreSystemHealthState(&sysHealthMsg);
 			xil_printf("A connection to the Data Hub has been established!\r\n");
@@ -156,7 +157,7 @@ bool RegisterSensors(UDPSocket* udpSocket, IPSTATUS* status)
 		{
 			// Wait up to 250 ms for the registration to be
 			// acknowledged by the Data Hub
-			if(WaitXMillisForMsgOfSpecifiedType(250/*msec*/, REG_ACK, &regAckMsg, udpSocket))
+			if(WiFiListenXMillisForMsgOfType(250/*msec*/, REG_ACK, &regAckMsg, udpSocket))
 				xil_printf("%s has been successfully registered!\r\n", sensorInfoCollection[i].sensorName);
 			else
 			{
@@ -190,68 +191,170 @@ bool SensorDataPub(UDPSocket* udpSocket, IPSTATUS* status, SensorData sensorData
 	if(SendMessage(&dataPubMsg, udpSocket, status, HUB))
 	{
 		xil_printf("Data from !\r\n");
-		// TODO:Print the sensor ID
+		// TODO: Print the sensor ID
 		xil_printf(" has been published to the Hub!");
 		return true;
 	}
 	xil_printf("Error publishing the data from ");
-	// TODO:Print the sensor
+	// TODO: Print the sensor
 	xil_printf("\r\n");
 	return false;
 }
 
-void StoreSystemHealthState(Message* sysHealthMsg)
+////////////////////////////////////////////////////////////////
+// 	Summary:
+// 		
+//
+// 	Returns:
+// 		TRUE -> 
+// 		FALSE -> 
+bool CheckForSystemHealthMsg(Message* msg, UDPSocket* udpSocket)
 {
-	// TODO: implement StoreSystemHealthState()
+	// TODO: implement CheckForSystemHealthMsg()
+}
+
+////////////////////////////////////////////////////////////////
+// 	Summary:
+// 		
+//
+// 	Returns:
+// 		TRUE -> 
+// 		FALSE -> 
+bool SubToSensor(Message* msg, UDPSocket* udpSocket)
+{
+	// TODO: implement SubToSensor()
+}
+
+////////////////////////////////////////////////////////////////
+// 	Summary:
+// 		
+//
+// 	Returns:
+// 		TRUE -> 
+// 		FALSE -> 
+bool ReportEmergency(Message* msg, UDPSocket* udpSocket)
+{
+	// TODO: implement ReportEmergency()
 }
 
 //-----------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
-// Sensor-node messaging functions
+// Hub WiFi Interface Functions
 //-----------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
 
-bool WiFiListen(Message* msg, UDPSocket* udpSocket)
+////////////////////////////////////////////////////////////////	
+// 	NOTE: 
+//		This function is not guaranteed to finish execution
+//		within the specified time if it is busy responding
+//		to a message it received.
+void WiFiListenForXMillisAndRespond(UDPSocket* udpSocket, uint32_t waitTime_ms)
 {
 	// Variables init
 	uint32_t bytesRead;
 	Message message;
 
-	// Read incoming messages and check handle the incoming message appropriately
-	if((bytesRead = RecvMessage(&message, udpSocket)) > 0)
-	{
-		PrintMsgType((MsgTypes)message.header.msgType);
-		xil_printf(" message received!");
-
-		switch(message.header.msgType)
+	// Start the timer
+	uint32_t timeStart_ms = SYSGetMilliSecond();
+    while(ElapsedMilliSeconds(timeStart_ms, SYSGetMilliSecond()) < waitTime_ms)
+    {
+		// Read incoming messages and check if they are of the desired type
+	    if((bytesRead = RecvMessage(&message, udpSocket)) > 0)
 		{
-			case CONNECTION_REQ:
-				// If this is received, then the number of connected sensor nodes
-				// should increase. 
-				break;
+			PrintMsgType((MsgTypes)message.header.msgType);
+			xil_printf(" message received!");
 
-			case EMERGENCY_REPORT:
-				break;
+			switch(message.header.msgType)
+			{
+				case CONNECTION_REQ:
+					HandleConnReq(msg, udpSocket);
+					break;
 
-			case SENSOR_REG:
-				break;
+				case EMERGENCY_REPORT:
+					// TODO: Handle EMERGENCY_REPORT
+					break;
 
-			case SENSOR_DATA_PUB:
-				break;
+				case SENSOR_REG:
+					// TODO: Handle SENSOR_REG
+					break;
 
-			case SENSOR_SUB:
-				break;
+				case SENSOR_DATA_PUB:
+					// TODO: Handle SENSOR_DATA_PUB
+					break;
 
-			case SENSOR_SAMPLE_REQ:
-				break;
+				case SENSOR_SUB:
+					// TODO: Handle SENSOR_SUB
+					break;
 
-			case SENSOR_UNSUB:
-				break;
+				case SENSOR_SAMPLE_REQ:
+					// TODO: Handle SENSOR_SAMPLE_REQ
+					break;
 
-			default:
-				break;
+				case SENSOR_UNSUB:
+					// TODO: Handle SENSOR_UNSUB
+					break;
+
+				default:
+					break;
+			}
+		}
+	 }
+}
+
+////////////////////////////////////////////////////////////////
+// 	
+void HandleConnReq(Message* msg, UDPSocket* udpSocket)
+{
+	xil_printf("Received connection request from: ");
+	PrintSensorNodeId(msg->header.sourceId);
+	// Make sure that the node requesting a connection is not
+	// already connected, if it is ignore the request
+	if(!connectedNodes[msg->header.sourceId])
+	{
+		// Send a system health msg to the new node
+		Message sysHealthMsg;
+		CreateSysHealthMsg(&sysHealthMsg, /*System Health Payload*/, MY_NODE_ID);
+		SendHealth(&sysHealthMsg, udpSocket);
+		xil_printf("Sending SYS_HEALTH to: ");
+		PrintSensorNodeId(msg->header.sourceId);
+
+		// Allow 1 second for the new node to ACK the system health msg
+		if(WaitXMillisForMsgOfSpecifiedType(1000, SYS_HEALTH_ACK, NULL, udpSocket))
+		{
+			// Record that the node has successfully connected to the hub
+			numConnectedNodes++;
+			connectedNodes[msg->header.sourceId] = true;
+			xil_printf("A connection to ");
+			PrintSensorNodeId(msg->header.sourceId);
+			xil_printf(" has been established!");
+		}
+		else
+		{
+			// 1 second elapsed and no ACk was received
+			xil_printf("Unable to establish a connection to ");
+			PrintSensorNodeId(msg->header.sourceId);
+			xil_printf(" they did not ACK the SYS_HEALTH");
 		}
 	}
+	else
+	{
+		xil_printf("This node already has an active connection to the hub!");
+		xil_printf("This request will be ignored!");
+	}
+}
+
+////////////////////////////////////////////////////////////////
+// 	
+bool SendHealth(Message* msg, UDPSocket* udpSocket)
+{
+	// TODO: Handle system health msg distribution
+}
+
+////////////////////////////////////////////////////////////////
+// 	 
+bool DistribHealthToConnectedNodes(Message* msg, UDPSocket* udpSocket)
+{
+	// TODO: Handle system health msg distribution
 }
 
 //-----------------------------------------------------------------------------------
@@ -260,7 +363,7 @@ bool WiFiListen(Message* msg, UDPSocket* udpSocket)
 //-----------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
 
-
+// FIXME: There is an error with the UDP sending
 bool SendMessage(Message* msg, UDPSocket* udpSocket, IPSTATUS* status, SensorNodeIds destId)
 {
 	if (deIPcK.isIPReady(status))
@@ -287,7 +390,7 @@ bool SendMessage(Message* msg, UDPSocket* udpSocket, IPSTATUS* status, SensorNod
 
 // Read all incoming messages until a message of the specified type comes in,
 // or the specified amount of time has elapsed
-bool WaitXMillisForMsgOfSpecifiedType(uint32_t waitTime_ms, MsgTypes typeWanted, Message* msg, UDPSocket* udpSocket)
+bool WiFiListenXMillisForMsgOfType(uint32_t waitTime_ms, MsgTypes typeWanted, Message* msg, UDPSocket* udpSocket)
 {
 	// Variables init
 	uint32_t bytesRead;

@@ -11,19 +11,20 @@
 
 enum MsgTypes
 {
-    CONNECTION_REQ,      // 0
-    SYS_HEALTH,          // 1
-    EMERGENCY_REPORT,    // 2
-    EMERGENCY_BROADCAST, // 3
-    SENSOR_REG,          // 4
-    REG_ACK,             // 5
-    SENSOR_DATA_PUB,     // 6
-    SENSOR_SUB,          // 7
-    SENSOR_DATA_FORW,    // 8
-    SENSOR_SAMPLE_REQ,   // 9
-    SENSOR_UNSUB,        // 10
-    SENSOR_SUB_INV,      // 11
-    UNSUB_ACK            // 12
+    CONNECTION_REQ,
+    SYS_HEALTH,
+    SYS_HEALTH_ACK,
+    EMERGENCY_REPORT,
+    EMERGENCY_BROADCAST,
+    SENSOR_REG,
+    REG_ACK,
+    SENSOR_DATA_PUB,
+    SENSOR_SUB,
+    SENSOR_DATA_FORW,
+    SENSOR_SAMPLE_REQ,
+    SENSOR_UNSUB,
+    SENSOR_SUB_INV,
+    UNSUB_ACK
 };
 
 //--------------------------------------------------------------
