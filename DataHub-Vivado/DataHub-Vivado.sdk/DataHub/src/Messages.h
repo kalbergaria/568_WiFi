@@ -50,6 +50,37 @@ struct Message
 };
 
 //--------------------------------------------------------------
+// System Health Payload
+//--------------------------------------------------------------
+
+// A maximum of 4 nodes will attempt to connect to the HUB
+#define MAX_CONNECTED_NODES 4
+
+struct SystemHealthPayload
+{
+    // A bool array to track which nodes have connected
+    // The node ID for each node is its index into the array below
+    // which tracks if that particular node is connected to the HUB
+    // or not.
+    // According to SensorNodeIds (defined in Config.h) the indexes would be:
+    // LIGHTING -> 0
+    // CLIMATE  -> 1
+    // POWER    -> 2
+    // PLANTS   -> 3
+    bool connectedNodes[MAX_CONNECTED_NODES];
+
+    // A bool array to track which sensors have been registered
+    // TRUE -> sensor registered and can be subscribed to
+    // FALSE -> sensor unregistered
+    // The sensor ID for each sensor is its index into the array below
+    // which tracks if that particular node is registered with the HUB
+    // or not.
+    // The Sensor IDs can be seen in the SensorIds enum defined earlier
+    // in this file
+    bool registeredSensors[NUM_SENSORS];
+};
+
+//--------------------------------------------------------------
 // Message creation functions
 //--------------------------------------------------------------
 

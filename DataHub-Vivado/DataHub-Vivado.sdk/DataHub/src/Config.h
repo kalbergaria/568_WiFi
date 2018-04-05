@@ -13,6 +13,24 @@ enum SensorNodeIds
 	HUB,         // 4
 };
 
+// This would not normarlly be static, however, to simplify and make it easy
+// for groups to subscribe to each other's sensors it is currently implemented
+// as static.
+#define NUM_SENSORS 1
+enum SensorIds
+{
+    // LIGHTING
+
+    // CLIMATE
+
+    // POWER
+
+    // PLANTS
+
+    // HUB
+    GPS,
+};
+
 // Structure containing sensor info fields
 struct SensorInfo
 {
@@ -39,7 +57,7 @@ struct SensorInfo
 // POWER
 // PLANTS
 // HUB
-static const uint8_t MY_NODE_ID = (uint8_t)/*YOUR GROUP HERE*/;
+static const uint8_t MY_NODE_ID = (uint8_t)POWER/*YOUR GROUP HERE*/;
 
 /*********************INTRUCTIONS**********************/
 // 1) Copy the commented the section below enclosed with

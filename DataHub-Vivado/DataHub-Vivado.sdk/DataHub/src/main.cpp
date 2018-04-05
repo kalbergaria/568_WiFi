@@ -1,6 +1,9 @@
 #include "WiFi.h"
 #include "PmodWIFI.h"
 
+#define HUB
+//#defined NODE
+
 // Definition of all states
 typedef enum {INIT,	CONNECT, WIFI, EXT_NET,
 			  GPS, RTCC, CLOSE, DONE        } State;
@@ -16,8 +19,8 @@ int main(void)
 
 	// Variable declaration and initialization
 	State state = INIT;
+	// TODO: look into putting these in the WiFi files
 	IPSTATUS status;
-	UDPSocket commsSocket;
 
 	while(1)
 	{
@@ -34,7 +37,7 @@ int main(void)
 			// Attempt to connect to the network per the specifications in Config.h
 			case CONNECT:
 				xil_printf("Attempting to connect to network...\r\n");
-				while(!Connect(&commsSocket, &status) && !IsIPStatusAnError(status)){}
+				while(!Connect(&status) && !IsIPStatusAnError(status)){}
 
 				// If connection successful change states
 				if(!IsIPStatusAnError(status))
@@ -50,8 +53,15 @@ int main(void)
 
 			// Handle any periodic tasks and poll all incoming interfaces for a task
 			case IDLE:
-				// TODO: implement the IDLE state
 				xil_printf("For now there is nothing to do in the IDLE state...\r\n");
+
+				#ifdef HUB
+				WiFiListenForXMillisAndRespond(&status, 10000/*10 secs*/);
+				#endif
+
+				#ifdef NODE
+				#endif
+
 				ChangeStatePrintTransition(&state, CLOSE);
 				break;
 

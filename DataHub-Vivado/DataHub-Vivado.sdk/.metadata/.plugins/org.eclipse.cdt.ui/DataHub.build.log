@@ -1,18 +1,5 @@
-20:26:50 **** Auto Build of configuration Debug for project DataHub ****
+13:23:01 **** Auto Build of configuration Debug for project DataHub ****
 make all 
-'Building file: ../src/Messages.cpp'
-'Invoking: MicroBlaze g++ compiler'
-mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Messages.o" -I../../DataHub_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/Messages.d" -MT"src/Messages.o" -o "src/Messages.o" "../src/Messages.cpp"
-In file included from ../src/Messages.h:5:0,
-                 from ../src/Messages.cpp:1:
-../src/Config.h:108:20: warning: 'HUB_IP' defined but not used [-Wunused-variable]
- static const char* HUB_IP = "192.168.100.50";
-                    ^~~~~~
-../src/Config.h:105:20: warning: 'SSID' defined but not used [-Wunused-variable]
- static const char* SSID = "ECE568";
-                    ^~~~
-'Finished building: ../src/Messages.cpp'
-' '
 'Building file: ../src/WiFi.cpp'
 'Invoking: MicroBlaze g++ compiler'
 mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/WiFi.o" -I../../DataHub_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/WiFi.d" -MT"src/WiFi.o" -o "src/WiFi.o" "../src/WiFi.cpp"
@@ -33,42 +20,57 @@ In file included from ../src/../../DataHub_bsp/microblaze_0/include/DEIPcK/utili
 ../../DataHub_bsp/microblaze_0/include/xil_io.h:99:0: note: this is the location of the previous definition
  #define INLINE inline
  
-../src/WiFi.cpp: In function 'bool ConnectToHub(UDPSocket*, uint32_t*)':
-../src/WiFi.cpp:120:86: error: 'WiFiListenXMillisForMsgOfType' was not declared in this scope
-   if(WiFiListenXMillisForMsgOfType(1000/*msec*/, SYS_HEALTH, &sysHealthMsg, udpSocket))
-                                                                                      ^
-../src/WiFi.cpp:122:40: error: 'StoreSystemHealthState' was not declared in this scope
-    StoreSystemHealthState(&sysHealthMsg);
-                                        ^
-../src/WiFi.cpp: In function 'bool RegisterSensors(UDPSocket*, uint32_t*)':
-../src/WiFi.cpp:160:80: error: 'WiFiListenXMillisForMsgOfType' was not declared in this scope
-    if(WiFiListenXMillisForMsgOfType(250/*msec*/, REG_ACK, &regAckMsg, udpSocket))
-                                                                                ^
-../src/WiFi.cpp: In function 'bool CheckForSystemHealthMsg(Message*, UDPSocket*)':
-../src/WiFi.cpp:214:1: warning: no return statement in function returning non-void [-Wreturn-type]
+In file included from ../src/WiFi.cpp:1:0:
+../src/WiFi.h:17:28: error: 'SENSOR_DATA_SIZE' was not declared in this scope
+ typedef uint8_t SensorData[SENSOR_DATA_SIZE];
+                            ^~~~~~~~~~~~~~~~
+../src/WiFi.h:21:5: error: 'SensorData' does not name a type
+     SensorData sensorData;
+     ^~~~~~~~~~
+../src/WiFi.h:84:38: error: 'SensorData' has not been declared
+ bool SensorDataPub(IPSTATUS* status, SensorData sensorData, uint8_t sensorID);
+                                      ^~~~~~~~~~
+../src/WiFi.cpp: In function 'bool Connect(uint32_t*)':
+../src/WiFi.cpp:72:25: error: no matching function for call to 'DEMRF24::getMyIP(const IPv4*)'
+    deIPcK.getMyIP(&MY_IP);
+                         ^
+In file included from ../src/WiFi.cpp:7:0:
+../src/../../DataHub_bsp/microblaze_0/include/DEIPcK/DEIPcK.h:458:10: note: candidate: bool DEIPcK::getMyIP(IPv4&)
+     bool getMyIP(IPv4& ip);
+          ^~~~~~~
+../src/../../DataHub_bsp/microblaze_0/include/DEIPcK/DEIPcK.h:458:10: note:   no known conversion for argument 1 from 'const IPv4* {aka const IPv4_T*}' to 'IPv4& {aka IPv4_T&}'
+../src/WiFi.cpp: At global scope:
+../src/WiFi.cpp:186:38: error: 'SensorData' has not been declared
+ bool SensorDataPub(IPSTATUS* status, SensorData sensorData, uint8_t sensorID)
+                                      ^~~~~~~~~~
+../src/WiFi.cpp: In function 'bool SensorDataPub(uint32_t*, int, uint8_t)':
+../src/WiFi.cpp:192:31: error: 'struct SensorDataPayload' has no member named 'sensorData'; did you mean 'sensorID'?
+  memcpy(&sensorData, &payload.sensorData, SENSOR_DATA_SIZE);
+                               ^~~~~~~~~~
+../src/WiFi.cpp: In function 'bool CheckForSystemHealthMsg(Message*)':
+../src/WiFi.cpp:219:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
-../src/WiFi.cpp: In function 'bool SubToSensor(Message*, UDPSocket*)':
-../src/WiFi.cpp:226:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../src/WiFi.cpp: In function 'bool SubToSensor(Message*)':
+../src/WiFi.cpp:231:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
-../src/WiFi.cpp: In function 'bool ReportEmergency(Message*, UDPSocket*)':
-../src/WiFi.cpp:238:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../src/WiFi.cpp: In function 'bool ReportEmergency(Message*)':
+../src/WiFi.cpp:243:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
-../src/WiFi.cpp: In function 'bool WiFiListenForXMillis(Message*, UDPSocket*, uint32_t)':
-../src/WiFi.cpp:262:15: error: 'typeWanted' was not declared in this scope
-  PrintMsgType(typeWanted);
-               ^~~~~~~~~~
-../src/WiFi.cpp: In function 'bool SendHealth(Message*, UDPSocket*)':
-../src/WiFi.cpp:335:1: warning: no return statement in function returning non-void [-Wreturn-type]
- }
- ^
-../src/WiFi.cpp: In function 'bool DistribHealthToConnectedNodes(Message*, UDPSocket*)':
-../src/WiFi.cpp:347:1: warning: no return statement in function returning non-void [-Wreturn-type]
- }
- ^
+../src/WiFi.cpp: In function 'bool SendMessage(Message*, uint32_t*, SensorNodeIds)':
+../src/WiFi.cpp:257:18: error: base operand of '->' has non-pointer type 'UDPSocket'
+         udpSocket->writeDatagram((byte*)msg, sizeof(Message));
+                  ^~
+../src/WiFi.cpp: In function 'uint32_t RecvMessage(Message*)':
+../src/WiFi.cpp:318:16: error: base operand of '->' has non-pointer type 'UDPSocket'
+  if ((udpSocket->available()) > 0)
+                ^~
+../src/WiFi.cpp:320:19: error: base operand of '->' has non-pointer type 'UDPSocket'
+   return udpSocket->readDatagram((byte*)msg, MSG_SIZE);
+                   ^~
 make: *** [src/WiFi.o] Error 1
 
-20:26:53 Build Finished (took 2s.765ms)
+13:23:02 Build Finished (took 702ms)
 

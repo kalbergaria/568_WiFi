@@ -1,13 +1,2 @@
 //org.eclipse.ui.commands/state/org.eclipse.ui.navigator.resources.nested.changeProjectPresentation/org.eclipse.ui.commands.radioState=false
-ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.ui.workbenchMisc\tTorg.eclipse.cdt.ui.presentation\tTorg.eclipse.cdt.ui.CEditor.presentation\tTorg.eclipse.ui.presentation.default
-ColorsAndFontsPreferencePage.selectedElement=Forg.eclipse.cdt.ui.editors.textfont
 eclipse.preferences.version=1
-org.eclipse.cdt.internal.ui.compare.AsmMergeViewer=1|Fira Code|12.0|0|WINDOWS|1|-20|0|0|0|400|0|0|0|0|3|2|1|49|Fira Code;
-org.eclipse.cdt.internal.ui.compare.CMergeViewer=1|Fira Code|12.0|0|WINDOWS|1|-20|0|0|0|400|0|0|0|0|3|2|1|49|Fira Code;
-org.eclipse.cdt.ui.editors.textfont=1|Fira Code|12.0|0|WINDOWS|1|-20|0|0|0|400|0|0|0|0|3|2|1|49|Fira Code;
-org.eclipse.e4.ui.css.theme.e4_default6.0,6.1,6.2,6.3,10.0.org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_BG_END=255,255,255
-org.eclipse.e4.ui.css.theme.e4_default6.0,6.1,6.2,6.3,10.0.org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_BG_START=255,255,255
-org.eclipse.e4.ui.css.theme.e4_default6.0,6.1,6.2,6.3,10.0.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START=255,255,255
-org.eclipse.e4.ui.css.theme.e4_default6.0,6.1,6.2,6.3,10.0.org.eclipse.ui.workbench.ACTIVE_TAB_OUTER_KEYLINE_COLOR=255,0,128
-org.eclipse.e4.ui.css.theme.e4_default6.0,6.1,6.2,6.3,10.0.org.eclipse.ui.workbench.INACTIVE_TAB_INNER_KEYLINE_COLOR=255,255,255
-org.eclipse.e4.ui.css.theme.e4_default6.0,6.1,6.2,6.3,10.0.org.eclipse.ui.workbench.INACTIVE_UNSELECTED_TABS_COLOR_START=244,246,252

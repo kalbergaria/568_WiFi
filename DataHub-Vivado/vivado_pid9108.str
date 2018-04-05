@@ -1,0 +1,156 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 9108
+License: Customer
+
+Current time: 	Thu Apr 05 09:51:09 EDT 2018
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 2560x1440
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 197 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	Keith
+User home directory: C:/Users/Keith
+User working directory: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.4
+RDI_DATADIR: C:/Xilinx/Vivado/2017.4/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/Keith/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/Keith/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/Keith/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/vivado.log
+Vivado journal file location: 	C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/vivado.jou
+Engine tmp dir: 	C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/.Xil/Vivado-9108-DellXPS15
+
+GUI allocated memory:	198 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 592 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 80 MB (+81173kb) [00:00:05]
+// [Engine Memory]: 517 MB (+390126kb) [00:00:05]
+// Opening Vivado Project: C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.xpr. Version: Vivado v2017.4 
+// bs (cj):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// HMemoryUtils.trashcanNow. Engine heap size: 623 MB. GUI used memory: 43 MB. Current time: 4/5/18 9:51:11 AM EDT
+// [Engine Memory]: 623 MB (+84837kb) [00:00:10]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 674 MB (+21007kb) [00:00:20]
+// [GUI Memory]: 84 MB (+98kb) [00:00:21]
+// [Engine Memory]: 709 MB (+1057kb) [00:00:21]
+// [GUI Memory]: 88 MB (+39kb) [00:00:22]
+// [Engine Memory]: 751 MB (+6644kb) [00:00:22]
+// [Engine Memory]: 803 MB (+14552kb) [00:00:23]
+// [GUI Memory]: 98 MB (+5991kb) [00:00:23]
+// HMemoryUtils.trashcanNow. Engine heap size: 812 MB. GUI used memory: 78 MB. Current time: 4/5/18 9:51:27 AM EDT
+// Tcl Message: open_project C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Keith/Documents/Git/568_Hub/568_WiFi/vivado-library'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:29 ; elapsed = 00:00:20 . Memory (MB): peak = 983.746 ; gain = 242.762 
+// Project name: DataHub-Vivado; location: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 105 MB (+2302kb) [00:00:40]
+// Elapsed time: 41 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// x (cj): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // x (cj)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run DataHub_mig_7series_0_0_synth_1 
+// TclEventType: RUN_MODIFY
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 6 seconds
+dismissDialog("Launch Runs"); // f (cj)
+// bs (cj):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP DataHub_mig_7series_0_0, cache-ID = 53f8dc96ee8309fc; cache size = 47.299 MB. 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 114 MB (+3296kb) [00:01:23]
+// [Engine Memory]: 846 MB (+3253kb) [00:01:23]
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Apr  5 09:52:25 2018] Launched DataHub_mig_7series_0_0_synth_1, synth_1... Run output will be captured here: DataHub_mig_7series_0_0_synth_1: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.runs/DataHub_mig_7series_0_0_synth_1/runme.log synth_1: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.runs/synth_1/runme.log [Thu Apr  5 09:52:25 2018] Launched impl_1... Run output will be captured here: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1011.109 ; gain = 23.488 
+dismissDialog("Generate Bitstream"); // bs (cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 846 MB. GUI used memory: 76 MB. Current time: 4/5/18 9:52:26 AM EDT
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 123 MB (+3303kb) [00:01:43]
+// [Engine Memory]: 900 MB (+12261kb) [00:01:43]
+// HMemoryUtils.trashcanNow. Engine heap size: 903 MB. GUI used memory: 91 MB. Current time: 4/5/18 9:52:46 AM EDT
+// [GUI Memory]: 132 MB (+3657kb) [00:02:24]
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cj): Bitstream Generation Completed: addNotify
+// [GUI Memory]: 139 MB (+28kb) [00:14:02]
+// Elapsed time: 937 seconds
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", true); // g (N, ah): TRUE
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 903 MB. GUI used memory: 92 MB. Current time: 4/5/18 10:22:46 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 903 MB. GUI used memory: 90 MB. Current time: 4/5/18 10:52:47 AM EDT
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
