@@ -1,12 +1,17 @@
-#include "WiFi.h"
+//#define HUB
+#define NODE
+#ifdef HUB
+	#include "HubWiFi.h"
+#endif
+
+#ifdef NODE
+	#include "WiFi.h"
+#endif
+
 #include "PmodWIFI.h"
 
-#define HUB
-//#defined NODE
-
 // Definition of all states
-typedef enum {INIT,	CONNECT, WIFI, EXT_NET,
-			  GPS, RTCC, CLOSE, DONE        } State;
+typedef enum {INIT,	CONNECT, WIFI, EXT_NET, GET_POS, GET_TIME, CLOSE, DONE} State;
 
 // Prototypes
 void ChangeStatePrintTransition(State* currState, State newState);
@@ -19,7 +24,6 @@ int main(void)
 
 	// Variable declaration and initialization
 	State state = INIT;
-	// TODO: look into putting these in the WiFi files
 	IPSTATUS status;
 
 	while(1)
@@ -42,7 +46,7 @@ int main(void)
 				// If connection successful change states
 				if(!IsIPStatusAnError(status))
 				{
-					ChangeStatePrintTransition(&state, IDLE);
+					ChangeStatePrintTransition(&state, WIFI);
 				}
 				else // error with connection attempt
 				{
@@ -52,7 +56,7 @@ int main(void)
 				break;
 
 			// Handle any periodic tasks and poll all incoming interfaces for a task
-			case IDLE:
+			case WIFI:
 				xil_printf("For now there is nothing to do in the IDLE state...\r\n");
 
 				#ifdef HUB
@@ -70,16 +74,15 @@ int main(void)
 				break;
 			
 			// TODO: Implement and integrate GPS
-			case GPS:
+			case GET_POS:
 				break;
 
 			// TODO: Implement and integrate RTCC
-			case RTCC:
+			case GET_TIME:
 				break;
 
 			// Close the socket and transition to the DONE state
 			case CLOSE:
-				commsSocket.close();
 				ChangeStatePrintTransition(&state, DONE);
 				break;
 
@@ -101,6 +104,7 @@ void ChangeStatePrintTransition(State* currState, State newState)
 	xil_printf(" to ");
 	PrintState(newState);
 	xil_printf("\r\n");
+	xil_printf("\r\n");
 	*currState = newState;
 }
 
@@ -114,8 +118,8 @@ void PrintState(State state)
 		case CONNECT:
 			xil_printf("CONNECT");
 			break;
-		case IDLE:
-			xil_printf("IDLE");
+		case WIFI:
+			xil_printf("WIFI");
 			break;
 		case CLOSE:
 			xil_printf("CLOSE");

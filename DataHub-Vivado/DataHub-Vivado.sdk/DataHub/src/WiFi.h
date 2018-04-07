@@ -13,7 +13,7 @@ class UDPServer;
 // Sensor Data
 //-----------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
-
+#define SENSOR_DATA_SIZE 1019
 typedef uint8_t SensorData[SENSOR_DATA_SIZE];
 struct SensorDataPayload
 {

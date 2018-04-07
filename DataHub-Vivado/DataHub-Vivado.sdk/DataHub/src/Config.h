@@ -121,7 +121,8 @@ static const SensorInfo sensorInfoCollection[] =
 static const char* SSID = "ECE568";
 
 // The static IP of the Data Hub
-static const char* HUB_IP = "192.168.100.50";
+//static const char* HUB_IP = "192.168.100.50";
+static const char* HUB_IP = "192.168.100.2";
 
 // Port to be used for communication locally and by the Data Hub
 static const uint16_t PORT = 44000;

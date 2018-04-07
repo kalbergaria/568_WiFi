@@ -23,17 +23,10 @@ static UDPSocket udpSocket;
 // A data structure to keep the current system health
 static SystemHealthPayload currentSysHealth;
 
-//-----------------------------------------------------------------------------------
-//-----------------------------------------------------------------------------------
-// Sensor Data
-//-----------------------------------------------------------------------------------
-//-----------------------------------------------------------------------------------
-static const uint16_t SENSOR_DATA_SIZE = 1019;
-
 ////////////////////////////////////////////////////////////////
 // 	Summary:
 // 		Set to {0,0,0,0} for DHCP
-static const IPv4 MY_IP = {0,0,0,0};
+static IPv4 MY_IP = {0,0,0,0};
 
 ////////////////////////////////////////////////////////////////
 // 	Summary:
@@ -69,8 +62,8 @@ bool Connect(IPSTATUS* status)
 		if(deIPcK.begin(MY_IP))
 		{
 			xil_printf("Connection established with network: %s\r\n", SSID);
-			deIPcK.getMyIP(&MY_IP);
-			xil_printf("My IP address is: %d.%d.%d.%d", MY_IP);
+			deIPcK.getMyIP(MY_IP);
+			xil_printf("My IP address is: %d.%d.%d.%d\r\n", MY_IP.u8[0], MY_IP.u8[1], MY_IP.u8[2], MY_IP.u8[3]);
 
 			xil_printf("Attempting to connect to HUB...\r\n", SSID);
 			if(ConnectToHub(status))
@@ -106,30 +99,42 @@ bool ConnectToHub(IPSTATUS* status)
 {
 	// Resolve the end point (i.e. the Data Hub)
 	IPEndPoint epRemote;
-	deIPcK.resolveEndPoint(HUB_IP, PORT, epRemote, status);
-	deIPcK.udpSetEndPoint(epRemote, udpSocket, PORT, status);
-	// Always check the status and get out on error
-	if (IsIPStatusAnError(*status))
+	xil_printf("Attempting to set %s:%d as the endpoint...\r\n", HUB_IP, PORT);
+	if(deIPcK.resolveEndPoint(HUB_IP, PORT, epRemote, status))  // FIXME: endpoint not being resolved
 	{
-		xil_printf("Unable to resolve endpoint(Data Hub), error: 0x%X\r\n", status);
-		return false;
-	}
-
-	// Send the connection request and allow up to 1 second for a SYS_HEALTH response
-	Message connReqMsg;
-	Message sysHealthMsg;
-	CreateConnReqMsg(&connReqMsg, MY_NODE_ID);
-	if(SendMessage(&connReqMsg, status, HUB))
-	{
-		xil_printf("Waiting up to 1 second for a response from the Data Hub...\r\n");
-		if(WiFiListenXMillisForMsgOfType(1000/*msec*/, SYS_HEALTH, &sysHealthMsg))
+		if(deIPcK.udpSetEndPoint(epRemote, udpSocket, PORT, status))
 		{
-			memcpy(&sysHealthMsg.payload, &currentSysHealth, sizeof(SystemHealthPayload));
-			xil_printf("A connection to the Data Hub has been established!\r\n");
-			return true;
+			// Send the connection request and allow up to 1 second for a SYS_HEALTH response
+			Message connReqMsg;
+			Message sysHealthMsg;
+			CreateConnReqMsg(&connReqMsg, MY_NODE_ID);
+			if(SendMessage(&connReqMsg, status, HUB))
+			{
+				xil_printf("Waiting up to 1 second for a response from the Data Hub...\r\n");
+				if(WiFiListenXMillisForMsgOfType(1000/*msec*/, SYS_HEALTH, &sysHealthMsg))
+				{
+					memcpy(&sysHealthMsg.payload, &currentSysHealth, sizeof(SystemHealthPayload));
+					xil_printf("A connection to the Data Hub has been established!\r\n");
+					return true;
+				}
+				else
+				{
+					xil_printf("1 second has elapsed... Done waiting, no response received!");
+					return false;
+				}
+			}
+			else
+			{
+				xil_printf("Unable to connect to the Data Hub!\r\n");
+				return false;
+			}
 		}
 	}
-	xil_printf("Unable to connect to the Data Hub!\r\n");
+
+	// Always check the status and get out on error
+	if (IsIPStatusAnError(*status))
+		xil_printf("Unable to resolve endpoint(Data Hub), error: 0x%X\r\n", status);
+
 	return false;
 }
 
@@ -248,13 +253,13 @@ bool ReportEmergency(Message* msg)
 //-----------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
 
-// FIXME: There is an error with the UDP sending
+
 bool SendMessage(Message* msg, IPSTATUS* status, SensorNodeIds destId)
 {
 	if (deIPcK.isIPReady(status))
 	{
         PrintMsgTypeAndDest((MsgTypes)msg->header.msgType, destId);
-        udpSocket->writeDatagram((byte*)msg, sizeof(Message));
+        udpSocket.writeDatagram((byte*)msg, sizeof(Message));
         return true;
  	}
  	else if (IsIPStatusAnError(*status))
@@ -315,9 +320,9 @@ bool WiFiListenXMillisForMsgOfType(uint32_t waitTime_ms, MsgTypes typeWanted, Me
 
 uint32_t RecvMessage(Message* msg)
 {
-	if ((udpSocket->available()) > 0)
+	if ((udpSocket.available()) > 0)
 	{
-		return udpSocket->readDatagram((byte*)msg, MSG_SIZE);
+		return udpSocket.readDatagram((byte*)msg, MSG_SIZE);
 	}
 	return 0;
 }
