@@ -8,6 +8,15 @@
 
 //-----------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
+// Max Wait Times for Responses
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+
+#define SYS_HEALTH_WAITTIME 1000 //ms
+#define REG_ACK_WAITTIME 1000 //ms
+
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
 // Communications Socket
 //-----------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
@@ -23,10 +32,22 @@ static UDPSocket udpSocket;
 // A data structure to keep the current system health
 static SystemHealthPayload currentSysHealth;
 
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+// IP Address Settings
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+
 ////////////////////////////////////////////////////////////////
 // 	Summary:
 // 		Set to {0,0,0,0} for DHCP
 static IPv4 MY_IP = {0,0,0,0};
+
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+// Sensor-node WiFi Interface Functions
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
 
 ////////////////////////////////////////////////////////////////
 // 	Summary:
@@ -66,16 +87,15 @@ bool Connect(IPSTATUS* status)
 			xil_printf("My IP address is: %d.%d.%d.%d\r\n", MY_IP.u8[0], MY_IP.u8[1], MY_IP.u8[2], MY_IP.u8[3]);
 
 			xil_printf("Attempting to connect to HUB...\r\n", SSID);
-			if(ConnectToHub(status))
+			while(!ConnectToHub(status))
 			{
-				xil_printf("Preparing to register sensors...\r\n", SSID);
-				if(RegisterSensors(status))
-					xil_printf("All sensors have been registered!");
-				else
-					return false;
+				// Every pass through loop(), keep the stack alive
+				DEIPcK::periodicTasks();
 			}
-			else
-				return false;
+
+			xil_printf("Preparing to register sensors...\r\n", SSID);
+			while(!RegisterSensors(status)){}
+			xil_printf("All sensors have been registered!");
 
 			return true;
 		}
@@ -99,27 +119,27 @@ bool ConnectToHub(IPSTATUS* status)
 {
 	// Resolve the end point (i.e. the Data Hub)
 	IPEndPoint epRemote;
-	xil_printf("Attempting to set %s:%d as the endpoint...\r\n", HUB_IP, PORT);
 	if(deIPcK.resolveEndPoint(HUB_IP, PORT, epRemote, status))  // FIXME: endpoint not being resolved
 	{
 		if(deIPcK.udpSetEndPoint(epRemote, udpSocket, PORT, status))
 		{
+			xil_printf("Endpoint set to: %s:%d\r\n", HUB_IP, PORT);
 			// Send the connection request and allow up to 1 second for a SYS_HEALTH response
 			Message connReqMsg;
 			Message sysHealthMsg;
 			CreateConnReqMsg(&connReqMsg, MY_NODE_ID);
 			if(SendMessage(&connReqMsg, status, HUB))
 			{
-				xil_printf("Waiting up to 1 second for a response from the Data Hub...\r\n");
-				if(WiFiListenXMillisForMsgOfType(1000/*msec*/, SYS_HEALTH, &sysHealthMsg))
+				if(WiFiListenXMillisForMsgOfType(SYS_HEALTH_WAITTIME, SYS_HEALTH, &sysHealthMsg))
 				{
+					// store the system health message
 					memcpy(&sysHealthMsg.payload, &currentSysHealth, sizeof(SystemHealthPayload));
 					xil_printf("A connection to the Data Hub has been established!\r\n");
 					return true;
 				}
 				else
 				{
-					xil_printf("1 second has elapsed... Done waiting, no response received!");
+					xil_printf("%dms have elapsed... Done waiting, no response received!", SYS_HEALTH_WAITTIME);
 					return false;
 				}
 			}
@@ -167,7 +187,7 @@ bool RegisterSensors(IPSTATUS* status)
 		{
 			// Wait up to 250 ms for the registration to be
 			// acknowledged by the Data Hub
-			if(WiFiListenXMillisForMsgOfType(250/*msec*/, REG_ACK, &regAckMsg))
+			if(WiFiListenXMillisForMsgOfType(REG_ACK_WAITTIME, REG_ACK, &regAckMsg))
 				xil_printf("%s has been successfully registered!\r\n", sensorInfoCollection[i].sensorName);
 			else
 			{
@@ -288,12 +308,13 @@ bool WiFiListenXMillisForMsgOfType(uint32_t waitTime_ms, MsgTypes typeWanted, Me
 	bool wantedMsgRecvd = false;
 
 	// Print the message type we are waiting for
-	xil_printf("waiting for a ");
+	xil_printf("Waiting %dms for a ", waitTime_ms);
 	PrintMsgType(typeWanted);
 	xil_printf("...\r\n");
 
 	// Start the timer
 	uint32_t timeStart_ms = SYSGetMilliSecond();
+	uint32_t elapsedTime_ms = 0, currentTime_ms = 0;;
     while(!wantedMsgRecvd)
     {
 		// Read incoming messages and check if they are of the desired type
@@ -307,12 +328,19 @@ bool WiFiListenXMillisForMsgOfType(uint32_t waitTime_ms, MsgTypes typeWanted, Me
 				wantedMsgRecvd = true;
 			}
 		}
+	    xil_printf("Here1");
 		// Check if the 1 second has elapsed, and if so return false
-		else if (ElapsedMilliSeconds(timeStart_ms, SYSGetMilliSecond()) > waitTime_ms)
+	    currentTime_ms = SYSGetMilliSecond();
+	    xil_printf("Here2");
+	    elapsedTime_ms = ElapsedMilliSeconds(timeStart_ms, currentTime_ms);
+		if (elapsedTime_ms > waitTime_ms)
 		{
-			xil_printf("%d miliseconds have elapsed, assuming that the message is not coming\r\n", waitTime_ms);
+			xil_printf("%d milliseconds have elapsed, assuming that the message is not coming\r\n", waitTime_ms);
 			return false;
 	 	}
+
+		// Every pass through loop(), keep the stack alive
+		DEIPcK::periodicTasks();
 	 }
 
 	 return true;
@@ -329,7 +357,7 @@ uint32_t RecvMessage(Message* msg)
 
 uint32_t ElapsedMilliSeconds(uint32_t start, uint32_t current)
 {
-	if(current > start)
+	if(current >= start)
 		return current - start;
 	else
 		// Only here if the timer rolled over

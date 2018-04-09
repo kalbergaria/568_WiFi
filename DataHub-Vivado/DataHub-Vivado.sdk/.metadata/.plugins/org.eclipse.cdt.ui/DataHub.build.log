@@ -1,21 +1,6 @@
-22:08:07 **** Auto Build of configuration Debug for project DataHub ****
+22:32:03 **** Incremental Build of configuration Debug for project DataHub ****
 make all 
-'Building file: ../src/LowLevelUdp.cpp'
-'Invoking: MicroBlaze g++ compiler'
-mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LowLevelUdp.o" -I../../DataHub_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/LowLevelUdp.d" -MT"src/LowLevelUdp.o" -o "src/LowLevelUdp.o" "../src/LowLevelUdp.cpp"
-'Finished building: ../src/LowLevelUdp.cpp'
-' '
-'Building target: DataHub.elf'
-'Invoking: MicroBlaze g++ linker'
-mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../DataHub_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "DataHub.elf"  ./src/LowLevelUdp.o ./src/UDPClientExample.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
-'Finished building target: DataHub.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size DataHub.elf  |tee "DataHub.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 336056	   1916	  20012	 357984	  57660	DataHub.elf
-'Finished building: DataHub.elf.size'
-' '
+make: Nothing to be done for `all'.
 
-22:08:09 Build Finished (took 2s.172ms)
+22:32:03 Build Finished (took 198ms)
 

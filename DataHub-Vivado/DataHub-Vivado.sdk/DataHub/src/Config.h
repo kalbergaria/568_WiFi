@@ -29,6 +29,7 @@ enum SensorIds
 
     // HUB
     GPS,
+    RTCC,
 };
 
 // Structure containing sensor info fields

@@ -1,17 +1,8 @@
-//#define HUB
-#define NODE
-#ifdef HUB
-	#include "HubWiFi.h"
-#endif
-
-#ifdef NODE
-	#include "WiFi.h"
-#endif
-
+#include "WiFi.h"
 #include "PmodWIFI.h"
 
 // Definition of all states
-typedef enum {INIT,	CONNECT, WIFI, EXT_NET, GET_POS, GET_TIME, CLOSE, DONE} State;
+typedef enum {INIT,	CONNECT, WIFI, CLOSE, DONE} State;
 
 // Prototypes
 void ChangeStatePrintTransition(State* currState, State newState);
@@ -25,6 +16,7 @@ int main(void)
 	// Variable declaration and initialization
 	State state = INIT;
 	IPSTATUS status;
+	bool performPeriodicTasks = false;
 
 	while(1)
 	{
@@ -32,7 +24,8 @@ int main(void)
 		{
 			// Perform necessary WiFi initialization
 			case INIT:
-				xil_printf("Performing WiFi initialization...\r\n");
+				xil_printf("\r\n\r\n-------------- NEW RUN --------------\r\n");
+				xil_printf("Performing initialization...\r\n");
 				InitWiFi();
 				xil_printf("Initialization complete!\r\n");
 				ChangeStatePrintTransition(&state, CONNECT);
@@ -46,6 +39,7 @@ int main(void)
 				// If connection successful change states
 				if(!IsIPStatusAnError(status))
 				{
+					performPeriodicTasks = true;
 					ChangeStatePrintTransition(&state, WIFI);
 				}
 				else // error with connection attempt
@@ -58,27 +52,7 @@ int main(void)
 			// Handle any periodic tasks and poll all incoming interfaces for a task
 			case WIFI:
 				xil_printf("For now there is nothing to do in the IDLE state...\r\n");
-
-				#ifdef HUB
-				WiFiListenForXMillisAndRespond(&status, 10000/*10 secs*/);
-				#endif
-
-				#ifdef NODE
-				#endif
-
 				ChangeStatePrintTransition(&state, CLOSE);
-				break;
-
-			// TODO: Implement the external network interface
-			case EXT_NET:
-				break;
-			
-			// TODO: Implement and integrate GPS
-			case GET_POS:
-				break;
-
-			// TODO: Implement and integrate RTCC
-			case GET_TIME:
 				break;
 
 			// Close the socket and transition to the DONE state
@@ -92,6 +66,11 @@ int main(void)
 			default:
 				break;
 		}
+
+		// Every pass through loop(), keep the stack alive once the
+		// WiFi interface is initialized
+		if(performPeriodicTasks)
+			DEIPcK::periodicTasks();
 	}
 
 	return 0;
