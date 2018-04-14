@@ -7,19 +7,19 @@ LD_SRCS += \
 ../src/lscript.ld 
 
 CPP_SRCS += \
+../src/Main.cpp \
 ../src/Messages.cpp \
-../src/WiFi.cpp \
-../src/main.cpp 
+../src/WiFi.cpp 
 
 OBJS += \
+./src/Main.o \
 ./src/Messages.o \
-./src/WiFi.o \
-./src/main.o 
+./src/WiFi.o 
 
 CPP_DEPS += \
+./src/Main.d \
 ./src/Messages.d \
-./src/WiFi.d \
-./src/main.d 
+./src/WiFi.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -33,7 +33,7 @@ enum SensorIds
 };
 
 // Structure containing sensor info fields
-struct SensorInfo
+typedef struct sensorInfo
 {
     char* sensorId;
     char* sensorNodeId;
@@ -42,7 +42,7 @@ struct SensorInfo
     char* dataUnits;
     char* samplingRate;
     char* dataFormat;
-};
+} SensorInfo;
 
 //--------------------------------------------------------------
 //--------------------------------------------------------------
@@ -123,7 +123,7 @@ static const char* SSID = "ECE568";
 
 // The static IP of the Data Hub
 //static const char* HUB_IP = "192.168.100.50";
-static const char* HUB_IP = "192.168.100.2";
+static const char* HUB_IP = "192.168.100.50";
 
 // Port to be used for communication locally and by the Data Hub
 static const uint16_t PORT = 44000;

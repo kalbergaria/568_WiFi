@@ -84,10 +84,12 @@ struct SystemHealthPayload
 // Message creation functions
 //--------------------------------------------------------------
 
-bool CreateConnReqMsg(Message* msg, uint8_t nodeId);
-bool CreateSysHealthMsg(Message* msg, uint8_t* payload, uint8_t nodeId);
-bool CreateSensorRegMsg(Message* msg, uint8_t* payload, uint8_t nodeId);
-bool CreateSensorDataPubMsg(Message* msg, uint8_t* payload, uint8_t nodeId);
+bool CreateConnReqMsg(Message* msg);
+bool CreateSysHealthMsg(Message* msg, uint8_t* payload);
+bool CreateSysHealthACKMsg(Message* msg);
+bool CreateSensorRegMsg(Message* msg, uint8_t* payload);
+bool CreateSensorDataPubMsg(Message* msg, uint8_t* payload);
+
 
 //--------------------------------------------------------------
 // Helper functions

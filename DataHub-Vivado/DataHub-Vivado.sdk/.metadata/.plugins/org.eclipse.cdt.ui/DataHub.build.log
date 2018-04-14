@@ -1,6 +1,42 @@
-22:32:03 **** Incremental Build of configuration Debug for project DataHub ****
+16:33:42 **** Auto Build of configuration Debug for project DataHub ****
 make all 
-make: Nothing to be done for `all'.
+'Building file: ../src/Main.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Main.o" -I../../DataHub_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/Main.d" -MT"src/Main.o" -o "src/Main.o" "../src/Main.cpp"
+In file included from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/../../../MRF24G/utility/ud_inc/internal/wf_global_includes.h:44:0,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/System.h:64,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/System.h:54,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/deIP.h:59,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../DataHub_bsp/microblaze_0/include/PmodWIFI.h:2,
+                 from ../src/Main.cpp:1:
+../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/../../../MRF24G/utility/ud_inc/internal/../../wf_customize.h:50:0: warning: "INLINE" redefined
+ #define INLINE
+ 
+In file included from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/System.h:62:0,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/System.h:54,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/deIP.h:59,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../DataHub_bsp/microblaze_0/include/PmodWIFI.h:2,
+                 from ../src/Main.cpp:1:
+../../DataHub_bsp/microblaze_0/include/xil_io.h:99:0: note: this is the location of the previous definition
+ #define INLINE inline
+ 
+../src/Main.cpp: In function 'void WiFi()':
+../src/Main.cpp:114:43: error: 'numSensors' was not declared in this scope
+             while (numSensorsRegistered < numSensors)
+                                           ^~~~~~~~~~
+../src/Main.cpp:129:21: warning: unused variable 'writeReturn' [-Wunused-variable]
+                 int writeReturn = udpClient.writeDatagram((byte *)&msg2Send, MSG_SIZE);
+                     ^~~~~~~~~~~
+In file included from ../src/Messages.h:5:0,
+                 from ../src/WiFi.h:4,
+                 from ../src/Main.cpp:2:
+../src/Config.h: At global scope:
+../src/Config.h:122:20: warning: 'SSID' defined but not used [-Wunused-variable]
+ static const char* SSID = "ECE568";
+                    ^~~~
+make: *** [src/Main.o] Error 1
 
-22:32:03 Build Finished (took 198ms)
+16:33:43 Build Finished (took 359ms)
 
