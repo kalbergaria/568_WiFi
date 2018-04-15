@@ -9,7 +9,7 @@ typedef enum {
     RECEIVE_SYS_HEALTH_CONFIRM_CONNECTION,
     SENSOR_REG_PREP,
     SEND_SENSOR_REG,
-	RECEIVE_REG_ACK,
+    RECEIVE_SENSOR_REG,
     SEND,
     RECEIVE,
     CLOSE,
@@ -109,10 +109,8 @@ void WiFi()
                     msgObtained = false;
                     xil_printf("Connected to HUB!\r\n");
                     ChangeStatePrintTransition(SENSOR_REG_PREP);
-                    break;
                 }
                 ChangeStatePrintTransition(CLOSE);
-                break;
             }
             ChangeStatePrintTransition(RECEIVE);
             break;
@@ -126,17 +124,16 @@ void WiFi()
             break;
 
         case SEND_SENSOR_REG:
-            if (numSensorsRegistered < numSensors) //while loop not exiting
+            while (numSensorsRegistered < numSensors)
             {
                 CreateSensorRegMsg(&msg2Send, (byte*)&sensorInfoCollection[numSensorsRegistered]);
                 ChangeStatePrintTransition(SEND);
-                break;
             }
             ChangeStatePrintTransition(CLOSE);
             break;
 
-        case RECEIVE_REG_ACK:
-            if (numSensorsRegistered < numSensors)
+        case RECEIVE_SENSOR_REG:
+            while (numSensorsRegistered < numSensors)
             {
                 if (msgObtained)
                     if (msgReceived.header.msgType == REG_ACK)
@@ -226,7 +223,7 @@ void PrintState(STATE state)
     case SEND_SENSOR_REG:
             xil_printf("SEND_SENSOR_REG");
             break;
-    case RECEIVE_REG_ACK:
+    case RECEIVE_SENSOR_REG:
             xil_printf("RECEIVE_SENSOR_REG");
             break;
     case SEND:

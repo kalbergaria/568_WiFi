@@ -9,7 +9,7 @@ typedef enum {
     RECEIVE_SYS_HEALTH_CONFIRM_CONNECTION,
     SENSOR_REG_PREP,
     SEND_SENSOR_REG,
-	RECEIVE_REG_ACK,
+    RECEIVE_SENSOR_REG,
     SEND,
     RECEIVE,
     CLOSE,
@@ -34,10 +34,6 @@ IPEndPoint epRemote;
 // Read buffer
 Message msgReceived;
 int readSize = 0;
-
-// The number of sensors that belongs to the sensor
-// node
-uint8_t numSensors;
 
 // The number of sensors that have been successfully registered
 // with the hub
@@ -109,10 +105,8 @@ void WiFi()
                     msgObtained = false;
                     xil_printf("Connected to HUB!\r\n");
                     ChangeStatePrintTransition(SENSOR_REG_PREP);
-                    break;
                 }
                 ChangeStatePrintTransition(CLOSE);
-                break;
             }
             ChangeStatePrintTransition(RECEIVE);
             break;
@@ -120,23 +114,21 @@ void WiFi()
         case SENSOR_REG_PREP:
             // Calculate the number of sensor that need to be registered
 	        // based on the size of the array of sensorInfo structures
-	        numSensors = sizeof(sensorInfoCollection) / sizeof(SensorInfo);
+	        uint8_t numSensors = sizeof(sensorInfoCollection) / sizeof(SensorInfo);
 	        xil_printf("Attempting to register %d sensors\r\n", numSensors);
-	        ChangeStatePrintTransition(SEND_SENSOR_REG);
             break;
 
         case SEND_SENSOR_REG:
-            if (numSensorsRegistered < numSensors) //while loop not exiting
+            while (numSensorsRegistered < numSensors)
             {
                 CreateSensorRegMsg(&msg2Send, (byte*)&sensorInfoCollection[numSensorsRegistered]);
                 ChangeStatePrintTransition(SEND);
-                break;
             }
             ChangeStatePrintTransition(CLOSE);
             break;
 
-        case RECEIVE_REG_ACK:
-            if (numSensorsRegistered < numSensors)
+        case RECEIVE_SENSOR_REG:
+            while (numSensorsRegistered < numSensors)
             {
                 if (msgObtained)
                     if (msgReceived.header.msgType == REG_ACK)
@@ -221,14 +213,8 @@ void PrintState(STATE state)
         xil_printf("RECEIVE_SYS_HEALTH_CONFIRM_CONNECTION");
         break;
     case SENSOR_REG_PREP:
-        xil_printf("SENSOR_REG_PREP");
+        xil_printf("REGISTER_SENSORS");
         break;
-    case SEND_SENSOR_REG:
-            xil_printf("SEND_SENSOR_REG");
-            break;
-    case RECEIVE_REG_ACK:
-            xil_printf("RECEIVE_SENSOR_REG");
-            break;
     case SEND:
         xil_printf("SEND");
         break;

@@ -136,7 +136,7 @@ void WiFi()
             break;
 
         case RECEIVE_REG_ACK:
-            if (numSensorsRegistered < numSensors)
+            while (numSensorsRegistered < numSensors)
             {
                 if (msgObtained)
                     if (msgReceived.header.msgType == REG_ACK)
@@ -226,7 +226,7 @@ void PrintState(STATE state)
     case SEND_SENSOR_REG:
             xil_printf("SEND_SENSOR_REG");
             break;
-    case RECEIVE_REG_ACK:
+    case RECEIVE_SENSOR_REG:
             xil_printf("RECEIVE_SENSOR_REG");
             break;
     case SEND:

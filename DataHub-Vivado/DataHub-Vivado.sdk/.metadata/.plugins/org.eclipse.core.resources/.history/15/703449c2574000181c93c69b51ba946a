@@ -136,7 +136,7 @@ void WiFi()
             break;
 
         case RECEIVE_REG_ACK:
-            if (numSensorsRegistered < numSensors)
+            while (numSensorsRegistered < numSensors)
             {
                 if (msgObtained)
                     if (msgReceived.header.msgType == REG_ACK)
