@@ -1,23 +1,64 @@
 #include "WiFi.h"
+#include "Messages.h"
 #include "Config.h"
 
 // The following #include has to be placed after "WiFi.h" because
 // of forward declarations
+// TODO: see if I can make this include relative
 #include "../../DataHub_bsp/microblaze_0/include/DEIPcK/DEIPcK.h"
+
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+// Max Wait Times for Responses
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+
+#define SYS_HEALTH_WAITTIME 1000 //ms
+#define REG_ACK_WAITTIME 1000 //ms
+
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+// Communications Socket
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+
+static UDPSocket udpSocket;
+
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+// Messages Buffer
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+
+#define MSG_BUFFER_SIZE 10
+static Message msgBuf[MSG_BUFFER_SIZE];
+static uint8_t numMsgsInBuf;
+
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+// System Health
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+
+// A data structure to keep the current system health
+static SystemHealthPayload currentSysHealth;
+
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+// IP Address Settings
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
 
 ////////////////////////////////////////////////////////////////
 // 	Summary:
-// 		Sets a static IP if operating as the HUB
-// 		else allow DHCP to set the IP
-#if MY_NODE_ID != 4 // 4 - denotes HUB
-	// Set to {0,0,0,0} for DHCP
-	// or set each IPV4 segment
-	// Example: 192.168.100.10 = {192,168,100,10}
-	static const IPv4 MY_IP = {0,0,0,0};
-#else
-	// The static IP for the data hub is 192.168.100.50
-	static const IPv4 MY_IP = {192,168,100,50};
-#endif
+// 		IPs have to be static or else an error occurs.
+static IPv4 MY_IP = {192,168,100,10};
+
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+// Sensor-node WiFi Interface Functions
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
 
 ////////////////////////////////////////////////////////////////
 // 	Summary:
@@ -38,10 +79,7 @@ void InitWiFi()
 
 ////////////////////////////////////////////////////////////////
 // 	Summary:
-// 		IF DATA HUB -> An attempt at establishing a connection
-//		to the network specified in Config.h will be made
-//
-// 		IF SENSOR NODE -> An attempt at establishing a
+// 		An attempt at establishing a
 //		connection to the network specified in Config.h will be
 // 		made, and attempt to establish a connection with the
 //		Data Hub
@@ -49,28 +87,19 @@ void InitWiFi()
 // 	Returns:
 // 		TRUE -> if a connection to the Data Hub was established
 // 		FALSE -> if a connection to the Data Hub was not established
-bool Connect(UDPSocket* udpSocket, IPSTATUS* status)
+bool Connect(IPSTATUS* status)
 {
+	// Connect to the network
 	if (WiFiConnectMacro())
 	{
+		// Get an IP address
 		if(deIPcK.begin(MY_IP))
 		{
 			xil_printf("Connection established with network: %s\r\n", SSID);
 
-// If you want this to run/not-run, make sure MY_NODE_ID is properly set in Config.h
-#if MY_NODE_ID != 4
-			xil_printf("Attempting to connect to HUB...\r\n", SSID);
-			if(ConnectToHub(udpSocket, status))
-			{
-				xil_printf("Preparing to register sensors...\r\n", SSID);
-				if(RegisterSensors(udpSocket, status))
-					xil_printf("All sensors have been registered!");
-				else
-					return false;
-			}
-			else
-				return false;
-#endif
+			// Check what IP I was given
+			deIPcK.getMyIP(MY_IP);
+			xil_printf("My IP address is: %d.%d.%d.%d\r\n", MY_IP.u8[0], MY_IP.u8[1], MY_IP.u8[2], MY_IP.u8[3]);
 
 			return true;
 		}
@@ -78,12 +107,6 @@ bool Connect(UDPSocket* udpSocket, IPSTATUS* status)
 
 	return false;
 }
-
-//-----------------------------------------------------------------------------------
-//-----------------------------------------------------------------------------------
-// Sensor-node messaging functions
-//-----------------------------------------------------------------------------------
-//-----------------------------------------------------------------------------------
 
 ////////////////////////////////////////////////////////////////
 // 	Summary:
@@ -96,34 +119,61 @@ bool Connect(UDPSocket* udpSocket, IPSTATUS* status)
 // 		TRUE -> if a connection to the Data Hub was established
 // 		FALSE -> if a connection to the Data Hub was not
 //		established
-bool ConnectToHub(UDPSocket* udpSocket, IPSTATUS* status)
+bool ConnectToHub(IPSTATUS* status)
 {
-	// Resolve the end point (i.e. the Data Hub)
-	IPEndPoint epRemote;
-	deIPcK.resolveEndPoint(HUB_IP, PORT, epRemote, status);
-	deIPcK.udpSetEndPoint(epRemote, *udpSocket, PORT, status);
-	// Always check the status and get out on error
-	if (IsIPStatusAnError(*status))
-	{
-		xil_printf("Unable to resolve endpoint(Data Hub), error: 0x%X\r\n", status);
-		return false;
-	}
+	xil_printf("Attempting to connect to HUB...\r\n", SSID);
 
-	// Send the connection request and allow up to 1 second for a SYS_HEALTH response
-	Message connReqMsg;
-	Message sysHealthMsg;
-	CreateConnReqMsg(&connReqMsg, MY_NODE_ID);
-	if(SendMessage(&connReqMsg, udpSocket, status, HUB))
+	// Declare/init local variables
+	int8_t sysHealthMsgIndex = 0;
+
+	// Resolve end point (i.e. the Data Hub)
+	IPEndPoint epRemote;
+	if(deIPcK.resolveEndPoint(HUB_IP, PORT, epRemote, status))  // FIXME: endpoint not being resolved
 	{
-		xil_printf("Waiting up to 1 second for a response from the Data Hub...\r\n");
-		if(WaitXMillisForMsgOfSpecifiedType(1000/*msec*/, SYS_HEALTH, &sysHealthMsg, udpSocket))
+		// Set the Data Hub as the end point
+		if(deIPcK.udpSetEndPoint(epRemote, udpSocket, PORT, status))
 		{
-			StoreSystemHealthState(&sysHealthMsg);
+			xil_printf("Endpoint set to: %s:%d\r\n", HUB_IP, PORT);
+
+			// Send a connection request and wait SYS_HEALTH_WAITTIME for a SYS_HEALTH
+			// message, repeat if the SYS_HEALTH message is not received within the
+			// time frame alotted
+			Message connReqMsg; // the connection request message to be sent
+			CreateConnReqMsg(&connReqMsg);
+			do
+			{
+				if(SendMessage(&connReqMsg, status))
+				{
+					xil_printf("Monitoring incoming messages for a SYS_HEALTH...\r\n");
+					CheckForMessagesForXMillis(status, SYS_HEALTH_WAITTIME);
+					sysHealthMsgIndex = CheckMsgBufForMsgType(SYS_HEALTH);
+				}
+			}
+			while(sysHealthMsgIndex < 0);
+
+			// ACK the receipt of the SYS_HEALTH message
+			xil_printf("SYS_HEALTH message received...\r\n");
+			Message sysHealthACKMsg;
+			CreateSysHealthACKMsg(&sysHealthACKMsg);
+			SendMessage(&sysHealthACKMsg, status);
+			// Store the obtained system health message
+			memcpy(msgBuf[sysHealthMsgIndex].payload, &currentSysHealth, sizeof(SystemHealthPayload));
+
+			// Connection established!
 			xil_printf("A connection to the Data Hub has been established!\r\n");
 			return true;
 		}
+		else
+		{
+			xil_printf("Endpoint could not be set!\r\n");
+			return false;
+		}
 	}
-	xil_printf("Unable to connect to the Data Hub!\r\n");
+
+	// Always check the status and get out on error
+	if (IsIPStatusAnError(*status))
+		xil_printf("Unable to resolve endpoint(Data Hub), error: 0x%X\r\n", status);
+
 	return false;
 }
 
@@ -138,8 +188,10 @@ bool ConnectToHub(UDPSocket* udpSocket, IPSTATUS* status)
 // 	Returns:
 // 		TRUE -> if all sensors were successfully registered
 // 		FALSE -> if any sensor could not be registered
-bool RegisterSensors(UDPSocket* udpSocket, IPSTATUS* status)
+bool RegisterSensors(IPSTATUS* status)
 {
+	// TODO: Need a data structure to track which sensor have been registered
+
 	// Calculate the number of sensor that need to be registered
 	// based on the size of the array of sensorInfo structures
 	uint8_t numSensors = sizeof(sensorInfoCollection) / sizeof(SensorInfo);
@@ -151,27 +203,92 @@ bool RegisterSensors(UDPSocket* udpSocket, IPSTATUS* status)
 	Message regAckMsg;
 	for(int i = 0; i < numSensors; i++)
 	{
-		CreateSensorRegMsg(&sensorRegMsg, (uint8_t*)&sensorInfoCollection[i], MY_NODE_ID);
-		if(SendMessage(&sensorRegMsg, udpSocket, status, HUB))
+		CreateSensorRegMsg(&sensorRegMsg, (uint8_t*)&sensorInfoCollection[i]);
+		if(SendMessage(&sensorRegMsg, status))
 		{
-			// Wait up to 250 ms for the registration to be
+			/*// Wait up to 250 ms for the registration to be
 			// acknowledged by the Data Hub
-			if(WaitXMillisForMsgOfSpecifiedType(250/*msec*/, REG_ACK, &regAckMsg, udpSocket))
+			if(WiFiListenXMillisForMsgOfType(REG_ACK_WAITTIME, REG_ACK, &regAckMsg))
 				xil_printf("%s has been successfully registered!\r\n", sensorInfoCollection[i].sensorName);
 			else
 			{
 				xil_printf("ERROR: %s could not be registered\r\n", sensorInfoCollection[i].sensorName);
 				successfulRegistration = false;
-			}
+			}*/
 		}
 	}
+
+	if(successfulRegistration)
+		xil_printf("All sensors have been registered!");
 
 	return successfulRegistration;
 }
 
-void StoreSystemHealthState(Message* sysHealthMsg)
+////////////////////////////////////////////////////////////////
+// 	Summary:
+// 		The data and the ID of its sensor provided to this
+//      function will be sent to the Data Hub.
+//
+// 	Returns:
+// 		TRUE -> if the sensor data and ID was successfully sent
+// 		FALSE -> if there was an issue sending the data provided
+bool SensorDataPub(IPSTATUS* status, SensorData sensorData, uint8_t sensorID)
 {
-	// TODO: implement StoreSystemHealthState()
+	// Create and populate the Sensor Data Pub message
+	Message dataPubMsg;
+	SensorDataPayload payload;
+	payload.sensorID = sensorID;
+	memcpy(&sensorData, &payload.sensorData, SENSOR_DATA_SIZE);
+	CreateSensorDataPubMsg(&dataPubMsg, (uint8_t*)&payload);
+
+	// Send the message
+	if(SendMessage(&dataPubMsg, status))
+	{
+		xil_printf("Data from !\r\n");
+		// TODO: Print the sensor ID
+		xil_printf(" has been published to the Hub!");
+		return true;
+	}
+	xil_printf("Error publishing the data from ");
+	// TODO: Print the sensor
+	xil_printf("\r\n");
+	return false;
+}
+
+////////////////////////////////////////////////////////////////
+// 	Summary:
+// 		
+//
+// 	Returns:
+// 		TRUE -> 
+// 		FALSE -> 
+bool CheckForSystemHealthMsg(Message* msg)
+{
+	// TODO: implement CheckForSystemHealthMsg()
+}
+
+////////////////////////////////////////////////////////////////
+// 	Summary:
+// 		
+//
+// 	Returns:
+// 		TRUE -> 
+// 		FALSE -> 
+bool SubToSensor(Message* msg)
+{
+	// TODO: implement SubToSensor()
+}
+
+////////////////////////////////////////////////////////////////
+// 	Summary:
+// 		
+//
+// 	Returns:
+// 		TRUE -> 
+// 		FALSE -> 
+bool ReportEmergency(Message* msg)
+{
+	// TODO: implement ReportEmergency()
 }
 
 //-----------------------------------------------------------------------------------
@@ -180,13 +297,15 @@ void StoreSystemHealthState(Message* sysHealthMsg)
 //-----------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
 
-
-bool SendMessage(Message* msg, UDPSocket* udpSocket, IPSTATUS* status, SensorNodeIds destId)
+bool SendMessage(Message* msg, IPSTATUS* status)
 {
+	uint8_t writeReturn;
+
 	if (deIPcK.isIPReady(status))
 	{
-        PrintMsgTypeAndDest((MsgTypes)msg->header.msgType, destId);
-        udpSocket->writeDatagram((byte*)msg, sizeof(Message));
+        PrintMsgTypeAndDest((MsgTypes)msg->header.msgType, HUB);
+        writeReturn = udpSocket.writeDatagram((byte*)msg, sizeof(Message)); // FIXME: sending unsuccessful
+		DEIPcK::periodicTasks();
         return true;
  	}
  	else if (IsIPStatusAnError(*status))
@@ -207,58 +326,46 @@ bool SendMessage(Message* msg, UDPSocket* udpSocket, IPSTATUS* status, SensorNod
 
 // Read all incoming messages until a message of the specified type comes in,
 // or the specified amount of time has elapsed
-bool WaitXMillisForMsgOfSpecifiedType(uint32_t waitTime_ms, MsgTypes typeWanted, Message* msg, UDPSocket* udpSocket)
+void CheckForMessagesForXMillis(IPSTATUS* status, uint32_t waitTime_ms)
 {
 	// Variables init
 	uint32_t bytesRead;
 	Message message;
-	bool wantedMsgRecvd = false;
-
-	// Print the message type we are waiting for
-	xil_printf("waiting for a ");
-	PrintMsgType(typeWanted);
-	xil_printf("...\r\n");
 
 	// Start the timer
 	uint32_t timeStart_ms = SYSGetMilliSecond();
-    while(!wantedMsgRecvd)
-    {
+	while(ElapsedMilliSeconds(timeStart_ms, SYSGetMilliSecond()) < waitTime_ms)
+	{
 		// Read incoming messages and check if they are of the desired type
-	    if((bytesRead = RecvMessage(&message, udpSocket)) > 0)
-		{
-			if(message.header.msgType == typeWanted)
-			{
-				PrintMsgType((MsgTypes)message.header.msgType);
-				xil_printf(" message received!");
+		if((bytesRead = RecvMessage(&message)) > 0)
+			memcpy(&msgBuf[numMsgsInBuf++], &message, MSG_SIZE);
 
-				wantedMsgRecvd = true;
-			}
-		}
-		// Check if the 1 second has elapsed, and if so return false
-		else if (ElapsedMilliSeconds(timeStart_ms, SYSGetMilliSecond()) > waitTime_ms)
-		{
-			xil_printf("%d miliseconds have elapsed, assuming that the message is not coming\r\n", waitTime_ms);
-			return false;
-	 	}
+		// Every pass through through this loop keep the stack alive
+		DEIPcK::periodicTasks();
 	 }
-
-	 return true;
 }
 
-uint32_t RecvMessage(Message* msg, UDPSocket* udpSocket)
+uint32_t RecvMessage(Message* msg)
 {
-	if ((udpSocket->available()) > 0)
+	if ((udpSocket.available()) > 0)
 	{
-		return udpSocket->readDatagram((byte*)msg, MSG_SIZE);
+		return udpSocket.readDatagram((byte*)msg, MSG_SIZE);
 	}
 	return 0;
 }
 
+int8_t CheckMsgBufForMsgType(MsgTypes desiredType)
+{
+	for(int i = 0; i < numMsgsInBuf; i++)
+		if(msgBuf[i].header.msgType == desiredType)
+			return i;
 
+	return -1;
+}
 
 uint32_t ElapsedMilliSeconds(uint32_t start, uint32_t current)
 {
-	if(current > start)
+	if(current >= start)
 		return current - start;
 	else
 		// Only here if the timer rolled over

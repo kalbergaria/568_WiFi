@@ -1,0 +1,214 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 14212
+License: Customer
+
+Current time: 	Wed Apr 04 15:45:31 EDT 2018
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 3072x1728
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 51 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	Keith
+User home directory: C:/Users/Keith
+User working directory: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.4
+RDI_DATADIR: C:/Xilinx/Vivado/2017.4/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/Keith/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/Keith/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/Keith/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/vivado.log
+Vivado journal file location: 	C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/vivado.jou
+Engine tmp dir: 	C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/.Xil/Vivado-14212-Keith-Z640
+
+GUI allocated memory:	180 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 546 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.xpr. Version: Vivado v2017.4 
+// bs (cj):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// [GUI Memory]: 53 MB (+53501kb) [00:00:07]
+// [Engine Memory]: 504 MB (+376572kb) [00:00:07]
+// Tcl Message: open_project C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// HMemoryUtils.trashcanNow. Engine heap size: 546 MB. GUI used memory: 48 MB. Current time: 4/4/18 3:45:33 PM EDT
+// [Engine Memory]: 546 MB (+18307kb) [00:00:12]
+// [Engine Memory]: 592 MB (+19478kb) [00:00:17]
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 621 MB. GUI used memory: 48 MB. Current time: 4/4/18 3:45:48 PM EDT
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 626 MB (+4697kb) [00:00:27]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 68 MB (+12819kb) [00:00:29]
+// [Engine Memory]: 677 MB (+20677kb) [00:00:29]
+// [GUI Memory]: 85 MB (+13505kb) [00:00:31]
+// [Engine Memory]: 713 MB (+1432kb) [00:00:31]
+// [Engine Memory]: 757 MB (+8783kb) [00:00:32]
+// [GUI Memory]: 89 MB (+357kb) [00:00:32]
+// [GUI Memory]: 100 MB (+7098kb) [00:00:33]
+// [Engine Memory]: 808 MB (+14396kb) [00:00:34]
+// Tcl Message: open_project C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Keith/Documents/Git/568_Hub/568_WiFi/vivado-library'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:37 ; elapsed = 00:00:29 . Memory (MB): peak = 965.633 ; gain = 258.973 
+// Project name: DataHub-Vivado; location: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U (q, cj)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // Z (cj)
+// [GUI Memory]: 123 MB (+18094kb) [00:00:43]
+// Tcl Message: update_compile_order -fileset sources_1 
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z (cj)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ac (cj)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U (q, cj)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// X (cj): Export Hardware: addNotify
+selectCheckBox(PAResourceItoN.NewExportHardwareDialog_INCLUDE_BITSTREAM, "Include bitstream", true); // g (N, X): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (X)
+// 'm' command handler elapsed time: 6 seconds
+dismissDialog("Export Hardware"); // X (cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// x (cj): Synthesis is Out-of-date: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 845 MB. GUI used memory: 84 MB. Current time: 4/4/18 3:46:19 PM EDT
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // x (cj)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run DataHub_mig_7series_0_0_synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 5 seconds
+dismissDialog("Launch Runs"); // f (cj)
+// bs (cj):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP DataHub_mig_7series_0_0, cache-ID = 53f8dc96ee8309fc; cache size = 47.299 MB. 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Tcl Message: config_ip_cache: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 995.578 ; gain = 0.000 
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// [Engine Memory]: 852 MB (+3487kb) [00:01:12]
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Apr  4 15:46:35 2018] Launched DataHub_mig_7series_0_0_synth_1, synth_1... Run output will be captured here: DataHub_mig_7series_0_0_synth_1: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.runs/DataHub_mig_7series_0_0_synth_1/runme.log synth_1: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.runs/synth_1/runme.log [Wed Apr  4 15:46:35 2018] Launched impl_1... Run output will be captured here: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1000.707 ; gain = 5.129 
+// Elapsed time: 13 seconds
+dismissDialog("Generate Bitstream"); // bs (cj)
+// [GUI Memory]: 130 MB (+935kb) [00:01:27]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// [GUI Memory]: 153 MB (+16961kb) [00:01:48]
+// HMemoryUtils.trashcanNow. Engine heap size: 908 MB. GUI used memory: 91 MB. Current time: 4/4/18 3:47:14 PM EDT
+// [Engine Memory]: 908 MB (+13690kb) [00:01:51]
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// [GUI Memory]: 163 MB (+2605kb) [00:03:10]
+// HMemoryUtils.trashcanNow. Engine heap size: 929 MB. GUI used memory: 93 MB. Current time: 4/4/18 3:48:44 PM EDT
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cj): Bitstream Generation Completed: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 929 MB. GUI used memory: 94 MB. Current time: 4/4/18 4:18:44 PM EDT
+// [GUI Memory]: 188 MB (+18330kb) [00:52:04]
+// [GUI Memory]: 236 MB (+40043kb) [00:52:07]
+// HMemoryUtils.trashcanNow. Engine heap size: 929 MB. GUI used memory: 91 MB. Current time: 4/4/18 4:48:44 PM EDT
+// Elapsed time: 5266 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+// aI (cj): Feedback Request: addNotify
+dismissDialog("Bitstream Generation Completed"); // ah (cj)
+selectButton(PAResourceTtoZ.TouchpointSurveyDialog_NO, "No"); // a (aI)
+dismissDialog("Feedback Request"); // aI (cj)
+selectButton("PAResourceTtoZ.TouchpointSurveyDialog_USE_TOOLS_OPTIONS_WINDOWS_BEHAVIOR_OK", "OK"); // JButton (A, G)
+// Elapsed time: 14 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U (q, cj)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // Z (cj)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z (cj)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z (cj)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ac (cj)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U (q, cj)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// X (cj): Export Hardware: addNotify
+selectCheckBox(PAResourceItoN.NewExportHardwareDialog_INCLUDE_BITSTREAM, "Include bitstream", true); // g (N, X): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (X)
+// 'm' command handler elapsed time: 4 seconds
+selectButton("PAResourceItoN.NewExportHardwareDialog_EXPORTED_FILE_FOR_THIS_MODULE_WAS_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Export Hardware"); // X (cj)
+// Tcl Message: file copy -force C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.runs/impl_1/DataHub_wrapper.sysdef C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper.hdf  
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U (q, cj)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // Z (cj)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z (cj)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ac (cj)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U (q, cj)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa (cj): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aa)
+dismissDialog("Launch SDK"); // aa (cj)
+// Tcl Message: launch_sdk -workspace C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk -hwspec C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk -hwspec C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// HMemoryUtils.trashcanNow. Engine heap size: 929 MB. GUI used memory: 92 MB. Current time: 4/4/18 5:18:45 PM EDT
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 929 MB. GUI used memory: 93 MB. Current time: 4/4/18 6:29:04 PM EDT
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 929 MB. GUI used memory: 92 MB. Current time: 4/4/18 6:59:07 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 929 MB. GUI used memory: 92 MB. Current time: 4/4/18 7:29:07 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 929 MB. GUI used memory: 92 MB. Current time: 4/4/18 7:59:07 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 929 MB. GUI used memory: 92 MB. Current time: 4/4/18 8:29:08 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 929 MB. GUI used memory: 92 MB. Current time: 4/4/18 8:59:08 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 929 MB. GUI used memory: 132 MB. Current time: 4/4/18 9:29:08 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 929 MB. GUI used memory: 92 MB. Current time: 4/5/18 7:57:22 AM EDT

@@ -1,0 +1,187 @@
+#include "PmodWIFI.h"
+#include "WiFi2.h"
+
+IPv4 myIP = {192,168,100,12};
+IPv4 readIP;
+
+typedef enum {
+   NONE = 0,
+   CONNECT,
+   SET_HUB_AS_ENDPOINT,
+   CONNECT_TO_HUB,
+   SEND,
+   RECEIVE,
+   CLOSE,
+   DONE,
+} STATE;
+
+STATE state = CONNECT;
+STATE prevState = CONNECT;
+
+// Prototypes
+void WiFi();
+void ChangeStatePrintTransition(STATE* currState, STATE newState);
+void PrintState(STATE state);
+
+unsigned tStart = 0;
+unsigned tStart2 = 0;
+unsigned tWait = 5000;
+
+// Must have a datagram cache
+UDPSocket udpClient;
+
+// Read buffer
+Message msgReceived;
+int readSize = 0;
+
+IPSTATUS status = ipsSuccess;
+IPEndPoint epRemote;
+
+// Message to write
+Message msg2Send; // sourceID = LIGHTING, MsgTypes = CONN_REQ
+
+bool msgObtained = false;
+
+
+int main(void) {
+   Xil_ICacheEnable();
+   Xil_DCacheEnable();
+
+   xil_printf("\r\n\r\n-------------- NEW RUN --------------\r\n");
+   WiFi();
+   return 0;
+}
+
+void WiFi() {
+   while (1) {
+      switch (state) {
+      case CONNECT:
+    	 InitWiFi();
+         if (Connect(&status))
+            state = SET_HUB_AS_ENDPOINT;
+         else if (IsIPStatusAnError(status))
+         {
+            xil_printf("Unable to connect, status: 0x%X\r\n", status);
+            state = CLOSE;
+         }
+         break;
+
+      case SET_HUB_AS_ENDPOINT:
+         if (deIPcK.resolveEndPoint(HUB_IP, PORT, epRemote,
+               &status)) {
+            if (deIPcK.udpSetEndPoint(epRemote, udpClient,
+            		PORT, &status)) {
+            	xil_printf("Endpoint set to: %s:%d\r\n", HUB_IP, PORT);
+            	state = CONNECT_TO_HUB;
+            }
+         }
+
+         // Always check the status and get out on error
+         if (IsIPStatusAnError(status)) {
+            xil_printf("Unable to resolve endpoint, error: 0x%X\r\n", status);
+            state = CLOSE;
+         }
+         break;
+
+      case CONNECT_TO_HUB:
+    	  CreateConnReqMsg(&msg2Send);
+    	  if(msgObtained)
+    	  {
+    		  if(msgReceived.header.msgType == SYS_HEALTH)
+    			  xil_printf("Connected to HUB!");
+    	  }
+    	  state = CLOSE;
+    	  break;
+
+      // Write out the strings
+      case SEND:
+         if (deIPcK.isIPReady(&status)) {
+            xil_printf("Writing out Datagram\r\n");
+
+            int writeReturn = udpClient.writeDatagram((byte*)&msg2Send, MSG_SIZE);
+
+            if(msg2Send.header.msgType != SENSOR_DATA_PUB)
+            	state = READ;
+            else
+            	state = CLOSE;
+
+            tStart = (unsigned) SYSGetMilliSecond();
+         } else if (IsIPStatusAnError(status)) {
+            xil_printf("Lost the network, error: 0x%X\r\n", status);
+            state = CLOSE;
+         }
+         break;
+
+      case RECEIVE:
+    	  xil_printf("Waiting for a datagram...\r\n");
+
+         // See if we got anything to read
+         if ((readSize = udpClient.available()) > 0) {
+            readSize = udpClient.readDatagram((byte*)&msgReceived, readSize);
+
+            msgObtained = true;
+
+            // Give us some more time to wait for stuff to come back
+            tStart = (unsigned) SYSGetMilliSecond();
+         }
+
+         // Give us some time to get everything echo'ed back
+         // or if the datagram is never echoed back
+         else if ((((unsigned) SYSGetMilliSecond()) - tStart) > tWait) {
+            xil_printf("Done waiting, assuming nothing more is coming\r\n");
+            state = CLOSE;
+         }
+         break;
+
+      // Done, so close up the tcpClient
+      case CLOSE:
+         udpClient.close();
+         xil_printf("Closing udpClient, Done with sketch.\r\n");
+         state = DONE;
+         break;
+
+      case DONE:
+
+      default:
+         break;
+      }
+
+      // Keep the stack alive each pass through the loop()
+      DEIPcK::periodicTasks();
+   }
+}
+
+void ChangeStatePrintTransition(State* currState, State newState)
+{
+	xil_printf("Transitioning from ");
+	PrintState(*currState);
+	xil_printf(" to ");
+	PrintState(newState);
+	xil_printf("\r\n");
+	xil_printf("\r\n");
+	*currState = newState;
+}
+
+void PrintState(State state)
+{
+	switch(state)
+	{
+		case INIT:
+			xil_printf("INIT");
+			break;
+		case CONNECT:
+			xil_printf("CONNECT");
+			break;
+		case WIFI:
+			xil_printf("WIFI");
+			break;
+		case CLOSE:
+			xil_printf("CLOSE");
+			break;
+		case DONE:
+			xil_printf("DONE");
+			break;
+		default:
+			break;
+	}
+}

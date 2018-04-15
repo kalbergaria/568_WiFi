@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="35" Path="C:/Users/Keith/Documents/Git/DataHub/DataHub-Vivado/DataHub-Vivado.xpr">
+<Project Version="7" Minor="35" Path="C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="fa891b7b6ca949faa7d5e3beb5838ad6"/>
@@ -63,9 +63,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_microblaze_0_axi_intc_0/DataHub_microblaze_0_axi_intc_0.xci">
-          <Proxy FileSetName="DataHub_microblaze_0_axi_intc_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_clk_wiz_0_0/DataHub_clk_wiz_0_0.xci">
           <Proxy FileSetName="DataHub_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
@@ -78,29 +75,17 @@
         <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_axi_uartlite_0_0/DataHub_axi_uartlite_0_0.xci">
           <Proxy FileSetName="DataHub_axi_uartlite_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_microblaze_0_xlconcat_0/DataHub_microblaze_0_xlconcat_0.xci">
-          <Proxy FileSetName="DataHub_microblaze_0_xlconcat_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_mdm_1_0/DataHub_mdm_1_0.xci">
-          <Proxy FileSetName="DataHub_mdm_1_0"/>
+        <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_microblaze_0_axi_intc_0/DataHub_microblaze_0_axi_intc_0.xci">
+          <Proxy FileSetName="DataHub_microblaze_0_axi_intc_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_rst_clk_wiz_0_100M_0/DataHub_rst_clk_wiz_0_100M_0.xci">
           <Proxy FileSetName="DataHub_rst_clk_wiz_0_100M_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_PmodSD_0_0/DataHub_PmodSD_0_0.xci">
-          <Proxy FileSetName="DataHub_PmodSD_0_0"/>
+        <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_mdm_1_0/DataHub_mdm_1_0.xci">
+          <Proxy FileSetName="DataHub_mdm_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_dlmb_v10_0/DataHub_dlmb_v10_0.xci">
-          <Proxy FileSetName="DataHub_dlmb_v10_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_lmb_bram_0/DataHub_lmb_bram_0.xci">
-          <Proxy FileSetName="DataHub_lmb_bram_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_ilmb_bram_if_cntlr_0/DataHub_ilmb_bram_if_cntlr_0.xci">
-          <Proxy FileSetName="DataHub_ilmb_bram_if_cntlr_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_rst_mig_7series_0_81M_0/DataHub_rst_mig_7series_0_81M_0.xci">
-          <Proxy FileSetName="DataHub_rst_mig_7series_0_81M_0"/>
+        <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_microblaze_0_xlconcat_0/DataHub_microblaze_0_xlconcat_0.xci">
+          <Proxy FileSetName="DataHub_microblaze_0_xlconcat_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_PmodWIFI_0_0/DataHub_PmodWIFI_0_0.xci">
           <Proxy FileSetName="DataHub_PmodWIFI_0_0"/>
@@ -108,17 +93,32 @@
         <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_axi_gpio_0_0/DataHub_axi_gpio_0_0.xci">
           <Proxy FileSetName="DataHub_axi_gpio_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_axi_smc_0/DataHub_axi_smc_0.xci">
+          <Proxy FileSetName="DataHub_axi_smc_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_ilmb_v10_0/DataHub_ilmb_v10_0.xci">
           <Proxy FileSetName="DataHub_ilmb_v10_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_axi_gpio_1_0/DataHub_axi_gpio_1_0.xci">
-          <Proxy FileSetName="DataHub_axi_gpio_1_0"/>
+        <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_dlmb_v10_0/DataHub_dlmb_v10_0.xci">
+          <Proxy FileSetName="DataHub_dlmb_v10_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_rst_mig_7series_0_81M_0/DataHub_rst_mig_7series_0_81M_0.xci">
+          <Proxy FileSetName="DataHub_rst_mig_7series_0_81M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_ilmb_bram_if_cntlr_0/DataHub_ilmb_bram_if_cntlr_0.xci">
+          <Proxy FileSetName="DataHub_ilmb_bram_if_cntlr_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_PmodSD_0_0/DataHub_PmodSD_0_0.xci">
+          <Proxy FileSetName="DataHub_PmodSD_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_xbar_0/DataHub_xbar_0.xci">
           <Proxy FileSetName="DataHub_xbar_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_axi_smc_0/DataHub_axi_smc_0.xci">
-          <Proxy FileSetName="DataHub_axi_smc_0"/>
+        <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_lmb_bram_0/DataHub_lmb_bram_0.xci">
+          <Proxy FileSetName="DataHub_lmb_bram_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_axi_gpio_1_0/DataHub_axi_gpio_1_0.xci">
+          <Proxy FileSetName="DataHub_axi_gpio_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="DataHub.bd" FileRelPathName="ip/DataHub_dlmb_bram_if_cntlr_0/DataHub_dlmb_bram_if_cntlr_0.xci">
           <Proxy FileSetName="DataHub_dlmb_bram_if_cntlr_0"/>

@@ -13,8 +13,27 @@ enum SensorNodeIds
 	HUB,         // 4
 };
 
+// This would not normarlly be static, however, to simplify and make it easy
+// for groups to subscribe to each other's sensors it is currently implemented
+// as static.
+#define NUM_SENSORS 1
+enum SensorIds
+{
+    // LIGHTING
+
+    // CLIMATE
+
+    // POWER
+
+    // PLANTS
+
+    // HUB
+    GPS,
+    RTCC,
+};
+
 // Structure containing sensor info fields
-struct SensorInfo
+typedef struct sensorInfo
 {
     char* sensorId;
     char* sensorNodeId;
@@ -23,7 +42,7 @@ struct SensorInfo
     char* dataUnits;
     char* samplingRate;
     char* dataFormat;
-};
+} SensorInfo;
 
 //--------------------------------------------------------------
 //--------------------------------------------------------------
@@ -32,16 +51,14 @@ struct SensorInfo
 //--------------------------------------------------------------
 //--------------------------------------------------------------
 
-// Specify the correct value below based on you project
-// LIGHTING -> 0
-// CLIMATE  -> 1
-// POWER    -> 2
-// PLANTS   -> 3
-// HUB      -> 4
-#define MY_GROUP 0
-
-// Do not modify the following line
-static const uint8_t MY_NODE_ID = (uint8_t)MY_GROUP;
+// Replace /*YOUR GROUP HERE*/ with one of the following in 
+// accordance to your group:
+// LIGHTING
+// CLIMATE
+// POWER
+// PLANTS
+// HUB
+static const uint8_t MY_NODE_ID = (uint8_t)POWER/*YOUR GROUP HERE*/;
 
 /*********************INTRUCTIONS**********************/
 // 1) Copy the commented the section below enclosed with
@@ -105,6 +122,7 @@ static const SensorInfo sensorInfoCollection[] =
 static const char* SSID = "ECE568";
 
 // The static IP of the Data Hub
+//static const char* HUB_IP = "192.168.100.50";
 static const char* HUB_IP = "192.168.100.50";
 
 // Port to be used for communication locally and by the Data Hub

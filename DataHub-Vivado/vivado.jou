@@ -2,16 +2,20 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Mon Mar 26 10:26:41 2018
-# Process ID: 31852
-# Current directory: C:/Users/Keith/Documents/Git/DataHub/DataHub-Vivado
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent34220 C:\Users\Keith\Documents\Git\DataHub\DataHub-Vivado\DataHub-Vivado.xpr
-# Log file: C:/Users/Keith/Documents/Git/DataHub/DataHub-Vivado/vivado.log
-# Journal file: C:/Users/Keith/Documents/Git/DataHub/DataHub-Vivado\vivado.jou
+# Start of session at: Thu Apr 12 09:39:44 2018
+# Process ID: 8140
+# Current directory: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4396 C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.xpr
+# Log file: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/vivado.log
+# Journal file: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/Keith/Documents/Git/DataHub/DataHub-Vivado/DataHub-Vivado.xpr
+open_project C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.xpr
 update_compile_order -fileset sources_1
-file copy -force C:/Users/Keith/Documents/Git/DataHub/DataHub-Vivado/DataHub-Vivado.runs/impl_1/DataHub_wrapper.sysdef C:/Users/Keith/Documents/Git/DataHub/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper.hdf
-
-launch_sdk -workspace C:/Users/Keith/Documents/Git/DataHub/DataHub-Vivado/DataHub-Vivado.sdk -hwspec C:/Users/Keith/Documents/Git/DataHub/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper.hdf
+launch_sdk -workspace C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk -hwspec C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper.hdf
+open_bd_design {C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.srcs/sources_1/bd/DataHub/DataHub.bd}
+startgroup
+copy_bd_objs /  [get_bd_cells {axi_smc}]
+set_property location {6 1833 922} [get_bd_cells axi_smc1]
+endgroup
+undo

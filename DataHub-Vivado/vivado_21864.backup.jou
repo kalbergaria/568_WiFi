@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Apr  9 15:42:55 2018
+# Process ID: 21864
+# Current directory: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22840 C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.xpr
+# Log file: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/vivado.log
+# Journal file: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk -hwspec C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper.hdf
+file copy -force C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.runs/impl_1/DataHub_wrapper.sysdef C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper.hdf
+
+launch_sdk -workspace C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk -hwspec C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper.hdf
+launch_sdk -workspace C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk -hwspec C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper.hdf
+open_bd_design {C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.srcs/sources_1/bd/DataHub/DataHub.bd}
+open_hw
+connect_hw_server
+open_hw_target
+refresh_hw_target {localhost:3121/xilinx_tcf/Digilent/210292A4BDC7A}
+close_hw_target {localhost:3121/xilinx_tcf/Digilent/210292A4BDC7A}
+open_hw_target {localhost:3121/xilinx_tcf/Digilent/210292A4BB27A}
+set_property PROGRAM.FILE {C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.runs/impl_1/DataHub_wrapper.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_target {localhost:3121/xilinx_tcf/Digilent/210292A4BB27A}
+open_hw_target {localhost:3121/xilinx_tcf/Digilent/210292A4BDC7A}
