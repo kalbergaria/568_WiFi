@@ -1,6 +1,7 @@
 #include "PmodWIFI.h"
 #include "WiFi.h"
 
+// State machine
 typedef enum {
     NONE = 0,
     CONNECT,
@@ -10,12 +11,12 @@ typedef enum {
     SENSOR_REG_PREP,
     SEND_SENSOR_REG,
 	RECEIVE_REG_ACK,
+	PUBLISH_SENSOR_DATA,
     SEND,
     RECEIVE,
     CLOSE,
     DONE,
 } STATE;
-
 STATE state = CONNECT;
 STATE prevState = CONNECT;
 
@@ -26,8 +27,7 @@ void PrintState(STATE state);
 
 // Networking variables
 UDPSocket udpClient;
-IPv4 myIP = {192,168,100,12};
-IPv4 readIP; // a structure to store the ip read
+IPv4 readIP; // a structure to store the ip read (should match the static one or else there is an error)
 IPSTATUS status = ipsSuccess;
 IPEndPoint epRemote;
 
@@ -56,7 +56,9 @@ int main(void)
     Xil_ICacheEnable();
     Xil_DCacheEnable();
 
-    xil_printf("\r\n\r\n-------------- NEW SENSOR NODE RUN --------------\r\n");
+    xil_printf("\r\n\r\n-------------- ");
+    PrintSensorNodeId((SensorNodeIds)MY_NODE_ID);
+	xil_printf(" RUN --------------\r\n");
     WiFi();
     return 0;
 }
@@ -67,124 +69,134 @@ void WiFi()
     {
         switch (state)
         {
-        case CONNECT:
-            InitWiFi();
-            if (Connect(&status))
-                ChangeStatePrintTransition(SET_HUB_AS_ENDPOINT);
-            else if (IsIPStatusAnError(status))
-            {
-                xil_printf("Unable to connect, status: 0x%X\r\n", status);
-                ChangeStatePrintTransition(CLOSE);
-            }
-            break;
+			case CONNECT:
+				InitWiFi();
+				if (Connect(&status))
+					ChangeStatePrintTransition(SET_HUB_AS_ENDPOINT);
+				else if (IsIPStatusAnError(status))
+				{
+					xil_printf("Unable to connect, status: 0x%X\r\n", status);
+					ChangeStatePrintTransition(CLOSE);
+				}
+				break;
 
-        case SET_HUB_AS_ENDPOINT:
-            if (deIPcK.resolveEndPoint(HUB_IP, PORT, epRemote, &status))
-            {
-                if (deIPcK.udpSetEndPoint(epRemote, udpClient, PORT, &status))
-                {
-                    xil_printf("Endpoint set to: %s:%d\r\n", HUB_IP, PORT);
-                    ChangeStatePrintTransition(PREP_SEND_CONN_REQ);
-                }
-            }
+			case SET_HUB_AS_ENDPOINT:
+				if (deIPcK.resolveEndPoint(HUB_IP, PORT, epRemote, &status))
+				{
+					if (deIPcK.udpSetEndPoint(epRemote, udpClient, PORT, &status))
+					{
+						xil_printf("Endpoint set to: %s:%d\r\n", HUB_IP, PORT);
+						ChangeStatePrintTransition(PREP_SEND_CONN_REQ);
+					}
+				}
 
-            // Always check the status and get out on error
-            if (IsIPStatusAnError(status))
-            {
-                xil_printf("Unable to resolve endpoint, error: 0x%X\r\n", status);
-                state = CLOSE;
-            }
-            break;
+				// Always check the status and get out on error
+				if (IsIPStatusAnError(status))
+				{
+					xil_printf("Unable to resolve endpoint, error: 0x%X\r\n", status);
+					state = CLOSE;
+				}
+				break;
 
-        case PREP_SEND_CONN_REQ:
-            CreateConnReqMsg(&msg2Send);
-            ChangeStatePrintTransition(SEND);
-            break;
+			case PREP_SEND_CONN_REQ:
+				CreateConnReqMsg(&msg2Send);
+				ChangeStatePrintTransition(SEND);
+				break;
 
-        case RECEIVE_SYS_HEALTH_CONFIRM_CONNECTION:
-            if (msgObtained)
-            {
-                if (msgReceived.header.msgType == SYS_HEALTH)
-                {
-                    msgObtained = false;
-                    xil_printf("Connected to HUB!\r\n");
-                    ChangeStatePrintTransition(SENSOR_REG_PREP);
-                    break;
-                }
-                ChangeStatePrintTransition(CLOSE);
-                break;
-            }
-            ChangeStatePrintTransition(RECEIVE);
-            break;
+			case RECEIVE_SYS_HEALTH_CONFIRM_CONNECTION:
+				if (msgObtained)
+				{
+					if (msgReceived.header.msgType == SYS_HEALTH)
+					{
+						msgObtained = false;
+						xil_printf("Connected to HUB!\r\n");
+						ChangeStatePrintTransition(SENSOR_REG_PREP);
+						break;
+					}
+					ChangeStatePrintTransition(CLOSE);
+					break;
+				}
+				ChangeStatePrintTransition(RECEIVE);
+				break;
 
-        case SENSOR_REG_PREP:
-            // Calculate the number of sensor that need to be registered
-	        // based on the size of the array of sensorInfo structures
-	        numSensors = sizeof(sensorInfoCollection) / sizeof(SensorInfo);
-	        xil_printf("Attempting to register %d sensors\r\n", numSensors);
-	        ChangeStatePrintTransition(SEND_SENSOR_REG);
-            break;
+			case SENSOR_REG_PREP:
+				// Calculate the number of sensor that need to be registered
+				// based on the size of the array of sensorInfo structures
+				numSensors = sizeof(sensorInfoCollection) / sizeof(SensorInfo);
+				xil_printf("Attempting to register %d sensors\r\n", numSensors);
+				ChangeStatePrintTransition(SEND_SENSOR_REG);
+				break;
 
-        case SEND_SENSOR_REG:
-            if (numSensorsRegistered < numSensors) //while loop not exiting
-            {
-                CreateSensorRegMsg(&msg2Send, (byte*)&sensorInfoCollection[numSensorsRegistered]);
-                ChangeStatePrintTransition(SEND);
-                break;
-            }
-            ChangeStatePrintTransition(CLOSE);
-            break;
+			case SEND_SENSOR_REG:
+				if (numSensorsRegistered < numSensors)
+				{
+					CreateSensorRegMsg(&msg2Send, (byte*)&sensorInfoCollection[numSensorsRegistered]);
+					xil_printf("Attempting to register %s...", sensorInfoCollection[numSensorsRegistered].sensorName);
+					ChangeStatePrintTransition(SEND);
+					break;
+				}
+				ChangeStatePrintTransition(CLOSE);
+				break;
 
-        case RECEIVE_REG_ACK:
-            if (numSensorsRegistered < numSensors)
-            {
-                if (msgObtained)
-                    if (msgReceived.header.msgType == REG_ACK)
-                        numSensorsRegistered++;
-                ChangeStatePrintTransition(RECEIVE);
-                break;
-            }
-            ChangeStatePrintTransition(CLOSE);
-            break;
+			case RECEIVE_REG_ACK:
+				if (numSensorsRegistered < numSensors)
+				{
+					if (msgObtained && msgReceived.header.msgType == REG_ACK)
+							numSensorsRegistered++;
 
-        // Write out the strings
-        case SEND:
-            if (deIPcK.isIPReady(&status))
-            {
-                xil_printf("Writing out Datagram\r\n");
+					if(numSensorsRegistered < numSensors)
+					{
+						ChangeStatePrintTransition(RECEIVE);
+						break;
+					}
+				}
+				ChangeStatePrintTransition(PUBLISH_SENSOR_DATA);
+				break;
 
-                int writeReturn = udpClient.writeDatagram((byte *)&msg2Send, MSG_SIZE);
+			case PUBLISH_SENSOR_DATA:
+				/*SensorDataPayload sensorData;
+				sensorData.sensorID = 1;
+				sensorData.sensorData = {1,2,3};
+				Message data2Pub;*/
 
-                ChangeStatePrintTransition((STATE)(prevState + 1));
-            }
-            else if (IsIPStatusAnError(status))
-            {
-                xil_printf("Lost the network, error: 0x%X\r\n", status);
-                state = CLOSE;
-            }
-            break;
+				ChangeStatePrintTransition(CLOSE);
+				break;
 
-        case RECEIVE:
-            // See if we got anything to read
-            if ((readSize = udpClient.available()) > 0)
-            {
-                readSize = udpClient.readDatagram((byte *)&msgReceived, readSize);
-                msgObtained = true;
-                ChangeStatePrintTransition((STATE)(prevState));
-            }
-            break;
+			case SEND:
+				if (deIPcK.isIPReady(&status))
+				{
+					xil_printf("Sending message...\r\n");
+					udpClient.writeDatagram((byte *)&msg2Send, MSG_SIZE);
+					ChangeStatePrintTransition((STATE)(prevState + 1));
+				}
+				else if (IsIPStatusAnError(status))
+				{
+					xil_printf("Lost the network, error: 0x%X\r\n", status);
+					state = CLOSE;
+				}
+				break;
 
-        // Done, so close up the tcpClient
-        case CLOSE:
-            udpClient.close();
-            xil_printf("Closing udpClient, Done with sketch.\r\n");
-            state = DONE;
-            break;
+			case RECEIVE:
+				// See if we got anything to read
+				if ((readSize = udpClient.available()) > 0)
+				{
+					readSize = udpClient.readDatagram((byte *)&msgReceived, readSize);
+					msgObtained = true;
+					ChangeStatePrintTransition((STATE)(prevState));
+				}
+				break;
 
-        case DONE:
+			// Done, so close up the udpClient
+			case CLOSE:
+				udpClient.close();
+				xil_printf("Closing udpClient, Done with sketch.\r\n");
+				state = DONE;
+				break;
 
-        default:
-            break;
+			case DONE:
+
+			default:
+				break;
         }
 
         // Keep the stack alive each pass through the loop()
@@ -224,11 +236,14 @@ void PrintState(STATE state)
         xil_printf("SENSOR_REG_PREP");
         break;
     case SEND_SENSOR_REG:
-            xil_printf("SEND_SENSOR_REG");
-            break;
+		xil_printf("SEND_SENSOR_REG");
+		break;
     case RECEIVE_REG_ACK:
-            xil_printf("RECEIVE_SENSOR_REG");
-            break;
+		xil_printf("RECEIVE_REG_ACK");
+		break;
+    case PUBLISH_SENSOR_DATA:
+		xil_printf("PUBLISH_SENSOR_DATA");
+		break;
     case SEND:
         xil_printf("SEND");
         break;
