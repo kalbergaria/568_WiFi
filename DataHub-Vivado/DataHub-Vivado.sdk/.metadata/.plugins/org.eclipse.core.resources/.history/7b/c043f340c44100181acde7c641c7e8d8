@@ -161,6 +161,7 @@ void WiFi()
 			case PUBLISH_SENSOR_DATA:
 				SensorDataPayload sensorDataPayload;
 				sensorDataPayload.sensorID = 1;
+				memcpy(dummyData, sensorDataPayload.sensorData, sizeof(dummyData));
 				CreateSensorDataPubMsg(&msg2Send, (uint8_t*)&sensorDataPayload);
 				ChangeStatePrintTransition(SEND);
 				break;

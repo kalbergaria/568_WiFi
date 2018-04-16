@@ -4914,3 +4914,426 @@ con
 ----------------End of Script----------------
 
 16:37:40 INFO  : Launch script is exported to file 'C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_datahub.elf_on_local.tcl'
+17:55:51 INFO  : Disconnected from the channel tcfchan#12.
+17:55:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0' command is executed.
+17:55:52 INFO  : 'fpga -state' command is executed.
+17:55:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:55:52 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A4BDC7A' is selected.
+17:55:52 INFO  : 'jtag frequency' command is executed.
+17:55:52 INFO  : Context for processor 'microblaze_0' is selected.
+17:55:52 INFO  : Processor reset is completed for 'microblaze_0'.
+17:55:52 INFO  : Context for processor 'microblaze_0' is selected.
+17:55:57 INFO  : The application 'C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf' is downloaded to processor 'microblaze_0'.
+17:55:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf
+----------------End of Script----------------
+
+17:55:57 INFO  : Memory regions updated for context MicroBlaze #0
+17:55:57 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+17:55:57 INFO  : Context for processor 'microblaze_0' is selected.
+17:55:57 INFO  : 'con' command is executed.
+17:55:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+con
+----------------End of Script----------------
+
+17:55:57 INFO  : Launch script is exported to file 'C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_datahub.elf_on_local.tcl'
+18:04:14 INFO  : Disconnected from the channel tcfchan#13.
+18:04:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0' command is executed.
+18:04:15 INFO  : 'fpga -state' command is executed.
+18:04:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:04:15 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A4BDC7A' is selected.
+18:04:15 INFO  : 'jtag frequency' command is executed.
+18:04:15 INFO  : Context for processor 'microblaze_0' is selected.
+18:04:15 INFO  : Processor reset is completed for 'microblaze_0'.
+18:04:15 INFO  : Context for processor 'microblaze_0' is selected.
+18:04:20 INFO  : The application 'C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf' is downloaded to processor 'microblaze_0'.
+18:04:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf
+----------------End of Script----------------
+
+18:04:20 INFO  : Memory regions updated for context MicroBlaze #0
+18:04:20 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+18:04:20 INFO  : Context for processor 'microblaze_0' is selected.
+18:04:20 INFO  : 'con' command is executed.
+18:04:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+con
+----------------End of Script----------------
+
+18:04:20 INFO  : Launch script is exported to file 'C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_datahub.elf_on_local.tcl'
+18:05:01 INFO  : Disconnected from the channel tcfchan#14.
+18:05:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0' command is executed.
+18:05:02 INFO  : 'fpga -state' command is executed.
+18:05:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:05:02 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A4BDC7A' is selected.
+18:05:02 INFO  : 'jtag frequency' command is executed.
+18:05:02 INFO  : Context for processor 'microblaze_0' is selected.
+18:05:02 INFO  : Processor reset is completed for 'microblaze_0'.
+18:05:02 INFO  : Context for processor 'microblaze_0' is selected.
+18:05:06 INFO  : The application 'C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf' is downloaded to processor 'microblaze_0'.
+18:05:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf
+----------------End of Script----------------
+
+18:05:06 INFO  : Memory regions updated for context MicroBlaze #0
+18:05:06 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+18:05:06 INFO  : Context for processor 'microblaze_0' is selected.
+18:05:06 INFO  : 'con' command is executed.
+18:05:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+con
+----------------End of Script----------------
+
+18:05:06 INFO  : Launch script is exported to file 'C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_datahub.elf_on_local.tcl'
+18:06:03 INFO  : Disconnected from the channel tcfchan#15.
+18:06:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0' command is executed.
+18:06:04 INFO  : 'fpga -state' command is executed.
+18:06:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:06:04 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A4BDC7A' is selected.
+18:06:04 INFO  : 'jtag frequency' command is executed.
+18:06:04 INFO  : Context for processor 'microblaze_0' is selected.
+18:06:04 INFO  : Processor reset is completed for 'microblaze_0'.
+18:06:04 INFO  : Context for processor 'microblaze_0' is selected.
+18:06:08 INFO  : The application 'C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf' is downloaded to processor 'microblaze_0'.
+18:06:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf
+----------------End of Script----------------
+
+18:06:08 INFO  : Memory regions updated for context MicroBlaze #0
+18:06:08 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+18:06:08 INFO  : Context for processor 'microblaze_0' is selected.
+18:06:08 INFO  : 'con' command is executed.
+18:06:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+con
+----------------End of Script----------------
+
+18:06:08 INFO  : Launch script is exported to file 'C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_datahub.elf_on_local.tcl'
+18:09:22 INFO  : Disconnected from the channel tcfchan#16.
+18:09:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0' command is executed.
+18:09:23 INFO  : 'fpga -state' command is executed.
+18:09:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:09:23 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A4BDC7A' is selected.
+18:09:23 INFO  : 'jtag frequency' command is executed.
+18:09:24 INFO  : Context for processor 'microblaze_0' is selected.
+18:09:24 INFO  : Processor reset is completed for 'microblaze_0'.
+18:09:24 INFO  : Context for processor 'microblaze_0' is selected.
+18:09:28 INFO  : The application 'C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf' is downloaded to processor 'microblaze_0'.
+18:09:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf
+----------------End of Script----------------
+
+18:09:28 INFO  : Memory regions updated for context MicroBlaze #0
+18:09:28 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+18:09:28 INFO  : Context for processor 'microblaze_0' is selected.
+18:09:28 INFO  : 'con' command is executed.
+18:09:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+con
+----------------End of Script----------------
+
+18:09:28 INFO  : Launch script is exported to file 'C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_datahub.elf_on_local.tcl'
+18:09:39 INFO  : Disconnected from the channel tcfchan#17.
+18:09:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0' command is executed.
+18:09:40 INFO  : 'fpga -state' command is executed.
+18:09:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:09:40 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A4BDC7A' is selected.
+18:09:40 INFO  : 'jtag frequency' command is executed.
+18:09:40 INFO  : Context for processor 'microblaze_0' is selected.
+18:09:40 INFO  : Processor reset is completed for 'microblaze_0'.
+18:09:41 INFO  : Context for processor 'microblaze_0' is selected.
+18:09:45 INFO  : The application 'C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf' is downloaded to processor 'microblaze_0'.
+18:09:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf
+----------------End of Script----------------
+
+18:09:45 INFO  : Memory regions updated for context MicroBlaze #0
+18:09:45 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+18:09:45 INFO  : Context for processor 'microblaze_0' is selected.
+18:09:45 INFO  : 'con' command is executed.
+18:09:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+con
+----------------End of Script----------------
+
+18:09:45 INFO  : Launch script is exported to file 'C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_datahub.elf_on_local.tcl'
+18:10:54 INFO  : Disconnected from the channel tcfchan#18.
+18:10:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0' command is executed.
+18:10:55 INFO  : 'fpga -state' command is executed.
+18:10:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:10:55 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A4BDC7A' is selected.
+18:10:55 INFO  : 'jtag frequency' command is executed.
+18:10:55 INFO  : Context for processor 'microblaze_0' is selected.
+18:10:55 INFO  : Processor reset is completed for 'microblaze_0'.
+18:10:55 INFO  : Context for processor 'microblaze_0' is selected.
+18:10:59 INFO  : The application 'C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf' is downloaded to processor 'microblaze_0'.
+18:10:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf
+----------------End of Script----------------
+
+18:10:59 INFO  : Memory regions updated for context MicroBlaze #0
+18:10:59 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+18:10:59 INFO  : Context for processor 'microblaze_0' is selected.
+18:10:59 INFO  : 'con' command is executed.
+18:10:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+con
+----------------End of Script----------------
+
+18:10:59 INFO  : Launch script is exported to file 'C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_datahub.elf_on_local.tcl'
+18:14:21 INFO  : Disconnected from the channel tcfchan#19.
+18:14:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0' command is executed.
+18:14:22 INFO  : 'fpga -state' command is executed.
+18:14:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:14:22 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A4BDC7A' is selected.
+18:14:22 INFO  : 'jtag frequency' command is executed.
+18:14:22 INFO  : Context for processor 'microblaze_0' is selected.
+18:14:22 INFO  : Processor reset is completed for 'microblaze_0'.
+18:14:22 INFO  : Context for processor 'microblaze_0' is selected.
+18:14:26 INFO  : The application 'C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf' is downloaded to processor 'microblaze_0'.
+18:14:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf
+----------------End of Script----------------
+
+18:14:27 INFO  : Memory regions updated for context MicroBlaze #0
+18:14:27 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+18:14:27 INFO  : Context for processor 'microblaze_0' is selected.
+18:14:27 INFO  : 'con' command is executed.
+18:14:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+con
+----------------End of Script----------------
+
+18:14:27 INFO  : Launch script is exported to file 'C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_datahub.elf_on_local.tcl'
+18:15:12 INFO  : Disconnected from the channel tcfchan#20.
+18:15:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0' command is executed.
+18:15:30 INFO  : 'fpga -state' command is executed.
+18:15:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:15:30 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A4BDC7A' is selected.
+18:15:30 INFO  : 'jtag frequency' command is executed.
+18:15:30 INFO  : Context for processor 'microblaze_0' is selected.
+18:15:30 INFO  : Processor reset is completed for 'microblaze_0'.
+18:15:30 INFO  : Context for processor 'microblaze_0' is selected.
+18:15:34 INFO  : The application 'C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf' is downloaded to processor 'microblaze_0'.
+18:15:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf
+----------------End of Script----------------
+
+18:15:34 INFO  : Memory regions updated for context MicroBlaze #0
+18:15:34 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+18:15:34 INFO  : Context for processor 'microblaze_0' is selected.
+18:15:34 INFO  : 'con' command is executed.
+18:15:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+con
+----------------End of Script----------------
+
+18:15:34 INFO  : Launch script is exported to file 'C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_datahub.elf_on_local.tcl'
+18:16:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:16:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0' command is executed.
+18:16:36 INFO  : FPGA configured successfully with bitstream "C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/download.bit"
+18:16:38 INFO  : Disconnected from the channel tcfchan#21.
+18:16:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0' command is executed.
+18:16:39 INFO  : 'fpga -state' command is executed.
+18:16:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:16:39 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A4BDC7A' is selected.
+18:16:39 INFO  : 'jtag frequency' command is executed.
+18:16:39 INFO  : Context for processor 'microblaze_0' is selected.
+18:16:39 INFO  : Processor reset is completed for 'microblaze_0'.
+18:16:39 INFO  : Context for processor 'microblaze_0' is selected.
+18:16:44 INFO  : The application 'C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf' is downloaded to processor 'microblaze_0'.
+18:16:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf
+----------------End of Script----------------
+
+18:16:44 INFO  : Memory regions updated for context MicroBlaze #0
+18:16:44 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+18:16:44 INFO  : Context for processor 'microblaze_0' is selected.
+18:16:44 INFO  : 'con' command is executed.
+18:16:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+con
+----------------End of Script----------------
+
+18:16:44 INFO  : Launch script is exported to file 'C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_datahub.elf_on_local.tcl'
+18:17:30 INFO  : Disconnected from the channel tcfchan#22.
+18:17:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0' command is executed.
+18:17:31 INFO  : 'fpga -state' command is executed.
+18:17:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:17:31 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A4BDC7A' is selected.
+18:17:31 INFO  : 'jtag frequency' command is executed.
+18:17:31 INFO  : Context for processor 'microblaze_0' is selected.
+18:17:31 INFO  : Processor reset is completed for 'microblaze_0'.
+18:17:31 INFO  : Context for processor 'microblaze_0' is selected.
+18:17:35 INFO  : The application 'C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf' is downloaded to processor 'microblaze_0'.
+18:17:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf
+----------------End of Script----------------
+
+18:17:35 INFO  : Memory regions updated for context MicroBlaze #0
+18:17:35 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+18:17:36 INFO  : Context for processor 'microblaze_0' is selected.
+18:17:36 INFO  : 'con' command is executed.
+18:17:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+con
+----------------End of Script----------------
+
+18:17:36 INFO  : Launch script is exported to file 'C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_datahub.elf_on_local.tcl'
+18:20:09 INFO  : Disconnected from the channel tcfchan#23.
+18:20:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0' command is executed.
+18:20:34 INFO  : 'fpga -state' command is executed.
+18:20:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:20:34 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A4BDC7A' is selected.
+18:20:34 INFO  : 'jtag frequency' command is executed.
+18:20:34 INFO  : Context for processor 'microblaze_0' is selected.
+18:20:34 INFO  : Processor reset is completed for 'microblaze_0'.
+18:20:34 INFO  : Context for processor 'microblaze_0' is selected.
+18:20:38 INFO  : The application 'C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf' is downloaded to processor 'microblaze_0'.
+18:20:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf
+----------------End of Script----------------
+
+18:20:38 INFO  : Memory regions updated for context MicroBlaze #0
+18:20:38 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+18:20:38 INFO  : Context for processor 'microblaze_0' is selected.
+18:20:38 INFO  : 'con' command is executed.
+18:20:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+con
+----------------End of Script----------------
+
+18:20:38 INFO  : Launch script is exported to file 'C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_datahub.elf_on_local.tcl'
+18:21:36 INFO  : Disconnected from the channel tcfchan#24.
+18:21:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0' command is executed.
+18:21:37 INFO  : 'fpga -state' command is executed.
+18:21:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:21:37 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A4BDC7A' is selected.
+18:21:37 INFO  : 'jtag frequency' command is executed.
+18:21:37 INFO  : Context for processor 'microblaze_0' is selected.
+18:21:37 INFO  : Processor reset is completed for 'microblaze_0'.
+18:21:37 INFO  : Context for processor 'microblaze_0' is selected.
+18:21:41 INFO  : The application 'C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf' is downloaded to processor 'microblaze_0'.
+18:21:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf
+----------------End of Script----------------
+
+18:21:41 INFO  : Memory regions updated for context MicroBlaze #0
+18:21:41 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+18:21:42 INFO  : Context for processor 'microblaze_0' is selected.
+18:21:42 INFO  : 'con' command is executed.
+18:21:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+con
+----------------End of Script----------------
+
+18:21:42 INFO  : Launch script is exported to file 'C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_datahub.elf_on_local.tcl'
+18:57:49 INFO  : Disconnected from the channel tcfchan#25.
+18:57:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0' command is executed.
+18:57:50 INFO  : 'fpga -state' command is executed.
+18:57:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:57:50 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A4BDC7A' is selected.
+18:57:50 INFO  : 'jtag frequency' command is executed.
+18:57:50 INFO  : Context for processor 'microblaze_0' is selected.
+18:57:50 INFO  : Processor reset is completed for 'microblaze_0'.
+18:57:50 INFO  : Context for processor 'microblaze_0' is selected.
+18:57:54 INFO  : The application 'C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf' is downloaded to processor 'microblaze_0'.
+18:57:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf
+----------------End of Script----------------
+
+18:57:54 INFO  : Memory regions updated for context MicroBlaze #0
+18:57:54 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+18:57:54 INFO  : Context for processor 'microblaze_0' is selected.
+18:57:54 INFO  : 'con' command is executed.
+18:57:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+con
+----------------End of Script----------------
+
+18:57:54 INFO  : Launch script is exported to file 'C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_datahub.elf_on_local.tcl'
+18:59:47 INFO  : Disconnected from the channel tcfchan#26.
+18:59:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0' command is executed.
+18:59:48 INFO  : 'fpga -state' command is executed.
+18:59:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:59:48 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A4BDC7A' is selected.
+18:59:48 INFO  : 'jtag frequency' command is executed.
+18:59:48 INFO  : Context for processor 'microblaze_0' is selected.
+18:59:48 INFO  : Processor reset is completed for 'microblaze_0'.
+18:59:48 INFO  : Context for processor 'microblaze_0' is selected.
+18:59:52 INFO  : The application 'C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf' is downloaded to processor 'microblaze_0'.
+18:59:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf
+----------------End of Script----------------
+
+18:59:52 INFO  : Memory regions updated for context MicroBlaze #0
+18:59:52 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+18:59:52 INFO  : Context for processor 'microblaze_0' is selected.
+18:59:52 INFO  : 'con' command is executed.
+18:59:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0
+con
+----------------End of Script----------------
+
+18:59:52 INFO  : Launch script is exported to file 'C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_datahub.elf_on_local.tcl'

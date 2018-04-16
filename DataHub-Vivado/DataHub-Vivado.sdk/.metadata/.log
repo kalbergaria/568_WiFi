@@ -6355,3 +6355,1817 @@ java.io.FileNotFoundException: C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\Dat
 	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
 	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2018-04-16 17:01:32.870
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2018-04-16 17:06:58.837
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2018-04-16 17:12:28.316
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:51.590
+!MESSAGE XSCT Command: [disconnect tcfchan#12], Thread: Thread-1263
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:51.595
+!MESSAGE XSCT command with result: [disconnect tcfchan#12], Result: [null, ]. Thread: Thread-1263
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-04-16 17:55:52.591
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.592
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.599
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#13]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.599
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.618
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.619
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.653
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.655
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.664
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.665
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.666
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#13]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.667
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.675
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.676
+!MESSAGE XSCT Command: [version -server], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.677
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.4]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.678
+!MESSAGE XSCT Command: [version], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.679
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.4]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.680
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.700
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.701
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.703
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.704
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.744
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.745
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.765
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.765
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.802
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:52.803
+!MESSAGE XSCT Command: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:57.055
+!MESSAGE XSCT command with result: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:57.092
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:57.147
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:57.148
+!MESSAGE XSCT Command: [con], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 17:55:57.153
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-91
+
+!ENTRY org.eclipse.core.resources 4 568 2018-04-16 18:00:49.712
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:14.696
+!MESSAGE XSCT Command: [disconnect tcfchan#13], Thread: Thread-1311
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:14.700
+!MESSAGE XSCT command with result: [disconnect tcfchan#13], Result: [null, ]. Thread: Thread-1311
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-04-16 18:04:15.697
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.698
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.705
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#14]. Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.706
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.724
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.724
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.752
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Result: [null, ]. Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.753
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.767
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.768
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.769
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#14]. Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.770
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.777
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.777
+!MESSAGE XSCT Command: [version -server], Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.778
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.4]. Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.779
+!MESSAGE XSCT Command: [version], Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.779
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.4]. Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.780
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.798
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Result: [null, ]. Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.799
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.800
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.801
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.834
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.834
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.858
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.858
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.893
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:15.893
+!MESSAGE XSCT Command: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:20.116
+!MESSAGE XSCT command with result: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Result: [null, ]. Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:20.147
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:20.202
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:20.202
+!MESSAGE XSCT Command: [con], Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:04:20.208
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-103
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:01.056
+!MESSAGE XSCT Command: [disconnect tcfchan#14], Thread: Thread-1337
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:01.059
+!MESSAGE XSCT command with result: [disconnect tcfchan#14], Result: [null, ]. Thread: Thread-1337
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-04-16 18:05:02.057
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.058
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.062
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#15]. Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.063
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.077
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.078
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.108
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Result: [null, ]. Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.109
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.122
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.122
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.124
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#15]. Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.124
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.131
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.132
+!MESSAGE XSCT Command: [version -server], Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.133
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.4]. Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.134
+!MESSAGE XSCT Command: [version], Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.144
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.4]. Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.146
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.169
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Result: [null, ]. Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.170
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.171
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.172
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.206
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.206
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.233
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.233
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.268
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:02.269
+!MESSAGE XSCT Command: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:06.495
+!MESSAGE XSCT command with result: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Result: [null, ]. Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:06.526
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:06.580
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:06.581
+!MESSAGE XSCT Command: [con], Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:05:06.586
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-107
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:03.418
+!MESSAGE XSCT Command: [disconnect tcfchan#15], Thread: Thread-1363
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:03.422
+!MESSAGE XSCT command with result: [disconnect tcfchan#15], Result: [null, ]. Thread: Thread-1363
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-04-16 18:06:04.420
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.420
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.425
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#16]. Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.425
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.439
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.439
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.468
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Result: [null, ]. Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.469
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.483
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.483
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.485
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#16]. Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.485
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.492
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.493
+!MESSAGE XSCT Command: [version -server], Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.494
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.4]. Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.494
+!MESSAGE XSCT Command: [version], Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.495
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.4]. Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.495
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.515
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Result: [null, ]. Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.515
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.517
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.517
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.550
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.551
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.578
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.578
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.612
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:04.613
+!MESSAGE XSCT Command: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:08.781
+!MESSAGE XSCT command with result: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Result: [null, ]. Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:08.812
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:08.866
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:08.867
+!MESSAGE XSCT Command: [con], Thread: Worker-109
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:06:08.873
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-109
+
+!ENTRY org.eclipse.core.resources 4 568 2018-04-16 18:07:16.735
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:22.884
+!MESSAGE XSCT Command: [disconnect tcfchan#16], Thread: Thread-1389
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:22.887
+!MESSAGE XSCT command with result: [disconnect tcfchan#16], Result: [null, ]. Thread: Thread-1389
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-04-16 18:09:23.885
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.886
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.891
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#17]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.891
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.903
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.904
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.937
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.938
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.945
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.946
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.947
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#17]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.948
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.954
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.955
+!MESSAGE XSCT Command: [version -server], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.957
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.4]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.957
+!MESSAGE XSCT Command: [version], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.958
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.4]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.959
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.978
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.979
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.980
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:23.981
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:24.015
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:24.016
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:24.031
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:24.031
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:24.070
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:24.071
+!MESSAGE XSCT Command: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:28.306
+!MESSAGE XSCT command with result: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:28.332
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:28.392
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:28.393
+!MESSAGE XSCT Command: [con], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:28.397
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:39.806
+!MESSAGE XSCT Command: [disconnect tcfchan#17], Thread: Thread-1415
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:39.815
+!MESSAGE XSCT command with result: [disconnect tcfchan#17], Result: [null, ]. Thread: Thread-1415
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-04-16 18:09:40.811
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.811
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.816
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#18]. Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.817
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.830
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.830
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.862
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Result: [null, ]. Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.863
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.875
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.876
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.877
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#18]. Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.878
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.886
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.887
+!MESSAGE XSCT Command: [version -server], Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.888
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.4]. Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.889
+!MESSAGE XSCT Command: [version], Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.890
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.4]. Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.890
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.910
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Result: [null, ]. Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.910
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.912
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.913
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.950
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.950
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.967
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:40.968
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:41.003
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:41.004
+!MESSAGE XSCT Command: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:45.238
+!MESSAGE XSCT command with result: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Result: [null, ]. Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:45.269
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:45.323
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:45.324
+!MESSAGE XSCT Command: [con], Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:09:45.329
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-104
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:54.247
+!MESSAGE XSCT Command: [disconnect tcfchan#18], Thread: Thread-1441
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:54.250
+!MESSAGE XSCT command with result: [disconnect tcfchan#18], Result: [null, ]. Thread: Thread-1441
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-04-16 18:10:55.249
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.250
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.254
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#19]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.255
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.268
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.269
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.299
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Result: [null, ]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.300
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.314
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.315
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.316
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#19]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.316
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.323
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.324
+!MESSAGE XSCT Command: [version -server], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.325
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.4]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.326
+!MESSAGE XSCT Command: [version], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.327
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.4]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.327
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.348
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Result: [null, ]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.348
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.349
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.350
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.385
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.385
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.405
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.406
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.442
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:55.443
+!MESSAGE XSCT Command: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:59.690
+!MESSAGE XSCT command with result: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Result: [null, ]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:59.719
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:59.777
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:59.777
+!MESSAGE XSCT Command: [con], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:10:59.782
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:21.554
+!MESSAGE XSCT Command: [disconnect tcfchan#19], Thread: Thread-1469
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:21.557
+!MESSAGE XSCT command with result: [disconnect tcfchan#19], Result: [null, ]. Thread: Thread-1469
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-04-16 18:14:22.556
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.557
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.561
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#20]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.562
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.575
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.575
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.604
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.605
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.618
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.619
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.620
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#20]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.621
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.628
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.629
+!MESSAGE XSCT Command: [version -server], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.631
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.4]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.631
+!MESSAGE XSCT Command: [version], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.632
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.4]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.633
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.654
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.655
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.656
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.657
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.692
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.693
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.717
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.718
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.752
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:22.752
+!MESSAGE XSCT Command: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Thread: Worker-91
+
+!ENTRY org.eclipse.core.resources 4 568 2018-04-16 18:14:22.938
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:26.979
+!MESSAGE XSCT command with result: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:27.037
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:27.103
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:27.104
+!MESSAGE XSCT Command: [con], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:14:27.110
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:12.242
+!MESSAGE XSCT Command: [disconnect tcfchan#20], Thread: Thread-1515
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:12.247
+!MESSAGE XSCT command with result: [disconnect tcfchan#20], Result: [null, ]. Thread: Thread-1515
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-04-16 18:15:30.318
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.318
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.324
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#21]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.325
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.341
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.341
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.377
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Result: [null, ]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.378
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.392
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.393
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.394
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#21]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.394
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.401
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.401
+!MESSAGE XSCT Command: [version -server], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.407
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.4]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.408
+!MESSAGE XSCT Command: [version], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.409
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.4]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.409
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.429
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Result: [null, ]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.429
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.431
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.431
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.467
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.467
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.484
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.484
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.518
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:30.519
+!MESSAGE XSCT Command: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:34.800
+!MESSAGE XSCT command with result: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Result: [null, ]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:34.841
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:34.900
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:34.900
+!MESSAGE XSCT Command: [con], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:15:34.908
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:19.720
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:19.724
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:34.205
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:34.207
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#21]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:34.208
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:34.216
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:34.217
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:34.225
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:34.225
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:34.245
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==1}], Result: [null,      2  xc7a100t (idcode 13631093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:34.246
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A6EA33A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:34.268
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A6EA33A" && level==1}], Result: [null,      6  xc7a100t (idcode 13631093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:34.268
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:34.291
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:34.292
+!MESSAGE XSCT Command: [fpga -file C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:36.504
+!MESSAGE XSCT command with result: [fpga -file C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:37.309
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:37.312
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:38.682
+!MESSAGE XSCT Command: [disconnect tcfchan#21], Thread: Thread-1568
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:38.684
+!MESSAGE XSCT command with result: [disconnect tcfchan#21], Result: [null, ]. Thread: Thread-1568
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-04-16 18:16:39.682
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.682
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.687
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#22]. Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.688
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.701
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.702
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.731
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Result: [null, ]. Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.732
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.745
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.745
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.746
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#22]. Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.747
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.753
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.754
+!MESSAGE XSCT Command: [version -server], Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.755
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.4]. Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.755
+!MESSAGE XSCT Command: [version], Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.756
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.4]. Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.757
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.776
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Result: [null, ]. Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.777
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.778
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.779
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.814
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.814
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.828
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.828
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.863
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:39.863
+!MESSAGE XSCT Command: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:44.014
+!MESSAGE XSCT command with result: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Result: [null, ]. Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:44.047
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:44.111
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:44.111
+!MESSAGE XSCT Command: [con], Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:16:44.117
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-118
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:30.540
+!MESSAGE XSCT Command: [disconnect tcfchan#22], Thread: Thread-1596
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:30.543
+!MESSAGE XSCT command with result: [disconnect tcfchan#22], Result: [null, ]. Thread: Thread-1596
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-04-16 18:17:31.541
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.541
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.545
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#23]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.546
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.558
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.559
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.589
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.590
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.604
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.604
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.605
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#23]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.606
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.613
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.614
+!MESSAGE XSCT Command: [version -server], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.616
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.4]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.616
+!MESSAGE XSCT Command: [version], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.617
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.4]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.618
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.641
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.641
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.643
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.643
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.678
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.679
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.701
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.702
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.736
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:31.737
+!MESSAGE XSCT Command: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:35.963
+!MESSAGE XSCT command with result: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:35.996
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:36.062
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:36.062
+!MESSAGE XSCT Command: [con], Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:17:36.070
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-91
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:09.050
+!MESSAGE XSCT Command: [disconnect tcfchan#23], Thread: Thread-1640
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:09.054
+!MESSAGE XSCT command with result: [disconnect tcfchan#23], Result: [null, ]. Thread: Thread-1640
+
+!ENTRY org.eclipse.core.resources 4 568 2018-04-16 18:20:30.324
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-04-16 18:20:34.402
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.402
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.407
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#24]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.408
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.421
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.422
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.452
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Result: [null, ]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.453
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.460
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.460
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.462
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#24]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.463
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.470
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.470
+!MESSAGE XSCT Command: [version -server], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.472
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.4]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.473
+!MESSAGE XSCT Command: [version], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.474
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.4]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.475
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.496
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Result: [null, ]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.497
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.498
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.499
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.534
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.534
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.561
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.562
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.595
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:34.596
+!MESSAGE XSCT Command: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:38.830
+!MESSAGE XSCT command with result: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Result: [null, ]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:38.860
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:38.922
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:38.922
+!MESSAGE XSCT Command: [con], Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:20:38.928
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-112
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:36.556
+!MESSAGE XSCT Command: [disconnect tcfchan#24], Thread: Thread-1678
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:36.559
+!MESSAGE XSCT command with result: [disconnect tcfchan#24], Result: [null, ]. Thread: Thread-1678
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-04-16 18:21:37.557
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.558
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.563
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#25]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.563
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.577
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.577
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.605
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Result: [null, ]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.605
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.618
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.618
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.619
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#25]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.619
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.626
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.627
+!MESSAGE XSCT Command: [version -server], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.628
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.4]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.629
+!MESSAGE XSCT Command: [version], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.630
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.4]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.631
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.650
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Result: [null, ]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.651
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.652
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.653
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.687
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.688
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.701
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.701
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.735
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:37.736
+!MESSAGE XSCT Command: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:41.937
+!MESSAGE XSCT command with result: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Result: [null, ]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:41.967
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:42.026
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:42.027
+!MESSAGE XSCT Command: [con], Thread: Worker-114
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:21:42.031
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-114
+
+!ENTRY org.eclipse.core.resources 4 568 2018-04-16 18:25:34.459
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:49.336
+!MESSAGE XSCT Command: [disconnect tcfchan#25], Thread: Thread-1714
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:49.346
+!MESSAGE XSCT command with result: [disconnect tcfchan#25], Result: [null, ]. Thread: Thread-1714
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-04-16 18:57:50.341
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.342
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.359
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#26]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.360
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.377
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.378
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.409
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Result: [null, ]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.410
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.450
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.450
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.451
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#26]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.452
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.458
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.459
+!MESSAGE XSCT Command: [version -server], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.460
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.4]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.461
+!MESSAGE XSCT Command: [version], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.462
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.4]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.462
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.483
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Result: [null, ]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.483
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.484
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.485
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.519
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.520
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.545
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.545
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.582
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:50.582
+!MESSAGE XSCT Command: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:54.801
+!MESSAGE XSCT command with result: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Result: [null, ]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:54.830
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:54.884
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:54.884
+!MESSAGE XSCT Command: [con], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:57:54.893
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:47.124
+!MESSAGE XSCT Command: [disconnect tcfchan#26], Thread: Thread-1740
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:47.127
+!MESSAGE XSCT command with result: [disconnect tcfchan#26], Result: [null, ]. Thread: Thread-1740
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-04-16 18:59:48.124
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.124
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.128
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#27]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.129
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.145
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.146
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.174
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Result: [null, ]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.175
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.182
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.184
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.185
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#27]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.185
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.195
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.196
+!MESSAGE XSCT Command: [version -server], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.197
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.4]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.198
+!MESSAGE XSCT Command: [version], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.199
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.4]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.200
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.223
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Result: [null, ]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.223
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.225
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.225
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.260
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.261
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.279
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.279
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.320
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:48.320
+!MESSAGE XSCT Command: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:52.602
+!MESSAGE XSCT command with result: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Result: [null, ]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:52.630
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:52.681
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:52.682
+!MESSAGE XSCT Command: [con], Thread: Worker-130
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 18:59:52.692
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-130
+
+!ENTRY org.eclipse.core.resources 4 568 2018-04-16 19:02:49.260
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

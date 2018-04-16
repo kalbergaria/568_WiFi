@@ -12,7 +12,6 @@ typedef enum {
     SEND_SENSOR_REG,
 	RECEIVE_REG_ACK,
 	PUBLISH_SENSOR_DATA,
-	SENSOR_DATA_PUBLISHED,
     SEND,
     RECEIVE,
     CLOSE,
@@ -51,10 +50,6 @@ Message msg2Send;
 // Set to true when a message was received and is available
 // in msgReceived
 bool msgObtained = false;
-
-// Data/variables used to test whether or not the sensor
-// data publishing is functional
-uint8_t dummyData[] = {1,2,3};
 
 int main(void)
 {
@@ -161,11 +156,9 @@ void WiFi()
 			case PUBLISH_SENSOR_DATA:
 				SensorDataPayload sensorDataPayload;
 				sensorDataPayload.sensorID = 1;
-				CreateSensorDataPubMsg(&msg2Send, (uint8_t*)&sensorDataPayload);
-				ChangeStatePrintTransition(SEND);
-				break;
-
-			case SENSOR_DATA_PUBLISHED:
+				memcpy({1,2,3}, sensorDataPayload.sensorData, 3);
+				sensorData.sensorData = {1,2,3};
+				Message data2Pub;
 				ChangeStatePrintTransition(CLOSE);
 				break;
 
@@ -196,8 +189,7 @@ void WiFi()
 			// Done, so close up the udpClient
 			case CLOSE:
 				udpClient.close();
-				xil_printf("Closing sockets...\r\n");
-				xil_printf("Sequence complete, the device will now idle!\r\n");
+				xil_printf("Closing udpClient, Done with sketch.\r\n");
 				state = DONE;
 				break;
 
@@ -251,9 +243,6 @@ void PrintState(STATE state)
 		break;
     case PUBLISH_SENSOR_DATA:
 		xil_printf("PUBLISH_SENSOR_DATA");
-		break;
-    case SENSOR_DATA_PUBLISHED:
-		xil_printf("SENSOR_DATA_PUBLISHED");
 		break;
     case SEND:
         xil_printf("SEND");

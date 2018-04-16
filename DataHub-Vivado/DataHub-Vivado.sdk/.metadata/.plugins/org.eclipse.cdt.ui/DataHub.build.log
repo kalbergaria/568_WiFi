@@ -1,4 +1,4 @@
-16:57:26 **** Auto Build of configuration Debug for project DataHub ****
+19:21:24 **** Auto Build of configuration Debug for project DataHub ****
 make all 
 'Building file: ../src/Main.cpp'
 'Invoking: MicroBlaze g++ compiler'
@@ -29,19 +29,6 @@ In file included from ../src/Messages.h:5:0,
  static const char* SSID = "ECE568";
                     ^~~~
 'Finished building: ../src/Main.cpp'
-' '
-'Building file: ../src/Messages.cpp'
-'Invoking: MicroBlaze g++ compiler'
-mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Messages.o" -I../../DataHub_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/Messages.d" -MT"src/Messages.o" -o "src/Messages.o" "../src/Messages.cpp"
-In file included from ../src/Messages.h:5:0,
-                 from ../src/Messages.cpp:1:
-../src/Config.h:126:20: warning: 'HUB_IP' defined but not used [-Wunused-variable]
- static const char* HUB_IP = "192.168.100.50";
-                    ^~~~~~
-../src/Config.h:122:20: warning: 'SSID' defined but not used [-Wunused-variable]
- static const char* SSID = "ECE568";
-                    ^~~~
-'Finished building: ../src/Messages.cpp'
 ' '
 'Building file: ../src/WiFi.cpp'
 'Invoking: MicroBlaze g++ compiler'
@@ -93,9 +80,9 @@ mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../DataHub_bsp/microblaze_0/lib -mlittl
 'Invoking: MicroBlaze Print Size'
 mb-size DataHub.elf  |tee "DataHub.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 338872	   1876	  21140	 361888	  585a0	DataHub.elf
+ 339144	   1876	  21140	 362160	  586b0	DataHub.elf
 'Finished building: DataHub.elf.size'
 ' '
 
-16:57:28 Build Finished (took 2s.260ms)
+19:21:25 Build Finished (took 1s.209ms)
 
