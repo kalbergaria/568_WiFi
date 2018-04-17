@@ -7,11 +7,11 @@ This repository contains a **Vivado 2017.4** project that implements the **Wi-Fi
 - Establishes a connection to a router with no security.
 - Establishes a connection to the Data Hub
 - Registers all of a subsystem's sensors (all those specified in Config.h)
+- Sensor Data Publishing                      [Monday, April 2nd]
 
 ## Soon to be functioning (i.e. the code is there with some bugs...)
 *NOTE: Everyting in this section will be fully functional by Monday, April 2nd or sooner.*
 - WPA2 Security (connection established with the use of a passphrase)
-- Sensor Data Publishing                      [Monday, April 2nd]
 - CoAP (using specifically the [microcoap implementation](https://github.com/1248/microcoap)) [as time permits...]
 
 ## Future Development
