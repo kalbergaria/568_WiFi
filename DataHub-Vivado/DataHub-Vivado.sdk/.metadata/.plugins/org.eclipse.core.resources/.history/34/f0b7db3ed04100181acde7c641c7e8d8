@@ -128,7 +128,7 @@ void WiFi()
 				// Calculate the number of sensor that need to be registered
 				// based on the size of the array of sensorInfo structures
 				numSensors = sizeof(sensorInfoCollection) / sizeof(SensorInfo);
-				xil_printf("Preparing to register %d sensors...\r\n", numSensors);
+				xil_printf("Attempting to register %d sensors\r\n", numSensors);
 				ChangeStatePrintTransition(SEND_SENSOR_REG);
 				break;
 
@@ -136,7 +136,7 @@ void WiFi()
 				if (numSensorsRegistered < numSensors)
 				{
 					CreateSensorRegMsg(&msg2Send, (byte*)&sensorInfoCollection[numSensorsRegistered]);
-					xil_printf("Registering %s...\r\n", sensorInfoCollection[numSensorsRegistered].sensorName);
+					xil_printf("Attempting to register %s...", sensorInfoCollection[numSensorsRegistered].sensorName);
 					ChangeStatePrintTransition(SEND);
 					break;
 				}
@@ -172,7 +172,7 @@ void WiFi()
 			case SEND:
 				if (deIPcK.isIPReady(&status))
 				{
-					PrintMsgTypeAndDest((MsgTypes)msg2Send.header.msgType, HUB);
+					xil_printf("Sending message...\r\n");
 					udpClient.writeDatagram((byte *)&msg2Send, MSG_SIZE);
 					ChangeStatePrintTransition((STATE)(prevState + 1));
 				}

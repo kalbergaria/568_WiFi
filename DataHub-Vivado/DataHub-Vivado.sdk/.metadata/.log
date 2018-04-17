@@ -8169,3 +8169,1035 @@ java.io.FileNotFoundException: C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\Dat
 	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
 	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2018-04-16 19:26:24.581
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:23.847
+!MESSAGE XSCT Command: [disconnect tcfchan#27], Thread: Thread-1774
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:23.849
+!MESSAGE XSCT command with result: [disconnect tcfchan#27], Result: [null, ]. Thread: Thread-1774
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-04-16 19:40:24.847
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.848
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.852
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#28]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.853
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.867
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.867
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.899
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Result: [null, ]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.899
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.939
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.940
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.941
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#28]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.941
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.949
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.949
+!MESSAGE XSCT Command: [version -server], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.951
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.4]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.951
+!MESSAGE XSCT Command: [version], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.952
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.4]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.952
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.973
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Result: [null, ]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.973
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.974
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:24.975
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:25.009
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:25.009
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:25.030
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:25.031
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:25.064
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:25.065
+!MESSAGE XSCT Command: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:29.281
+!MESSAGE XSCT command with result: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Result: [null, ]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:29.309
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:29.362
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:29.362
+!MESSAGE XSCT Command: [con], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:40:29.371
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:15.174
+!MESSAGE XSCT Command: [disconnect tcfchan#28], Thread: Thread-1800
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:15.177
+!MESSAGE XSCT command with result: [disconnect tcfchan#28], Result: [null, ]. Thread: Thread-1800
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-04-16 19:41:16.175
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.175
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.180
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#29]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.181
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.195
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.195
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.222
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Result: [null, ]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.223
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.264
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.264
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.266
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#29]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.266
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.272
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.273
+!MESSAGE XSCT Command: [version -server], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.275
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.4]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.275
+!MESSAGE XSCT Command: [version], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.276
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.4]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.277
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.297
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Result: [null, ]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.298
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.299
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.299
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.338
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.338
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.358
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.358
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.393
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:16.394
+!MESSAGE XSCT Command: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:20.605
+!MESSAGE XSCT command with result: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Result: [null, ]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:20.632
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:20.687
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:20.688
+!MESSAGE XSCT Command: [con], Thread: Worker-144
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:41:20.693
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-144
+
+!ENTRY org.eclipse.core.resources 4 568 2018-04-16 19:45:23.823
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:33.379
+!MESSAGE XSCT Command: [disconnect tcfchan#29], Thread: Thread-1852
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:33.382
+!MESSAGE XSCT command with result: [disconnect tcfchan#29], Result: [null, ]. Thread: Thread-1852
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-04-16 19:48:34.380
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.380
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.385
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#30]. Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.386
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.400
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.400
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.427
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Result: [null, ]. Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.427
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.461
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.462
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.463
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#30]. Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.463
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.470
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.470
+!MESSAGE XSCT Command: [version -server], Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.472
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.4]. Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.472
+!MESSAGE XSCT Command: [version], Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.473
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.4]. Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.474
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.494
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Result: [null, ]. Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.495
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.496
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.497
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.534
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.535
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.561
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.561
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.598
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:34.598
+!MESSAGE XSCT Command: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:38.839
+!MESSAGE XSCT command with result: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Result: [null, ]. Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:38.866
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:38.919
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:38.920
+!MESSAGE XSCT Command: [con], Thread: Worker-149
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 19:48:38.925
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-149
+
+!ENTRY org.eclipse.core.resources 4 568 2018-04-16 19:50:29.854
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Keith\Documents\Git\568_Hub\568_WiFi\DataHub-Vivado\DataHub-Vivado.sdk\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:03.996
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:04.013
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:04.014
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:04.019
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.5",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:04.120
+!MESSAGE XSCT Command: [::hsi::utils::get_config_params_for_sw -json C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:04.135
+!MESSAGE XSCT command with result: [::hsi::utils::get_config_params_for_sw -json C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_bsp/system.mss], Result: [null, {"microblaze_0": {"archiver": {"category": "",
+"value": "mb-ar",
+"default": "mb-ar",
+"type": "string",
+"desc": "Archiver used to archive libraries for both BSP generation as well as for applications",
+"permit": "",
+"options": {},
+"range": "",
+},
+"compiler": {"category": "",
+"value": "mb-gcc",
+"default": "mb-gcc",
+"type": "string",
+"desc": "Compiler used to compile both BSP/Libraries and Applications.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"compiler_flags": {"category": "",
+"value": "-O2 -c",
+"default": "-O2 -c",
+"type": "string",
+"desc": "Compiler flags used in BSP and library generation. '-c' flag stands for 'compile and assemble, but do not link'. Without this flag, gcc tries to link the code, which will fail bacause there is no application involved during libgen. '-O2' can be overwritten by extra compiler flags",
+"permit": "none",
+"options": {},
+"range": "",
+},
+"extra_compiler_flags": {"category": "",
+"value": "-ffunction-sections -fdata-sections -Wall -Wextra",
+"default": "-ffunction-sections -fdata-sections -Wall -Wextra",
+"type": "string",
+"desc": "Extra compiler flags used in BSP and library generation.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"xmdstub_peripheral": {"category": "",
+"value": "none",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "Debug peripheral to be used with xmdstub",
+"permit": "",
+"options": {},
+"range": "",
+},
+},
+"standalone": {"enable_sw_intrusive_profiling": {"category": "sw_intrusive_profiling",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable S/W Intrusive Profiling on Hardware Targets",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"hypervisor_guest": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable hypervisor guest support for A53 64bit EL1 Non-Secure. If hypervisor_guest is not selected, BSP will be built for EL3.",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"microblaze_exceptions": {"category": "microblaze_exceptions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable MicroBlaze Exceptions",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"predecode_fpu_exceptions": {"category": "microblaze_exceptions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "(MicroBlaze) Predecode FPU exceptions and save operand info before invoking user registered exception handler.",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"profile_timer": {"category": "sw_intrusive_profiling",
+"value": "none",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "Specify the Timer to use for Profiling. For PowerPC system, specify none to use PIT timer. For ARM system, specify none to use SCU timer",
+"permit": "",
+"options": {},
+"range": "",
+},
+"stdin": {"category": "",
+"value": "axi_uartlite_0",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "stdin peripheral",
+"permit": "",
+"options": {},
+"range": "axi_uartlite_0",
+},
+"stdout": {"category": "",
+"value": "axi_uartlite_0",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "stdout peripheral",
+"permit": "",
+"options": {},
+"range": "axi_uartlite_0",
+},
+"zynqmp_fsbl_bsp": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Disable or Enable Optimization for FSBL's BSP. ZynqMP FSBL will set this to true",
+"permit": "",
+"options": {},
+"range": "",
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:04.210
+!MESSAGE XSCT Command: [hsi::utils::get_supported_os -json C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:04.217
+!MESSAGE XSCT command with result: [hsi::utils::get_supported_os -json C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf], Result: [null, {"microblaze_0": {"freertos901_xilinx_v1_1": {"name": "freertos901_xilinx",
+"version": "1.1",
+"desc": "FreeRTOS is a market leading open source RTOS",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/ThirdParty/bsp/freertos901_xilinx_v1_1",
+},
+"standalone_v6_5": {"name": "standalone",
+"version": "6.5",
+"desc": "Standalone is a simple, low-level software layer. It provides access to basic processor features such as caches, interrupts and exceptions as well as the basic features of a hosted environment, such as standard input and output, profiling, abort and exit.",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/lib/bsp/standalone_v6_5",
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:04.221
+!MESSAGE XSCT Command: [hsi::utils::get_all_libs -json], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:04.227
+!MESSAGE XSCT command with result: [hsi::utils::get_all_libs -json], Result: [null, {"libmetal_v1_3": {"name": "libmetal",
+"version": "1.3",
+"desc": "Libmetal Library",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/ThirdParty/sw_services/libmetal_v1_3",
+"os": "standalone freertos901_xilinx",
+"proc": "ps7_cortexa9 psu_cortexr5 psu_cortexa53",
+},
+"lwip141_v2_0": {"name": "lwip141",
+"version": "2.0",
+"desc": "lwIP TCP/IP Stack library: lwIP v1.4.1",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/ThirdParty/sw_services/lwip141_v2_0",
+"os": "standalone xilkernel freertos901_xilinx",
+"proc": "ps7_cortexa9 psu_cortexa53 psu_cortexr5 psu_pmu microblaze",
+},
+"openamp_v1_4": {"name": "openamp",
+"version": "1.4",
+"desc": "OpenAmp Library",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxil,-lmetal,-lopen_amp,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/ThirdParty/sw_services/openamp_v1_4",
+"os": "standalone freertos901_xilinx",
+"proc": "ps7_cortexa9 psu_cortexr5",
+},
+"xilffs_v3_7": {"name": "xilffs",
+"version": "3.7",
+"desc": "Generic Fat File System Library",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/lib/sw_services/xilffs_v3_7",
+"os": "standalone freertos901_xilinx",
+"proc": "ps7_cortexa9 psu_cortexa53 psu_cortexr5 psu_pmu microblaze",
+},
+"xilflash_v4_4": {"name": "xilflash",
+"version": "4.4",
+"desc": "Xilinx Flash library for Intel/AMD CFI compliant parallel flash",
+"compilerflags": "",
+"linkerflags": "-lxilflash",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/lib/sw_services/xilflash_v4_4",
+"os": "standalone xilkernel freertos901_xilinx",
+"proc": "ps7_cortexa9 psu_cortexa53 psu_cortexr5 psu_pmu microblaze",
+},
+"xilfpga_v3_0": {"name": "xilfpga",
+"version": "3.0",
+"desc": "Xilinx fpga Library",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxilfpga,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/lib/sw_services/xilfpga_v3_0",
+"os": "standalone freertos901_xilinx",
+"proc": "psu_cortexa53 psu_cortexr5 psu_pmu",
+},
+"xilisf_v5_9": {"name": "xilisf",
+"version": "5.9",
+"desc": "Xilinx In-system and Serial Flash Library",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/lib/sw_services/xilisf_v5_9",
+"os": "standalone xilkernel freertos901_xilinx",
+"proc": "ps7_cortexa9 psu_cortexa53 psu_cortexr5 psu_pmu microblaze",
+},
+"xilmfs_v2_3": {"name": "xilmfs",
+"version": "2.3",
+"desc": "Xilinx Memory File System",
+"compilerflags": "",
+"linkerflags": "",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/lib/sw_services/xilmfs_v2_3",
+"os": "standalone xilkernel freertos901_xilinx",
+"proc": "ps7_cortexa9 psu_cortexa53 psu_cortexr5 psu_pmu microblaze",
+},
+"xilpm_v2_2": {"name": "xilpm",
+"version": "2.2",
+"desc": "Power Management API Library for ZynqMP",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxilpm,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/lib/sw_services/xilpm_v2_2",
+"os": "standalone freertos901_xilinx",
+"proc": "ps7_cortexa9 psu_cortexa53 psu_cortexr5 psu_pmu microblaze",
+},
+"xilrsa_v1_4": {"name": "xilrsa",
+"version": "1.4",
+"desc": "Xilinx RSA Library",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/lib/sw_services/xilrsa_v1_4",
+"os": "standalone freertos901_xilinx",
+"proc": "ps7_cortexa9",
+},
+"xilsecure_v2_2": {"name": "xilsecure",
+"version": "2.2",
+"desc": "Xilinx Secure Library",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxilsecure,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/lib/sw_services/xilsecure_v2_2",
+"os": "standalone freertos901_xilinx",
+"proc": "psu_cortexa53 psu_cortexr5 psu_pmu",
+},
+"xilskey_v6_3": {"name": "xilskey",
+"version": "6.3",
+"desc": "Xilinx Secure Key Library",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxilskey,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/lib/sw_services/xilskey_v6_3",
+"os": "standalone freertos901_xilinx",
+"proc": "ps7_cortexa9 psu_cortexa53 psu_cortexr5 psu_pmu microblaze",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:04.229
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:04.232
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:04.232
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:04.235
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_bsp/system.mss], Result: [null, {}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:04.276
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:04.280
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_bsp/system.mss], Result: [null, {"PmodSD_0": {"name": "PmodSD",
+"ver": "1.0",
+},
+"PmodWIFI_0": {"name": "PmodWIFI",
+"ver": "1.0",
+},
+"axi_gpio_led": {"name": "gpio",
+"ver": "4.3",
+},
+"axi_gpio_sw": {"name": "gpio",
+"ver": "4.3",
+},
+"axi_uartlite_0": {"name": "uartlite",
+"ver": "3.2",
+},
+"microblaze_0_axi_intc": {"name": "intc",
+"ver": "3.7",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.2",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.2",
+},
+"mig_7series_0": {"name": "mig_7series",
+"ver": "2.1",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.6",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:04.282
+!MESSAGE XSCT Command: [hsi::utils::get_drivers_for_hw -json C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:04.335
+!MESSAGE XSCT command with result: [hsi::utils::get_drivers_for_hw -json C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf], Result: [null, {"PmodSD_0": {"version": "1.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"PmodSD_v1_0": {"name": "PmodSD",
+"version": "1.0",
+"repo": "C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/drivers/PmodSD_v1_0",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"PmodWIFI_0": {"version": "1.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"PmodWIFI_v1_0": {"name": "PmodWIFI",
+"version": "1.0",
+"repo": "C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/drivers/PmodWIFI_v1_0",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"axi_gpio_led": {"version": "2.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"gpio_v4_3": {"name": "gpio",
+"version": "4.3",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/gpio_v4_3",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"axi_gpio_sw": {"version": "2.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"gpio_v4_3": {"name": "gpio",
+"version": "4.3",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/gpio_v4_3",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"axi_smc": {"version": "1.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"axi_uartlite_0": {"version": "2.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"uartlite_v3_2": {"name": "uartlite",
+"version": "3.2",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/uartlite_v3_2",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"clk_wiz_0": {"version": "5.4",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"clk_wiz_v1_2": {"name": "clk_wiz",
+"version": "1.2",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/clk_wiz_v1_2",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"mdm_1": {"version": "3.2",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"uartlite_v3_2": {"name": "uartlite",
+"version": "3.2",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/uartlite_v3_2",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"microblaze_0": {"version": "10.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"cpu_v2_6": {"name": "cpu",
+"version": "2.6",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/cpu_v2_6",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"microblaze_0_axi_intc": {"version": "4.1",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"intc_v3_7": {"name": "intc",
+"version": "3.7",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/intc_v3_7",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"microblaze_0_axi_periph": {"version": "2.1",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"version": "4.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"bram_v4_2": {"name": "bram",
+"version": "4.2",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/bram_v4_2",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"microblaze_0_local_memory_dlmb_v10": {"version": "3.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"version": "4.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"bram_v4_2": {"name": "bram",
+"version": "4.2",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/bram_v4_2",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"microblaze_0_local_memory_ilmb_v10": {"version": "3.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"microblaze_0_local_memory_lmb_bram": {"version": "8.4",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"microblaze_0_xlconcat": {"version": "2.1",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"mig_7series_0": {"version": "4.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"mig_7series_v2_1": {"name": "mig_7series",
+"version": "2.1",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/mig_7series_v2_1",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"rst_clk_wiz_0_100M": {"version": "5.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"rst_mig_7series_0_81M": {"version": "5.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.4/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:04.351
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf microblaze_0], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:04.354
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/system.hdf microblaze_0], Result: [null, PmodSD_0 PmodWIFI_0 axi_gpio_led axi_gpio_sw axi_uartlite_0 microblaze_0_axi_intc microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr mig_7series_0]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:40.763
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:08:40.767
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:46.443
+!MESSAGE XSCT Command: [disconnect tcfchan#30], Thread: Thread-1900
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:46.447
+!MESSAGE XSCT command with result: [disconnect tcfchan#30], Result: [null, ]. Thread: Thread-1900
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-04-16 20:09:47.444
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.445
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.450
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#31]. Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.450
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.463
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.464
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.491
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level==0} -index 0], Result: [null, ]. Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.492
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.530
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.531
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.532
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#31]. Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.532
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.539
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys4DDR 210292A4BDC7A
+  5  Digilent Nexys4DDR 210292A6EA33A]. Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.540
+!MESSAGE XSCT Command: [version -server], Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.541
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.4]. Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.541
+!MESSAGE XSCT Command: [version], Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.542
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.4]. Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.543
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.563
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys4DDR 210292A4BDC7A" && level == 0}], Result: [null, ]. Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.564
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.565
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.565
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.600
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.600
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.624
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.624
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.656
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:47.657
+!MESSAGE XSCT Command: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:51.894
+!MESSAGE XSCT command with result: [dow C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub/Debug/DataHub.elf], Result: [null, ]. Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:51.922
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:51.977
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A4BDC7A"} -index 0], Result: [null, ]. Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:51.978
+!MESSAGE XSCT Command: [con], Thread: Worker-155
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-04-16 20:09:51.982
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-155

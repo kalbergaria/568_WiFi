@@ -31261,3 +31261,187 @@ mb-size DataHub.elf  |tee "DataHub.elf.size"
  339144	   1876	  21140	 362160	  586b0	DataHub.elf
 'Finished building: DataHub.elf.size'
 ' '
+19:40:23 **** Incremental Build of configuration Debug for project DataHub ****
+make all 
+make: Nothing to be done for `all'.
+19:41:14 **** Incremental Build of configuration Debug for project DataHub ****
+make all 
+make: Nothing to be done for `all'.
+19:45:30 **** Auto Build of configuration Debug for project DataHub ****
+make all 
+'Building file: ../src/Main.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Main.o" -I../../DataHub_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/Main.d" -MT"src/Main.o" -o "src/Main.o" "../src/Main.cpp"
+In file included from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/../../../MRF24G/utility/ud_inc/internal/wf_global_includes.h:44:0,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/System.h:64,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/System.h:54,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/deIP.h:59,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../DataHub_bsp/microblaze_0/include/PmodWIFI.h:2,
+                 from ../src/Main.cpp:1:
+../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/../../../MRF24G/utility/ud_inc/internal/../../wf_customize.h:50:0: warning: "INLINE" redefined
+ #define INLINE
+ 
+In file included from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/System.h:62:0,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/System.h:54,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/deIP.h:59,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../DataHub_bsp/microblaze_0/include/PmodWIFI.h:2,
+                 from ../src/Main.cpp:1:
+../../DataHub_bsp/microblaze_0/include/xil_io.h:99:0: note: this is the location of the previous definition
+ #define INLINE inline
+ 
+In file included from ../src/Messages.h:5:0,
+                 from ../src/WiFi.h:4,
+                 from ../src/Main.cpp:2:
+../src/Config.h:122:20: warning: 'SSID' defined but not used [-Wunused-variable]
+ static const char* SSID = "ECE568";
+                    ^~~~
+'Finished building: ../src/Main.cpp'
+' '
+'Building target: DataHub.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../DataHub_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "DataHub.elf"  ./src/Main.o ./src/Messages.o ./src/WiFi.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: DataHub.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size DataHub.elf  |tee "DataHub.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 339736	   1876	  21140	 362752	  58900	DataHub.elf
+'Finished building: DataHub.elf.size'
+' '
+19:46:13 **** Auto Build of configuration Debug for project DataHub ****
+make all 
+'Building file: ../src/Main.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Main.o" -I../../DataHub_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/Main.d" -MT"src/Main.o" -o "src/Main.o" "../src/Main.cpp"
+In file included from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/../../../MRF24G/utility/ud_inc/internal/wf_global_includes.h:44:0,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/System.h:64,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/System.h:54,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/deIP.h:59,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../DataHub_bsp/microblaze_0/include/PmodWIFI.h:2,
+                 from ../src/Main.cpp:1:
+../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/../../../MRF24G/utility/ud_inc/internal/../../wf_customize.h:50:0: warning: "INLINE" redefined
+ #define INLINE
+ 
+In file included from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/System.h:62:0,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/System.h:54,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/deIP.h:59,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../DataHub_bsp/microblaze_0/include/PmodWIFI.h:2,
+                 from ../src/Main.cpp:1:
+../../DataHub_bsp/microblaze_0/include/xil_io.h:99:0: note: this is the location of the previous definition
+ #define INLINE inline
+ 
+In file included from ../src/Messages.h:5:0,
+                 from ../src/WiFi.h:4,
+                 from ../src/Main.cpp:2:
+../src/Config.h:122:20: warning: 'SSID' defined but not used [-Wunused-variable]
+ static const char* SSID = "ECE568";
+                    ^~~~
+'Finished building: ../src/Main.cpp'
+' '
+'Building target: DataHub.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../DataHub_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "DataHub.elf"  ./src/Main.o ./src/Messages.o ./src/WiFi.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: DataHub.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size DataHub.elf  |tee "DataHub.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 339724	   1876	  21136	 362736	  588f0	DataHub.elf
+'Finished building: DataHub.elf.size'
+' '
+19:48:15 **** Auto Build of configuration Debug for project DataHub ****
+make all 
+'Building file: ../src/Main.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Main.o" -I../../DataHub_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/Main.d" -MT"src/Main.o" -o "src/Main.o" "../src/Main.cpp"
+In file included from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/../../../MRF24G/utility/ud_inc/internal/wf_global_includes.h:44:0,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/System.h:64,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/System.h:54,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/deIP.h:59,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../DataHub_bsp/microblaze_0/include/PmodWIFI.h:2,
+                 from ../src/Main.cpp:1:
+../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/../../../MRF24G/utility/ud_inc/internal/../../wf_customize.h:50:0: warning: "INLINE" redefined
+ #define INLINE
+ 
+In file included from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/System.h:62:0,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/System.h:54,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/deIP.h:59,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../DataHub_bsp/microblaze_0/include/PmodWIFI.h:2,
+                 from ../src/Main.cpp:1:
+../../DataHub_bsp/microblaze_0/include/xil_io.h:99:0: note: this is the location of the previous definition
+ #define INLINE inline
+ 
+In file included from ../src/Messages.h:5:0,
+                 from ../src/WiFi.h:4,
+                 from ../src/Main.cpp:2:
+../src/Config.h:122:20: warning: 'SSID' defined but not used [-Wunused-variable]
+ static const char* SSID = "ECE568";
+                    ^~~~
+'Finished building: ../src/Main.cpp'
+' '
+'Building target: DataHub.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../DataHub_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "DataHub.elf"  ./src/Main.o ./src/Messages.o ./src/WiFi.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: DataHub.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size DataHub.elf  |tee "DataHub.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 339728	   1876	  21140	 362744	  588f8	DataHub.elf
+'Finished building: DataHub.elf.size'
+' '
+19:48:32 **** Incremental Build of configuration Debug for project DataHub ****
+make all 
+make: Nothing to be done for `all'.
+19:49:25 **** Auto Build of configuration Debug for project DataHub ****
+make all 
+'Building file: ../src/Main.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Main.o" -I../../DataHub_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/Main.d" -MT"src/Main.o" -o "src/Main.o" "../src/Main.cpp"
+In file included from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/../../../MRF24G/utility/ud_inc/internal/wf_global_includes.h:44:0,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/System.h:64,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/System.h:54,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/deIP.h:59,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../DataHub_bsp/microblaze_0/include/PmodWIFI.h:2,
+                 from ../src/Main.cpp:1:
+../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/../../../MRF24G/utility/ud_inc/internal/../../wf_customize.h:50:0: warning: "INLINE" redefined
+ #define INLINE
+ 
+In file included from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/fpga/System.h:62:0,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/System.h:54,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/utility/deIP.h:59,
+                 from ../../DataHub_bsp/microblaze_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../DataHub_bsp/microblaze_0/include/PmodWIFI.h:2,
+                 from ../src/Main.cpp:1:
+../../DataHub_bsp/microblaze_0/include/xil_io.h:99:0: note: this is the location of the previous definition
+ #define INLINE inline
+ 
+In file included from ../src/Messages.h:5:0,
+                 from ../src/WiFi.h:4,
+                 from ../src/Main.cpp:2:
+../src/Config.h:122:20: warning: 'SSID' defined but not used [-Wunused-variable]
+ static const char* SSID = "ECE568";
+                    ^~~~
+'Finished building: ../src/Main.cpp'
+' '
+'Building target: DataHub.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../DataHub_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "DataHub.elf"  ./src/Main.o ./src/Messages.o ./src/WiFi.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: DataHub.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size DataHub.elf  |tee "DataHub.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 339728	   1876	  21140	 362744	  588f8	DataHub.elf
+'Finished building: DataHub.elf.size'
+' '
+20:09:45 **** Incremental Build of configuration Debug for project DataHub ****
+make all 
+make: Nothing to be done for `all'.

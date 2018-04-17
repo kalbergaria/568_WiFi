@@ -128,7 +128,7 @@ void WiFi()
 				// Calculate the number of sensor that need to be registered
 				// based on the size of the array of sensorInfo structures
 				numSensors = sizeof(sensorInfoCollection) / sizeof(SensorInfo);
-				xil_printf("Preparing to register %d sensors...\r\n", numSensors);
+				xil_printf("Attempting to register %d sensors...\r\n", numSensors);
 				ChangeStatePrintTransition(SEND_SENSOR_REG);
 				break;
 
