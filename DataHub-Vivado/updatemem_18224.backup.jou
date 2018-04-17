@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# updatemem v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# 
+# Start of session at: Sun Apr 15 14:42:29 2018
+# Process ID: 18224
+# Current directory: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado
+# Command line: updatemem.exe -mode batch -source C:/Xilinx/SDK/2017.4/scripts/updatemem/main.tcl -notrace -tclargs -meminfo C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/DataHub_wrapper.mmi -data C:/Xilinx/SDK/2017.4/data/embeddedsw/lib/microblaze/mb_bootloop_le.elf -proc DataHub_i/microblaze_0 -bit C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/DataHub_wrapper.bit -out C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/DataHub-Vivado.sdk/DataHub_wrapper_hw_platform_0/download.bit -force
+# Log file: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado/updatemem.log
+# Journal file: C:/Users/Keith/Documents/Git/568_Hub/568_WiFi/DataHub-Vivado\updatemem.jou
+#-----------------------------------------------------------
+source C:/Xilinx/SDK/2017.4/scripts/updatemem/main.tcl -notrace

@@ -1,0 +1,247 @@
+#include "PmodWIFI.h"
+#include "WiFi.h"
+
+typedef enum {
+    NONE = 0,
+    CONNECT,
+    SET_HUB_AS_ENDPOINT,
+    PREP_SEND_CONN_REQ,
+    RECEIVE_SYS_HEALTH_CONFIRM_CONNECTION,
+    SENSOR_REG_PREP,
+    SEND_SENSOR_REG,
+	RECEIVE_REG_ACK,
+    SEND,
+    RECEIVE,
+    CLOSE,
+    DONE,
+} STATE;
+
+STATE state = CONNECT;
+STATE prevState = CONNECT;
+
+// Prototypes
+void WiFi();
+void ChangeStatePrintTransition(STATE newState);
+void PrintState(STATE state);
+
+// Networking variables
+UDPSocket udpClient;
+IPv4 myIP = {192,168,100,12};
+IPv4 readIP; // a structure to store the ip read
+IPSTATUS status = ipsSuccess;
+IPEndPoint epRemote;
+
+// Read buffer
+Message msgReceived;
+int readSize = 0;
+
+// The number of sensors that belongs to the sensor
+// node
+uint8_t numSensors;
+
+// The number of sensors that have been successfully registered
+// with the hub
+uint8_t numSensorsRegistered = 0;
+
+// A message whose contents change throughout execution
+// to reflect the
+Message msg2Send;
+
+// Set to true when a message was received and is available
+// in msgReceived
+bool msgObtained = false;
+
+int main(void)
+{
+    Xil_ICacheEnable();
+    Xil_DCacheEnable();
+
+    xil_printf("\r\n\r\n-------------- NEW SENSOR NODE RUN --------------\r\n");
+    WiFi();
+    return 0;
+}
+
+void WiFi()
+{
+    while (1)
+    {
+        switch (state)
+        {
+        case CONNECT:
+            InitWiFi();
+            if (Connect(&status))
+                ChangeStatePrintTransition(SET_HUB_AS_ENDPOINT);
+            else if (IsIPStatusAnError(status))
+            {
+                xil_printf("Unable to connect, status: 0x%X\r\n", status);
+                ChangeStatePrintTransition(CLOSE);
+            }
+            break;
+
+        case SET_HUB_AS_ENDPOINT:
+            if (deIPcK.resolveEndPoint(HUB_IP, PORT, epRemote, &status))
+            {
+                if (deIPcK.udpSetEndPoint(epRemote, udpClient, PORT, &status))
+                {
+                    xil_printf("Endpoint set to: %s:%d\r\n", HUB_IP, PORT);
+                    ChangeStatePrintTransition(PREP_SEND_CONN_REQ);
+                }
+            }
+
+            // Always check the status and get out on error
+            if (IsIPStatusAnError(status))
+            {
+                xil_printf("Unable to resolve endpoint, error: 0x%X\r\n", status);
+                state = CLOSE;
+            }
+            break;
+
+        case PREP_SEND_CONN_REQ:
+            CreateConnReqMsg(&msg2Send);
+            ChangeStatePrintTransition(SEND);
+            break;
+
+        case RECEIVE_SYS_HEALTH_CONFIRM_CONNECTION:
+            if (msgObtained)
+            {
+                if (msgReceived.header.msgType == SYS_HEALTH)
+                {
+                    msgObtained = false;
+                    xil_printf("Connected to HUB!\r\n");
+                    ChangeStatePrintTransition(SENSOR_REG_PREP);
+                    break;
+                }
+                ChangeStatePrintTransition(CLOSE);
+                break;
+            }
+            ChangeStatePrintTransition(RECEIVE);
+            break;
+
+        case SENSOR_REG_PREP:
+            // Calculate the number of sensor that need to be registered
+	        // based on the size of the array of sensorInfo structures
+	        numSensors = sizeof(sensorInfoCollection) / sizeof(SensorInfo);
+	        xil_printf("Attempting to register %d sensors\r\n", numSensors);
+	        ChangeStatePrintTransition(SEND_SENSOR_REG);
+            break;
+
+        case SEND_SENSOR_REG:
+            if (numSensorsRegistered < numSensors) //while loop not exiting
+            {
+                CreateSensorRegMsg(&msg2Send, (byte*)&sensorInfoCollection[numSensorsRegistered]);
+                ChangeStatePrintTransition(SEND);
+                break;
+            }
+            ChangeStatePrintTransition(CLOSE);
+            break;
+
+        case RECEIVE_REG_ACK:
+            if (numSensorsRegistered < numSensors)
+            {
+                if (msgObtained)
+                    if (msgReceived.header.msgType == REG_ACK)
+                        numSensorsRegistered++;
+                ChangeStatePrintTransition(RECEIVE);
+                break;
+            }
+            ChangeStatePrintTransition(CLOSE);
+            break;
+
+        // Write out the strings
+        case SEND:
+            if (deIPcK.isIPReady(&status))
+            {
+                xil_printf("Writing out Datagram\r\n");
+
+                int writeReturn = udpClient.writeDatagram((byte *)&msg2Send, MSG_SIZE);
+
+                ChangeStatePrintTransition((STATE)(prevState + 1));
+            }
+            else if (IsIPStatusAnError(status))
+            {
+                xil_printf("Lost the network, error: 0x%X\r\n", status);
+                state = CLOSE;
+            }
+            break;
+
+        case RECEIVE:
+            // See if we got anything to read
+            if ((readSize = udpClient.available()) > 0)
+            {
+                readSize = udpClient.readDatagram((byte *)&msgReceived, readSize);
+                msgObtained = true;
+                ChangeStatePrintTransition((STATE)(prevState));
+            }
+            break;
+
+        // Done, so close up the tcpClient
+        case CLOSE:
+            udpClient.close();
+            xil_printf("Closing udpClient, Done with sketch.\r\n");
+            state = DONE;
+            break;
+
+        case DONE:
+
+        default:
+            break;
+        }
+
+        // Keep the stack alive each pass through the loop()
+        DEIPcK::periodicTasks();
+    }
+}
+
+void ChangeStatePrintTransition(STATE newState)
+{
+    xil_printf("Transitioning from ");
+    PrintState(state);
+    xil_printf(" to ");
+    PrintState(newState);
+    xil_printf("\r\n");
+    xil_printf("\r\n");
+    prevState = state;
+    state = newState;
+}
+
+void PrintState(STATE state)
+{
+    switch (state)
+    {
+    case CONNECT:
+        xil_printf("CONNECT");
+        break;
+    case SET_HUB_AS_ENDPOINT:
+        xil_printf("SET_HUB_AS_ENDPOINT");
+        break;
+    case PREP_SEND_CONN_REQ:
+        xil_printf("CONNECT_TO_HUB");
+        break;
+    case RECEIVE_SYS_HEALTH_CONFIRM_CONNECTION:
+        xil_printf("RECEIVE_SYS_HEALTH_CONFIRM_CONNECTION");
+        break;
+    case SENSOR_REG_PREP:
+        xil_printf("SENSOR_REG_PREP");
+        break;
+    case SEND_SENSOR_REG:
+            xil_printf("SEND_SENSOR_REG");
+            break;
+    case RECEIVE_REG_ACK:
+            xil_printf("RECEIVE_SENSOR_REG");
+            break;
+    case SEND:
+        xil_printf("SEND");
+        break;
+    case RECEIVE:
+        xil_printf("RECEIVE");
+        break;
+    case CLOSE:
+        xil_printf("CLOSE");
+        break;
+    case DONE:
+        xil_printf("DONE");
+        break;
+    default:
+        break;
+    }
+}

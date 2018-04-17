@@ -81,6 +81,17 @@ struct SystemHealthPayload
 };
 
 //--------------------------------------------------------------
+// Sensor Data
+//--------------------------------------------------------------
+#define SENSOR_DATA_SIZE 1019
+typedef uint8_t SensorData[SENSOR_DATA_SIZE];
+struct SensorDataPayload
+{
+    uint8_t sensorID;
+    SensorData sensorData;
+};
+
+//--------------------------------------------------------------
 // Message creation functions
 //--------------------------------------------------------------
 
